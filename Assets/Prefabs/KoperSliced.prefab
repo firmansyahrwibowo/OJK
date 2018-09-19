@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4152747451223566}
+  - component: {fileID: 114286553604933010}
   m_Layer: 0
   m_Name: KoperSliced
   m_TagString: Untagged
@@ -210,6 +211,17 @@ PolygonCollider2D:
       - {x: 1.5749999, y: -0.515}
       - {x: 1.5849999, y: -0.49499997}
       - {x: 1.5849999, y: 0.515}
+--- !u!114 &114286553604933010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593082538241056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba192047dce454695e44b665337cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212405492700628386
 SpriteRenderer:
   m_ObjectHideFlags: 1

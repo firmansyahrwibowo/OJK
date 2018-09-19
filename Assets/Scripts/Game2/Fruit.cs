@@ -11,30 +11,68 @@ public class Fruit : MonoBehaviour {
     public int scoreGet;
     public int durationCut;
     //private Game2Manager _GameManager;
-	Rigidbody2D rb;
+	public Rigidbody2D rb;
 
-	void Start ()
-	{
-		rb = GetComponent<Rigidbody2D>();
-		rb.AddForce(transform.up * startForce, ForceMode2D.Impulse);
-        //_GameManager = GameObject.Find("GAMEMANAGER").GetComponent<Game2Manager>();
+    Coroutine _ThisCoroutine;
+    Coroutine _SlashedCoroutine;
+    
 
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    public void Init ()
+    {
+        rb.AddForce(transform.up * startForce, ForceMode2D.Impulse);
     }
 
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.tag == "Blade")
 		{
-			GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
-			Destroy(slicedFruit, 1f);
+            GameObject slice = PoolingObject.Instance.GetSlicedObject(gameObject.name);
+            if (slice != null)
+            {
+                slice.transform.localPosition = transform.localPosition;
+                slice.transform.localRotation = transform.localRotation;
+            }
+            
+
+            //GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
+            //Destroy(slicedFruit, 1f);
+
 
             EventManager.TriggerEvent(new DurationCutEvent(durationCut));
             EventManager.TriggerEvent(new ScoreSetEvent(scoreGet));
             //_GameManager.time -= durationCut;
             //_GameManager.Score += scoreGet;
 
-			Destroy(gameObject);
+            //gameObject.SetActive(false);
+            DisableActivation();
 		}
 	}
 
+    void DisableActivation() {
+        transform.localPosition = new Vector3(1000, 1000, 1000);
+    }
+
+    void OnEnable ()
+    {
+        if (_ThisCoroutine != null)
+            StopCoroutine(_ThisCoroutine);
+
+        _ThisCoroutine = StartCoroutine(DestroyThis());
+    }
+
+    IEnumerator DestroyThis()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        if (_ThisCoroutine != null)
+            StopCoroutine(_ThisCoroutine);
+    }
 }

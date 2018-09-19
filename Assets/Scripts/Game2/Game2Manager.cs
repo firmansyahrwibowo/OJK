@@ -27,7 +27,10 @@ public class Game2Manager : MonoBehaviour {
 
         _Spawner = GetComponent<FruitSpawner>();
     }
-
+    private void Start()
+    {
+        PoolingObject.Instance.InitPooling();
+    }
     private void SetScoreHandler(ScoreSetEvent e)
     {
         Score += e.Value;

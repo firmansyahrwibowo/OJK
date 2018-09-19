@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 7d96d7286ab4f9c4282e0f2be401aeee
-labels:
-- ObjectPool
-- Pooling
+guid: d8ba192047dce454695e44b665337cca
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

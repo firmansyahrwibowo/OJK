@@ -55,6 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933387940549018}
+  - component: {fileID: 114003546276348390}
   m_Layer: 0
   m_Name: KoinSliced
   m_TagString: Untagged
@@ -215,6 +216,17 @@ PolygonCollider2D:
       - {x: 0.56, y: 0.265}
       - {x: 0.55, y: 0.315}
       - {x: 0.25, y: 0.475}
+--- !u!114 &114003546276348390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929710381139272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba192047dce454695e44b665337cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212076308290602680
 SpriteRenderer:
   m_ObjectHideFlags: 1
