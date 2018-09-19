@@ -26,7 +26,7 @@ public class Fruit : MonoBehaviour {
 		if (col.tag == "Blade")
 		{
 			GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
-			Destroy(slicedFruit, 3f);
+			Destroy(slicedFruit, 1f);
 
             EventManager.TriggerEvent(new DurationCutEvent(durationCut));
             EventManager.TriggerEvent(new ScoreSetEvent(scoreGet));

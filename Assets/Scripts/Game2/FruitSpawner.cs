@@ -36,7 +36,7 @@ public class FruitSpawner : MonoBehaviour {
 
             int itemIndex = Random.Range(0, itemPrefabs.Length);
 			GameObject spawnedFruit = Instantiate(itemPrefabs[itemIndex], spawnPoint.position, spawnPoint.rotation);
-			Destroy(spawnedFruit, 5f);
+			Destroy(spawnedFruit, 2f);
 		}
 	}
 
