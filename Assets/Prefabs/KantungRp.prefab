@@ -130,9 +130,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitSlicedPrefab: {fileID: 1077251510374660, guid: 5c94d6f4317dc6d4fb5a60b77a6a3afe,
     type: 2}
-  startForce: 12
+  startForce: 13
   scoreGet: 10
   durationCut: 0
+  rb: {fileID: 0}
 --- !u!212 &212325884171027362
 SpriteRenderer:
   m_ObjectHideFlags: 1

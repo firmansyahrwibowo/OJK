@@ -32,3 +32,26 @@ public enum OptionType {
     OPTION_C,
     OPTION_D,
 }
+
+public enum ObjectName {
+    DOLAR_SUAP, //0
+    BATIK, //1
+    BERLIAN, //2
+    EMAS, //3
+    GOLF, //4
+    JAM, //5
+    KADO, //6
+    KALUNG, //7
+    KANTUNG_DOLAR, //8
+    KANTUNG_RP, //9
+    KOIN, //10
+    KOPER, //11
+    PARCEL, //12
+    RAKET, //13
+    RP_SUAP, //14
+    VERBODEN_DOLAR, //15
+    VERBODEN_RP, //16
+    VOUCHER, //17
+
+    BLADE_TRAIL//18
+}

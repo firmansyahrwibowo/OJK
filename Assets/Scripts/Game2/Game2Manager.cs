@@ -19,6 +19,7 @@ public class Game2Manager : MonoBehaviour {
     bool _IsStart = false;
 
     FruitSpawner _Spawner;
+    Blade _Blade;
     // Use this for initialization
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class Game2Manager : MonoBehaviour {
         EventManager.AddListener<ScoreSetEvent>(SetScoreHandler);
 
         _Spawner = GetComponent<FruitSpawner>();
+        _Blade = GetComponentInChildren<Blade>();
     }
     private void Start()
     {
@@ -51,6 +53,7 @@ public class Game2Manager : MonoBehaviour {
         //StartCoroutine(spawnObject.SpawnFruits());
         _IsStart = true;
         _Spawner.InitSpawner();
+        _Blade.Init();
 
     }
 	
@@ -80,6 +83,7 @@ public class Game2Manager : MonoBehaviour {
     void GameEnd()
     {
         _Spawner.Reset();
+        _Blade.StopInit();
         durationFill.fillAmount = 0;
         Blade.SetActive(false);
         Spawner.SetActive(false);

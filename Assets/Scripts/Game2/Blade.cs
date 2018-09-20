@@ -17,61 +17,69 @@ public class Blade : MonoBehaviour {
 	Camera cam;
 	CircleCollider2D circleCollider;
 
-	void Start ()
+    bool _IsStart = false;
+    Transform _BladeParent;
+
+	void Awake ()
 	{
 		cam = Camera.main;
-		rb = GetComponent<Rigidbody2D>();
-		circleCollider = GetComponent<CircleCollider2D>();
+		//rb = GetComponent<Rigidbody2D>();
+		//circleCollider = GetComponent<CircleCollider2D>();
 	}
-
+    public void Init() {
+        _IsStart = true;
+    }
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
-		{
-			StartCutting();
-		} else if (Input.GetMouseButtonUp(0))
-		{
-			StopCutting();
-		}
+        if (_IsStart)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCutting();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                StopCutting();
+            }
 
-		if (isCutting)
-		{
-			UpdateCut();
-		}
-
+            if (isCutting)
+            {
+                UpdateCut();
+            }
+        }
 	}
 
 	void UpdateCut ()
 	{
 		Vector2 newPosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        rb.position = newPosition;
-
-		float velocity = (newPosition - previousPosition).magnitude * Time.deltaTime;
-		if (velocity > minCuttingVelocity)
-		{
-			circleCollider.enabled = true;
-		} else
-		{
-			circleCollider.enabled = false;
-		}
-
-		previousPosition = newPosition;
+        currentBladeTrail.transform.position = newPosition;
 	}
 
 	void StartCutting ()
 	{
 		isCutting = true;
-		currentBladeTrail = Instantiate(bladeTrailPrefab, transform);
+		currentBladeTrail = PoolingObject.Instance.GetPooledObject(ObjectName.BLADE_TRAIL); // Instantiate(bladeTrailPrefab, transform);
+        if (currentBladeTrail == null)
+            return;
+        _BladeParent = currentBladeTrail.transform.parent;
+        currentBladeTrail.transform.SetParent (transform);
+        currentBladeTrail.transform.localPosition = new Vector3(0, 0, 0);
+        currentBladeTrail.SetActive(true);
 		previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
-		circleCollider.enabled = false;
 	}
 
 	void StopCutting ()
 	{
 		isCutting = false;
-		currentBladeTrail.transform.SetParent(null);
-		Destroy(currentBladeTrail, 2f);
-		circleCollider.enabled = false;
+        if (currentBladeTrail == null)
+            return;
+
+        currentBladeTrail.transform.SetParent(_BladeParent);
+        currentBladeTrail.SetActive(false);
 	}
 
+
+    public void StopInit() {
+        _IsStart = false;
+    }
 }

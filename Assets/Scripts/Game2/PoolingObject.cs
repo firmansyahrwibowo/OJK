@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class PoolingData {
     public GameObject Object;
-    public string AlternName;
+    public ObjectName AlternName;
+    public int Amount;
 }
 
 public class PoolingObject : MonoBehaviour
@@ -16,8 +17,7 @@ public class PoolingObject : MonoBehaviour
     public static PoolingObject Instance;
     public List<PoolingData> pooledObject;
     public List<PoolingData> slicedObject;
-
-    public int pooledAmount = 20;
+    
     public bool willGrow = true;
     
     [SerializeField]
@@ -35,12 +35,12 @@ public class PoolingObject : MonoBehaviour
         _PooledObjects = new List<PoolingData>();
         for (int i = 0; i < pooledObject.Count; i++)
         {
-            for (int j = 0; j < pooledAmount; j++)
+            for (int j = 0; j < pooledObject[i].Amount; j++)
             {
                 GameObject obj = (GameObject)Instantiate(pooledObject[i].Object);
 				obj.transform.SetParent(transform);
                 obj.SetActive(false);
-                obj.name = pooledObject[i].AlternName;
+                obj.name = pooledObject[i].AlternName.ToString();
 
                 PoolingData data = new PoolingData();
                 data.Object = obj;
@@ -52,7 +52,7 @@ public class PoolingObject : MonoBehaviour
         _SlicedObjects = new List<PoolingData>();
         for (int i = 0; i < slicedObject.Count; i++)
         {
-            for (int j = 0; j < pooledAmount; j++)
+            for (int j = 0; j < slicedObject[i].Amount; j++)
             {
                 GameObject obj = (GameObject)Instantiate(slicedObject[i].Object);
                 obj.transform.SetParent(transform);
@@ -68,7 +68,7 @@ public class PoolingObject : MonoBehaviour
 			DonePooling();
     }
 
-    public GameObject GetPooledObject(string objName)
+    public GameObject GetPooledObject(ObjectName objName)
     {
         for (int i = 0; i < _PooledObjects.Count; i++)
         {
@@ -108,7 +108,7 @@ public class PoolingObject : MonoBehaviour
         {
             if (!_SlicedObjects[i].Object.activeInHierarchy)
             {
-                if (objName == _SlicedObjects[i].AlternName)
+                if (objName == _SlicedObjects[i].AlternName.ToString())
                 {
                     _SlicedObjects[i].Object.SetActive(true);
                     return _SlicedObjects[i].Object;

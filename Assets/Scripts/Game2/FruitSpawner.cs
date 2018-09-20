@@ -7,8 +7,8 @@ public class FruitSpawner : MonoBehaviour {
     //public GameObject[] itemPrefabs;
 	public Transform[] spawnPoints;
 
-	public float minDelay = .1f;
-	public float maxDelay = 1f;
+	public float minDelay = 0.1f;
+	public float maxDelay = 0.8f;
 
     Coroutine _LoopSpawner;
     bool _IsStart;
@@ -21,9 +21,7 @@ public class FruitSpawner : MonoBehaviour {
         _IsStart = true;
         _LoopSpawner = StartCoroutine(SpawnFruits());
 	}
-
-
-
+    
 	public IEnumerator SpawnFruits ()
 	{
 		while (_IsStart)
@@ -34,7 +32,7 @@ public class FruitSpawner : MonoBehaviour {
 			int spawnIndex = Random.Range(0, spawnPoints.Length);
 			Transform spawnPoint = spawnPoints[spawnIndex];
 
-            int itemIndex = Random.Range(0, 89);
+            int itemIndex = Random.Range(0, 53);
 
             GameObject slice = PoolingObject.Instance.GetRandom(itemIndex);
             if (slice != null)

@@ -7,7 +7,7 @@ using BismaEvent;
 public class Fruit : MonoBehaviour {
 
 	public GameObject fruitSlicedPrefab;
-	public float startForce = 15f;
+	public float startForce;
     public int scoreGet;
     public int durationCut;
     //private Game2Manager _GameManager;
@@ -23,7 +23,8 @@ public class Fruit : MonoBehaviour {
     }
     public void Init ()
     {
-        rb.AddForce(transform.up * startForce, ForceMode2D.Impulse);
+        float force = Random.Range(12.1f, 14.1f);
+        rb.AddForce(transform.up * force, ForceMode2D.Impulse);
     }
 
 	void OnTriggerEnter2D (Collider2D col)
@@ -34,7 +35,7 @@ public class Fruit : MonoBehaviour {
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;
-                slice.transform.localRotation = transform.localRotation;
+                //slice.transform.localRotation = transform.localRotation;
             }
             
 

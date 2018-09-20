@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4789421929750782}
   - component: {fileID: 212405492700628386}
-  - component: {fileID: 50649733601837582}
-  - component: {fileID: 60974379231407854}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -38,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152747451223566}
   - component: {fileID: 114286553604933010}
+  - component: {fileID: 95551775085027014}
   m_Layer: 0
   m_Name: KoperSliced
   m_TagString: Untagged
@@ -54,8 +53,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4389321844251904}
   - component: {fileID: 212770160056405094}
-  - component: {fileID: 50611688444045340}
-  - component: {fileID: 60977561627570600}
   m_Layer: 0
   m_Name: Item (1)
   m_TagString: Untagged
@@ -104,113 +101,23 @@ Transform:
   m_Father: {fileID: 4152747451223566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50611688444045340
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!95 &95551775085027014
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774212420576392}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!50 &50649733601837582
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076007036785408}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &60974379231407854
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076007036785408}
+  m_GameObject: {fileID: 1593082538241056}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.18, y: 1.04}
-    newSize: {x: 1.16, y: 1.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.48, y: 0.52}
-      - {x: -0.69, y: 0.52}
-      - {x: -1.54, y: 0.24}
-      - {x: -1.5699999, y: 0.22999999}
-      - {x: -1.5899999, y: 0.21}
-      - {x: -1.5899999, y: -0.52}
-      - {x: 1.5899999, y: -0.52}
-      - {x: 1.5899999, y: 0.24}
-      - {x: 0.5, y: 0.42}
-    - - {x: -0.29, y: 0.35}
-      - {x: 0.02, y: 0.35}
-      - {x: 0.28, y: 0.25}
-      - {x: -0.39, y: 0.25}
---- !u!60 &60977561627570600
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774212420576392}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.17, y: 1.03}
-    newSize: {x: 1.16, y: 1.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1.5849999, y: 0.515}
-      - {x: -1.5849999, y: -0.49499997}
-      - {x: -1.5749999, y: -0.515}
-      - {x: 1.5749999, y: -0.515}
-      - {x: 1.5849999, y: -0.49499997}
-      - {x: 1.5849999, y: 0.515}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f07c12e2f428e046abf58a8c9387dbb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114286553604933010
 MonoBehaviour:
   m_ObjectHideFlags: 1
