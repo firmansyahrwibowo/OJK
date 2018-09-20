@@ -55,6 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349721159148548}
+  - component: {fileID: 114074274844957524}
   m_Layer: 0
   m_Name: VerbodenRpSliced
   m_TagString: Untagged
@@ -232,6 +233,17 @@ PolygonCollider2D:
       - {x: -0.19, y: -0.19999999}
       - {x: 0.11, y: -0.24}
       - {x: 0.42, y: -0.32}
+--- !u!114 &114074274844957524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964729168051362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba192047dce454695e44b665337cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212518997880148860
 SpriteRenderer:
   m_ObjectHideFlags: 1

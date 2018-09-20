@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4003119933161012}
+  - component: {fileID: 114448672956383600}
   m_Layer: 0
   m_Name: KadoSliced
   m_TagString: Untagged
@@ -222,6 +223,17 @@ PolygonCollider2D:
       - {x: 1.145, y: 0.48499998}
       - {x: -1.165, y: 0.48499998}
       - {x: -1.165, y: -0.48499998}
+--- !u!114 &114448672956383600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002128250906494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba192047dce454695e44b665337cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212129499328440662
 SpriteRenderer:
   m_ObjectHideFlags: 1
