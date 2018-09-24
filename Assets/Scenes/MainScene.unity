@@ -3841,14 +3841,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quizList:
-  - question: How do you create a folder in c#?
+  - question: 'Apa kepanjangan OJK? '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-    - answer: You'll learn everything you need
+    - answer: 'Organisasi Jasa Keuangan '
       isTrue: 1
+    - answer: SALAH
+      isTrue: 0
+    - answer: SALAH
+      isTrue: 0
     - answer: SALAH
       isTrue: 0
   - question: Unity uses Mono, System.IO is part of Mono
@@ -4082,10 +4082,12 @@ MonoBehaviour:
   _ScoreText: {fileID: 2131084981}
   _ImageFill: {fileID: 33291432}
   _BattleObject: {fileID: 1022734271}
-  _Speed: 35
-  _FillSpeed: 0.05
-  _IncreaseSpeed: 80
-  _IncreaseFillSpeed: 0.1
+  _Speed: 5
+  _FillSpeed: 0.005
+  _IncreaseSpeed: 100
+  _IncreaseFillSpeed: 0.15
+  _DecreaseSpeed: 80
+  _DecreaseFillSpeed: 0.1
 --- !u!1 &1314886360
 GameObject:
   m_ObjectHideFlags: 0

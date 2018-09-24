@@ -73,13 +73,16 @@ public class Game1Manager : MonoBehaviour {
     float _IncreaseSpeed = 15f;
     [SerializeField]
     float _IncreaseFillSpeed = 0.1f;
+    [SerializeField]
+    float _DecreaseSpeed = 10f;
+    [SerializeField]
+    float _DecreaseFillSpeed = 0.1f;
 
     int _WaitingTime = 1;
     bool _isWaiting = false;
-
-    float _VelocityValue = 0;
-    float _FillVelocityValue = 0;
+    
     bool _IsStart = false;
+    bool _IsTrueAnswer = false;
     Coroutine _AddValue;
 
     private void Awake()
@@ -176,6 +179,7 @@ public class Game1Manager : MonoBehaviour {
     }
 
     void ThrowAnswer(bool isTrue) {
+        _IsTrueAnswer = isTrue;
         if (isTrue)
         {
             _isWaiting = true;
@@ -184,13 +188,17 @@ public class Game1Manager : MonoBehaviour {
             _BenarPopUp.SetActive(true);
             _ScorePoint += 20;
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
-            StartCoroutine(TrueAnswerWaiting());
+            StartCoroutine(AnswerWaiting());
         }
         else
         {
+            _isWaiting = true;
             _FalseAnswer++;
             Debug.Log("FALSE");
+            _ScorePoint -= 10;
+            _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             _SalahPopUp.SetActive(true);
+            StartCoroutine(AnswerWaiting());
         }
 
         EventManager.TriggerEvent(new HoldOnEvent(true));
@@ -241,8 +249,6 @@ public class Game1Manager : MonoBehaviour {
 
         _ImageFill.fillAmount = 0.5f;
         _IsStart = true;
-        _VelocityValue = 0;
-        _FillVelocityValue = 0;
         _ScorePoint = 0;
         _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
         _isWaiting = false;
@@ -257,13 +263,21 @@ public class Game1Manager : MonoBehaviour {
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             if (!_isWaiting)
             {
-                _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - ((_Speed + _VelocityValue) * Time.deltaTime), _BattleObject.anchoredPosition.y);
-                _ImageFill.fillAmount -= ((0.05f + _FillVelocityValue) * Time.deltaTime);
+                _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - (_Speed * Time.deltaTime), _BattleObject.anchoredPosition.y);
+                _ImageFill.fillAmount -= (_FillSpeed  * Time.deltaTime);
             }
             else
             {
-                _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x + _IncreaseSpeed * Time.deltaTime, _BattleObject.anchoredPosition.y);
-                _ImageFill.fillAmount += _IncreaseFillSpeed * Time.deltaTime;
+                if (_IsTrueAnswer)
+                {
+                    _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x + _IncreaseSpeed * Time.deltaTime, _BattleObject.anchoredPosition.y);
+                    _ImageFill.fillAmount += _IncreaseFillSpeed * Time.deltaTime;
+                }
+                else
+                {
+                    _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - _DecreaseSpeed * Time.deltaTime, _BattleObject.anchoredPosition.y);
+                    _ImageFill.fillAmount -= _DecreaseFillSpeed * Time.deltaTime;
+                }
             }
 
             if (_ImageFill.fillAmount <= 0)
@@ -278,20 +292,11 @@ public class Game1Manager : MonoBehaviour {
         }
     }
 
-    IEnumerator TrueAnswerWaiting()
+    IEnumerator AnswerWaiting()
     {
         yield return new WaitForSeconds(1);
         _isWaiting = false;
-    }
-
-    //IEnumerator IncreaseValue() {
-    //    while (_IsStart)
-    //    {
-    //        yield return new WaitForSeconds(5);
-    //        _FillVelocityValue += 0.05f;
-    //        _VelocityValue += 5;
-    //    }
-    //}
+    } 
 
     void GameEnd()
     {
@@ -299,9 +304,6 @@ public class Game1Manager : MonoBehaviour {
 
         if (_AddValue != null)
             StopCoroutine(_AddValue);
-
-        _VelocityValue = 0;
-        _FillVelocityValue = 0;
 
         //BUAT NAMPILIN POP UP SCORE
         EventManager.TriggerEvent(new PopUpScoreEvent(new HighScore("JOKO", Mathf.FloorToInt(_ScorePoint).ToString())));

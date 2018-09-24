@@ -24,8 +24,7 @@ public class MainManager : MonoBehaviour {
     GameObject _Tutorial1;
     [SerializeField]
     GameObject _Tutorial2;
-
-
+    
     //GAME 2
     [Header("Game 2 Component")]
     [SerializeField]

@@ -26,6 +26,7 @@ public class Blade : MonoBehaviour {
 		//rb = GetComponent<Rigidbody2D>();
 		//circleCollider = GetComponent<CircleCollider2D>();
 	}
+
     public void Init() {
         _IsStart = true;
     }
