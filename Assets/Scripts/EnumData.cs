@@ -10,9 +10,13 @@ public enum ButtonType
 }
 public enum CharacterType
 {
-    DODO, NINA
+    DODO, NINA, ENEMY
 }
 
+public enum ResultType
+{
+    WIN, LOSE
+}
 public enum GameType
 {
     GAME_1, GAME_2

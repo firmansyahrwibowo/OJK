@@ -305,6 +305,12 @@ public class Game1Manager : MonoBehaviour {
         if (_AddValue != null)
             StopCoroutine(_AddValue);
 
+        //CHARACTER RESULT OBJECT
+        if (_ImageFill.fillAmount >= 0.5f)
+            EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
+        else
+            EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
+
         //BUAT NAMPILIN POP UP SCORE
         EventManager.TriggerEvent(new PopUpScoreEvent(new HighScore("JOKO", Mathf.FloorToInt(_ScorePoint).ToString())));
     }

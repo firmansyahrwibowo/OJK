@@ -58,3 +58,22 @@ public class PopUpScoreEvent : GameEvent {
         this.highScore = highScore;
     }
 }
+
+public class InitCharacterManagerEvent : GameEvent
+{
+    public CharacterType Type;
+
+    public InitCharacterManagerEvent(CharacterType type)
+    {
+        Type = type;
+    }
+}
+public class ResultCharacterEvent : GameEvent
+{
+    public ResultType Type;
+
+    public ResultCharacterEvent(ResultType type)
+    {
+        Type = type;
+    }
+}

@@ -113,6 +113,8 @@ public class MainManager : MonoBehaviour {
             case ObjectType.PLAY_GAME:
                 if (GameSelected == GameType.GAME_1)
                 {
+                    EventManager.TriggerEvent(new InitCharacterManagerEvent(CharacterSelected));
+
                     _Tutorial1.SetActive(false);
                     _Game1.SetActive(true);
                     _Game1Manager.Init();

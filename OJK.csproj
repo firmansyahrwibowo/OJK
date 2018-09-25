@@ -291,6 +291,7 @@
     <Compile Include="Assets\Scripts\EventBisma.cs" />
     <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\Events.cs" />
+    <Compile Include="Assets\Scripts\Game1\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Game1\DisableNotificationPopUp.cs" />
     <Compile Include="Assets\Scripts\Game1\Game1Manager.cs" />
     <Compile Include="Assets\Scripts\Game1\OptionData.cs" />
