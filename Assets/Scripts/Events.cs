@@ -51,11 +51,13 @@ public class HoldOnEvent : GameEvent {
 }
 
 public class PopUpScoreEvent : GameEvent {
-    public HighScore highScore;
+    public string Score;
+    public bool IsGame1;
 
-    public PopUpScoreEvent(HighScore highScore)
+    public PopUpScoreEvent(string score, bool isGame1)
     {
-        this.highScore = highScore;
+        Score = score;
+        IsGame1 = isGame1;
     }
 }
 
@@ -76,4 +78,42 @@ public class ResultCharacterEvent : GameEvent
     {
         Type = type;
     }
+}
+public class SFXPlayEvent : GameEvent
+{
+    public SfxType Sfx;
+    public bool IsEnd;
+
+    public SFXPlayEvent(SfxType sfx, bool isEnd)
+    {
+        Sfx = sfx;
+        IsEnd = isEnd;
+    }
+}
+public class KeyboardTypeEvent : GameEvent
+{
+    public string KeyCode;
+
+    public KeyboardTypeEvent(string keyCode)
+    {
+        KeyCode = keyCode;
+    }
+}
+public class KeyboardInitEvent : GameEvent
+{
+
+}
+public class ShowRecordEvent : GameEvent
+{
+    public List<HighScore> HighScore;
+
+    public ShowRecordEvent(List<HighScore> highScore)
+    {
+        HighScore = highScore;
+    }
+}
+
+public class CloseRecordEvent : GameEvent
+{
+
 }

@@ -111,6 +111,9 @@ public class MainManager : MonoBehaviour {
                 }
                 break;
             case ObjectType.PLAY_GAME:
+                EventManager.TriggerEvent(new KeyboardInitEvent());
+
+                EventManager.TriggerEvent(new SFXPlayEvent(SfxType.START_GAME, true));
                 if (GameSelected == GameType.GAME_1)
                 {
                     EventManager.TriggerEvent(new InitCharacterManagerEvent(CharacterSelected));

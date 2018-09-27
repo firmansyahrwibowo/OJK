@@ -59,3 +59,11 @@ public enum ObjectName {
 
     BLADE_TRAIL//18
 }
+
+public enum OrderType {
+    ASCENDING, DESCENDING
+}
+public enum DataType
+{
+    STRING, FLOAT
+}

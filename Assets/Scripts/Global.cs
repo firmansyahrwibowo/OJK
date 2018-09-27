@@ -7,7 +7,7 @@ using UnityEngine;
 
 public static class Global {
 
-    
+    public static string PlayerName = "";
 
     #region ARRAY_JSON
     public static class JsonHelper

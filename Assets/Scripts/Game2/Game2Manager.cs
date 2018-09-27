@@ -89,6 +89,6 @@ public class Game2Manager : MonoBehaviour {
         Spawner.SetActive(false);
         //GameOver.GetComponent<Text>().text = "GAME OVER YOUR SCORE : "+Score.ToString();
         //GameOver.SetActive(true);
-        EventManager.TriggerEvent(new PopUpScoreEvent(new HighScore("xx", Score.ToString())));
+        EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
     }
 }

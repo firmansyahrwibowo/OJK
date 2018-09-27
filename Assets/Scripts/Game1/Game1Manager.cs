@@ -189,6 +189,8 @@ public class Game1Manager : MonoBehaviour {
             _ScorePoint += 20;
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             StartCoroutine(AnswerWaiting());
+
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.BENAR, false));
         }
         else
         {
@@ -199,6 +201,8 @@ public class Game1Manager : MonoBehaviour {
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             _SalahPopUp.SetActive(true);
             StartCoroutine(AnswerWaiting());
+
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.SALAH, false));
         }
 
         EventManager.TriggerEvent(new HoldOnEvent(true));
@@ -307,12 +311,18 @@ public class Game1Manager : MonoBehaviour {
 
         //CHARACTER RESULT OBJECT
         if (_ImageFill.fillAmount >= 0.5f)
+        {
             EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, false));
+        }
         else
+        {
             EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, false));
+        }
 
         //BUAT NAMPILIN POP UP SCORE
-        EventManager.TriggerEvent(new PopUpScoreEvent(new HighScore("JOKO", Mathf.FloorToInt(_ScorePoint).ToString())));
+        EventManager.TriggerEvent(new PopUpScoreEvent(Mathf.FloorToInt(_ScorePoint).ToString(), true));
     }
 
     void WinningBonus()

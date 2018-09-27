@@ -17,11 +17,11 @@ public class HighScore {
 }
 
 public class Backeend : MonoBehaviour {
+    
+    public List<HighScore> _Game1HighScore = new List<HighScore>();
+    public List<HighScore> _Game2HighScore = new List<HighScore>();
 
-    [SerializeField]
-    private List<HighScore> _Game1HighScore = new List<HighScore>();
-    [SerializeField]
-    private List<HighScore> _Game2HighScore = new List<HighScore>();
+    HighScore[] _HighScoreArray;
 
     string _BackeendDir = "_Data";
 
@@ -43,32 +43,43 @@ public class Backeend : MonoBehaviour {
         string fileName = "";
         string filePath = "";
         string json = "";
-        
-        if (e.IsGame1)
-            fileName = "Game1HighScore.fyr";
-        else
-            fileName = "Game2HighScore.fyr";
 
+        if (e.IsGame1)
+        {
+            fileName = "Game1HighScore.fyr";
+            _Game1HighScore.Add(e.highScore);
+            _HighScoreArray = _Game1HighScore.ToArray();
+
+            MySort(OrderType.DESCENDING, DataType.FLOAT);
+        }
+        else
+        {
+            fileName = "Game2HighScore.fyr";
+            _Game2HighScore.Add(e.highScore);
+            _HighScoreArray = _Game2HighScore.ToArray();
+
+            MySort(OrderType.ASCENDING, DataType.FLOAT);
+        }
 
         filePath = _BackeendDir +"/"+fileName;
 
-        //Game1HighScore.Add(data);
-        json = JsonHelper.ToJson(_Game1HighScore.ToArray(), true);        //JsonUtility.ToJson(scoreData);
 
+        json = JsonHelper.ToJson(_HighScoreArray, true);        //JsonUtility.ToJson(scoreData);
         File.WriteAllText(filePath, json);
-        
+
+        LoadAllHighScore();
     }
     #endregion
 
     #region LOAD
     public void LoadAllHighScore( )
     {
-        string path = "";
+        string filePath = "";
         string fileName = "";
         
         fileName = "Game1HighScore.fyr";
         
-        string filePath = _BackeendDir + "/" + fileName;
+        filePath = _BackeendDir + "/" + fileName;
 
         if (File.Exists(filePath))
         {
@@ -78,9 +89,55 @@ public class Backeend : MonoBehaviour {
             _Game1HighScore = highScore.ToList();
         }
 
+        fileName = "Game2HighScore.fyr";
+
+        filePath = _BackeendDir + "/" + fileName;
+
+        if (File.Exists(filePath))
+        {
+            _Game2HighScore = new List<HighScore>();
+            string json = File.ReadAllText(filePath);
+            HighScore[] highScore = JsonHelper.FromJson<HighScore>(json);
+            _Game2HighScore = highScore.ToList();
+        }
     }
     #endregion
 
+    #region SORTING
+    void MySort (OrderType Order, DataType By)
+    {
+        if (Order == OrderType.ASCENDING)
+        {
+            if (By == DataType.STRING)
+            {
+                System.Array.Sort(_HighScoreArray, delegate (HighScore thing1, HighScore thing2) {
+                    return thing1.NamePlayer.CompareTo(thing2.NamePlayer);
+                });
+            }
+            else if (By == DataType.FLOAT)
+            {
+                System.Array.Sort(_HighScoreArray, delegate (HighScore thing1, HighScore thing2) {
+                    return Int32.Parse(thing1.Score).CompareTo(Int32.Parse(thing2.Score));
+                });
+            }
+        }
+        else
+        {
+            if (By == DataType.STRING)
+            {
+                System.Array.Sort(_HighScoreArray, delegate (HighScore thing1, HighScore thing2) {
+                    return thing2.NamePlayer.CompareTo(thing1.NamePlayer);
+                });
+            }
+            else if (By == DataType.FLOAT)
+            {
+                System.Array.Sort(_HighScoreArray, delegate (HighScore thing1, HighScore thing2) {
+                    return Int32.Parse(thing2.Score).CompareTo(Int32.Parse(thing1.Score));
+                });
+            }
+        }
+    }
+    #endregion
     #region ARRAY_JSON
     public class JsonHelper
     {
