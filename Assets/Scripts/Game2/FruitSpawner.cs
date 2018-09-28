@@ -7,8 +7,8 @@ public class FruitSpawner : MonoBehaviour {
     //public GameObject[] itemPrefabs;
 	public Transform[] spawnPoints;
 
-	public float minDelay = 0.1f;
-	public float maxDelay = 0.8f;
+	private float minDelay = 0.1f;
+	private float maxDelay = 1.0f;
 
     Coroutine _LoopSpawner;
     bool _IsStart;
