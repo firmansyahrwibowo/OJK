@@ -75,13 +75,10 @@ public class MainManager : MonoBehaviour {
                 _Game2.SetActive(false);
                 break;
             case ObjectType.SELECT_CHARACTER:
-                _MainMenu.SetActive(false);
                 _SelectGame.SetActive(false);
-
                 _SelectCharacter.SetActive(true);
                 break;
             case ObjectType.SELECT_GAME:
-                _MainMenu.SetActive(false);
                 _SelectCharacter.SetActive(false);
                 _SelectGame.SetActive(true);
                 break;

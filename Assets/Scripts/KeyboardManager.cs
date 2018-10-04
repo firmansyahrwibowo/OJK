@@ -47,7 +47,7 @@ public class KeyboardManager : MonoBehaviour {
             case "ENTER":
                 if (Global.PlayerName == "")
                     return;
-                _KeyboardObject.SetActive(false);
+                //_KeyboardObject.SetActive(false);
                 //DONE N SAVE
                 break;
             default:

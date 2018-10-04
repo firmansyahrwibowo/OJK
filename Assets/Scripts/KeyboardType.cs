@@ -15,7 +15,7 @@ public class KeyboardType : MonoBehaviour
     void Awake ()
     {
         _ThisImage = GetComponent<Image>();
-        _ThisImage.color = new Color(0, 0, 0, 1);
+        _ThisImage.color = new Color(1, 1, 1, 1);
         gameObject.AddComponent<Button>().onClick.AddListener(delegate
         {
             KeyboardClick();
@@ -53,11 +53,11 @@ public class KeyboardType : MonoBehaviour
     {
         if (isClick)
         {
-            _ThisImage.color = new Color(0, 0, 0, 0.5f);
+            _ThisImage.color = new Color(1, 1, 1, 0.5f);
         }
         else
         {
-            _ThisImage.color = new Color(0, 0, 0, 1);
+            _ThisImage.color = new Color(1, 1, 1, 1);
         }
     }
 }

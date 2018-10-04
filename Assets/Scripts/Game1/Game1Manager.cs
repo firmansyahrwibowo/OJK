@@ -259,8 +259,6 @@ public class Game1Manager : MonoBehaviour {
     {
         if (_IsStart)
         {
-            _ScorePoint += 2 * Time.deltaTime;
-            _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             if (!_isWaiting)
             {
                 _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - (_Speed * Time.deltaTime), _BattleObject.anchoredPosition.y);

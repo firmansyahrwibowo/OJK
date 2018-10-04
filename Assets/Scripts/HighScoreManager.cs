@@ -63,6 +63,8 @@ public class HighScoreManager : MonoBehaviour {
 
     private void SelesaiButtonHandler()
     {
+        if (Global.PlayerName == "")
+            return;
         _UIScore.SetActive(false);
         EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.MAIN_MENU));
         EventManager.TriggerEvent(new SaveHighScoreEvent(new HighScore(Global.PlayerName, _Score), _IsGame1));
