@@ -9,7 +9,7 @@ public class Blade : MonoBehaviour {
 
 	bool isCutting = false;
 
-	Vector2 previousPosition;
+	//Vector2 previousPosition;
 
 	GameObject currentBladeTrail;
 
@@ -66,7 +66,7 @@ public class Blade : MonoBehaviour {
         currentBladeTrail.transform.SetParent (transform);
         currentBladeTrail.transform.localPosition = new Vector3(0, 0, 0);
         currentBladeTrail.SetActive(true);
-		previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+		//previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 	}
 
 	void StopCutting ()

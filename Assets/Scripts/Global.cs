@@ -8,6 +8,7 @@ using UnityEngine;
 public static class Global {
 
     public static string PlayerName = "";
+    public static bool IsPause = false;
 
     #region ARRAY_JSON
     public static class JsonHelper

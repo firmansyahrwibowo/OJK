@@ -77,13 +77,11 @@ public class Game1Manager : MonoBehaviour {
     float _DecreaseSpeed = 10f;
     [SerializeField]
     float _DecreaseFillSpeed = 0.1f;
-
-    int _WaitingTime = 1;
+    
     bool _isWaiting = false;
     
     bool _IsStart = false;
     bool _IsTrueAnswer = false;
-    Coroutine _AddValue;
 
     private void Awake()
     {
@@ -248,8 +246,6 @@ public class Game1Manager : MonoBehaviour {
     #region BATTLE
     void InitBattle()
     {
-        if (_AddValue != null)
-            StopCoroutine(_AddValue);
 
         _ImageFill.fillAmount = 0.5f;
         _IsStart = true;
@@ -305,10 +301,7 @@ public class Game1Manager : MonoBehaviour {
     void GameEnd()
     {
         _IsStart = false;
-
-        if (_AddValue != null)
-            StopCoroutine(_AddValue);
-
+        
         //CHARACTER RESULT OBJECT
         if (_ImageFill.fillAmount >= 0.5f)
         {

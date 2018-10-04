@@ -47,9 +47,11 @@ public class ButtonManager : MonoBehaviour {
     GameObject _SkipTutorial2;
 
     Backeend _Backend;
+    PauseManager _PauseManager;
     // Use this for initialization
     void Awake () {
         _Backend = GetComponent<Backeend>();
+        _PauseManager = GetComponent<PauseManager>();
 
         //MAIN MENU
         _StartGameBtn.AddComponent<Button>().onClick.AddListener(delegate {
@@ -150,5 +152,15 @@ public class ButtonManager : MonoBehaviour {
     {
         Application.Quit();
         Debug.Log("Exit");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape)) {
+            if (!Global.IsPause)
+                _PauseManager.PauseHandler(true);
+            else
+                _PauseManager.PauseHandler(false);
+        }
     }
 }
