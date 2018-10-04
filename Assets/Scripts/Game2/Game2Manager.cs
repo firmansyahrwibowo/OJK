@@ -5,33 +5,42 @@ using UnityEngine.UI;
 using BismaEvent;
 using System;
 
-public class Game2Manager : MonoBehaviour {
+public class Game2Manager : MonoBehaviour
+{
 
     public Text scoreText;
     public int Score;
     public Image durationFill;
-    private float timeAmount=80;
+    private float timeAmount = 80;
     public float time;
     public GameObject GameOver;
     public GameObject Blade;
     public GameObject Spawner;
+    public GameObject Dodo;
+    public GameObject Nina;
+    public GameObject Enemy;
+    public CharacterType Type;
 
     bool _IsStart = false;
 
     FruitSpawner _Spawner;
     Blade _Blade;
+    Animator m_AnimatorDodo, m_AnimatorNina, m_AnimatorEnemy;
     // Use this for initialization
     private void Awake()
     {
         EventManager.AddListener<DurationCutEvent>(CutEventHandler);
         EventManager.AddListener<ScoreSetEvent>(SetScoreHandler);
-
+        EventManager.AddListener<InitCharacterManagerEvent>(InitCharacterManager);
         _Spawner = GetComponent<FruitSpawner>();
         _Blade = GetComponentInChildren<Blade>();
     }
     private void Start()
     {
         PoolingObject.Instance.InitPooling();
+        m_AnimatorDodo = Dodo.GetComponent<Animator>();
+        m_AnimatorNina = Nina.GetComponent<Animator>();
+        m_AnimatorEnemy = Enemy.GetComponent<Animator>();
     }
     private void SetScoreHandler(ScoreSetEvent e)
     {
@@ -43,7 +52,7 @@ public class Game2Manager : MonoBehaviour {
         time -= e.Value;
     }
 
-    public void Init ()
+    public void Init()
     {
         Score = 0;
         time = timeAmount;
@@ -54,14 +63,16 @@ public class Game2Manager : MonoBehaviour {
         _IsStart = true;
         _Spawner.InitSpawner();
         _Blade.Init();
-
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         if (_IsStart)
         {
+            m_AnimatorDodo.SetBool("IsPlay", true);
+            m_AnimatorNina.SetBool("IsPlay", true);
+            m_AnimatorEnemy.SetBool("IsPlay", true);
             if (Score <= 0)
             {
                 Score = 0;
@@ -78,7 +89,7 @@ public class Game2Manager : MonoBehaviour {
                 GameEnd();
             }
         }
-	}
+    }
 
     void GameEnd()
     {
@@ -90,5 +101,32 @@ public class Game2Manager : MonoBehaviour {
         //GameOver.GetComponent<Text>().text = "GAME OVER YOUR SCORE : "+Score.ToString();
         //GameOver.SetActive(true);
         EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
+        //m_AnimatorDodo.SetBool("IsPlay", false);
+        //m_AnimatorNina.SetBool("IsPlay", false);
+        m_AnimatorEnemy.SetBool("IsPlay", false);
+        if (Score>=300)
+        {
+            m_AnimatorDodo.SetBool("IsWin", true);
+            m_AnimatorNina.SetBool("IsWin", true);
+        }
+        else
+        {
+            m_AnimatorDodo.SetBool("IsLose", true);
+            m_AnimatorNina.SetBool("IsLose", true);
+        }
+    }
+
+    void InitCharacterManager(InitCharacterManagerEvent e)
+    {
+        if (e.Type == 0)
+        {
+            Dodo.SetActive(true);
+            Enemy.SetActive(true);
+        }
+        else
+        {
+            Nina.SetActive(true);
+            Enemy.SetActive(true);
+        }
     }
 }

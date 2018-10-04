@@ -1,8 +1,20 @@
 {
     "data": [
         {
+            "NamePlayer": "ME",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "BAT",
+            "Score": "337"
+        },
+        {
             "NamePlayer": "FIRST",
             "Score": "367"
+        },
+        {
+            "NamePlayer": "YEAH",
+            "Score": "840"
         }
     ]
 }

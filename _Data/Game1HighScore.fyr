@@ -1,6 +1,10 @@
 {
     "data": [
         {
+            "NamePlayer": "TRY",
+            "Score": "230"
+        },
+        {
             "NamePlayer": "RERE",
             "Score": "221"
         },
@@ -25,8 +29,8 @@
             "Score": "198"
         },
         {
-            "NamePlayer": "HUJ",
-            "Score": "194"
+            "NamePlayer": "TEST",
+            "Score": "197"
         },
         {
             "NamePlayer": "TYUIOP",
@@ -34,6 +38,10 @@
         },
         {
             "NamePlayer": "YU",
+            "Score": "194"
+        },
+        {
+            "NamePlayer": "HUJ",
             "Score": "194"
         },
         {

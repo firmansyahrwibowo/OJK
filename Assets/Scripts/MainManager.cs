@@ -124,6 +124,8 @@ public class MainManager : MonoBehaviour {
                 }
                 else
                 {
+                    EventManager.TriggerEvent(new InitCharacterManagerEvent(CharacterSelected));
+
                     _Tutorial2.SetActive(false);
                     _Game2.SetActive(true);
                     _Game2Manager.Init();
