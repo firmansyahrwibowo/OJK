@@ -67,7 +67,7 @@ public class Fruit : MonoBehaviour {
 
     IEnumerator DestroyThis()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }
 

@@ -34,13 +34,13 @@ public class Game2Manager : MonoBehaviour
         EventManager.AddListener<InitCharacterManagerEvent>(InitCharacterManager);
         _Spawner = GetComponent<FruitSpawner>();
         _Blade = GetComponentInChildren<Blade>();
+        m_AnimatorDodo = Dodo.GetComponent<Animator>();
+        m_AnimatorNina = Nina.GetComponent<Animator>();
+        m_AnimatorEnemy = Enemy.GetComponent<Animator>();
     }
     private void Start()
     {
         PoolingObject.Instance.InitPooling();
-        m_AnimatorDodo = Dodo.GetComponent<Animator>();
-        m_AnimatorNina = Nina.GetComponent<Animator>();
-        m_AnimatorEnemy = Enemy.GetComponent<Animator>();
     }
     private void SetScoreHandler(ScoreSetEvent e)
     {
@@ -118,6 +118,13 @@ public class Game2Manager : MonoBehaviour
 
     void InitCharacterManager(InitCharacterManagerEvent e)
     {
+        Dodo.SetActive(false);
+        Nina.SetActive(false);
+        Enemy.SetActive(false);
+        m_AnimatorDodo.SetBool("IsWin", false);
+        m_AnimatorNina.SetBool("IsWin", false);
+        m_AnimatorDodo.SetBool("IsLose", false);
+        m_AnimatorNina.SetBool("IsLose", false);
         if (e.Type == 0)
         {
             Dodo.SetActive(true);
