@@ -10,16 +10,19 @@ public class Fruit : MonoBehaviour {
 	public float startForce;
     public int scoreGet;
     public int durationCut;
-    //private Game2Manager _GameManager;
+    private Game2Manager _GameManager;
 	public Rigidbody2D rb;
 
     Coroutine _ThisCoroutine;
     Coroutine _SlashedCoroutine;
-    
+
+    //Animator m_AnimatorDodo, m_AnimatorNina;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        //m_AnimatorDodo = _GameManager.GetComponent<Animator>();
+        //m_AnimatorNina = _GameManager.GetComponent<Animator>();
     }
     public void Init ()
     {
@@ -35,9 +38,11 @@ public class Fruit : MonoBehaviour {
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;
-                //slice.transform.localRotation = transform.localRotation;
+                slice.transform.localRotation = transform.localRotation;
+                //m_AnimatorDodo.SetBool("IsPlay", true);
+                //m_AnimatorNina.SetBool("IsPlay", true);
             }
-            
+
 
             //GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
             //Destroy(slicedFruit, 1f);
