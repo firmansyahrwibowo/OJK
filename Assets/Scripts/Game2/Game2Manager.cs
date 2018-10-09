@@ -27,6 +27,8 @@ public class Game2Manager : MonoBehaviour
     public GameObject EnemyLose;
     public CharacterType Type;
     public int CharacterPick;
+    public Game1Manager GameManager1;
+    public List<Quiz> Game2Quiz;
 
     bool _IsStart = false;
 
@@ -39,15 +41,23 @@ public class Game2Manager : MonoBehaviour
         EventManager.AddListener<DurationCutEvent>(CutEventHandler);
         EventManager.AddListener<ScoreSetEvent>(SetScoreHandler);
         EventManager.AddListener<InitCharacterManagerEvent>(InitCharacterManager);
+
         _Spawner = GetComponent<FruitSpawner>();
         _Blade = GetComponentInChildren<Blade>();
+
         m_AnimatorDodo = Dodo.GetComponent<Animator>();
         m_AnimatorNina = Nina.GetComponent<Animator>();
         m_AnimatorEnemy = Enemy.GetComponent<Animator>();
+
+        for (int i = 0; i < GameManager1._quizList.Count; i++)
+        {
+            Game2Quiz.Add(GameManager1._quizList[i]);
+        }
     }
     private void Start()
     {
         PoolingObject.Instance.InitPooling();
+        
     }
     private void SetScoreHandler(ScoreSetEvent e)
     {
@@ -111,7 +121,6 @@ public class Game2Manager : MonoBehaviour
         durationFill.fillAmount = 0;
         Spawner.SetActive(false);
         EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
-        m_AnimatorEnemy.SetBool("IsPlay", false);
         Dodo.SetActive(false);
         Nina.SetActive(false);
         Enemy.SetActive(false);
