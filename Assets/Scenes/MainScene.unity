@@ -452,74 +452,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &33291430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 33291431}
-  - component: {fileID: 33291433}
-  - component: {fileID: 33291432}
-  m_Layer: 5
-  m_Name: MainBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &33291431
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.01, y: 1.4139699, z: 1.0099999}
-  m_Children: []
-  m_Father: {fileID: 1896314388}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -11.2, y: -13.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &33291432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.29411766, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9eb0025aaa999db42ba56dea616111ce, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 0.5
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &33291433
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
 --- !u!1 &41012910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5386,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 852516011}
-  - {fileID: 1896314388}
   m_Father: {fileID: 1023541319}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8860,7 +8791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1023541319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11775,230 +11706,369 @@ MonoBehaviour:
   _quizList:
   - question: 'Apa kepanjangan OJK? '
     option:
-    - answer: 'Organisasi Jasa Keuangan '
+    - answer: Organisasi Jasa Keuangan
+      isTrue: 0
+    - answer: Otoritas Jaga Korupsi
+      isTrue: 0
+    - answer: Otoritas Jasa Keuangan
       isTrue: 1
-    - answer: SALAH
+    - answer: Ormas Jasa Keuangan
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Unity uses Mono, System.IO is part of Mono
+  - question: 'Apa dasar hukum pembentukan OJK? '
     option:
-    - answer: Then, if you want to create a Folder
+    - answer: UU Nomor 21 Tahun 2011
       isTrue: 1
-    - answer: SALAH
+    - answer: UU Nomor 20 Tahun 2011
       isTrue: 0
-    - answer: SALAH
+    - answer: UU Nomor 20 Tahun 2001
       isTrue: 0
-    - answer: SALAH
+    - answer: UU Nomor 30 Tahun 2002
       isTrue: 0
-  - question: The best place to ask and answer questions about development with Unity.
+  - question: Berikut ini adalah Lembaga Jasa Keuangan yang diatur dan diawasi OJK,
+      kecuali ...
     option:
-    - answer: SALAH
+    - answer: Bank
       isTrue: 0
-    - answer: SALAH
+    - answer: Perusahaan Efek
       isTrue: 0
-    - answer: SALAH
+    - answer: Perusahaan Asuransi
       isTrue: 0
-    - answer: About handling files and folders
+    - answer: UMKM
       isTrue: 1
-  - question: To help users navigate the site we have posted a site navigation guide.
+  - question: 'Berapa jumlah Anggota Dewan Komisioner OJK? '
     option:
-    - answer: Then, if you want to create a Folder
+    - answer: 6 orang
+      isTrue: 0
+    - answer: 7 orang
+      isTrue: 0
+    - answer: 8 orang
+      isTrue: 0
+    - answer: 9 orang
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: If you are a moderator, see our Moderator Guidelines page.
+  - question: 'Berikut ini adalah tujuan pembentukan OJK, kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Menjaga keseluruhan kegiatan di dalam sektor jasa keuangan terselenggara
+        secara teratur, adil, transparan, akuntabel
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Mewujudkan sistem keuangan yang tumbuh secara berkelanjutan dan stabil
+      isTrue: 0
+    - answer: Melindungi kepentingan konsumen maupun masyarakat
+      isTrue: 0
+    - answer: Menjaga stabilitas nilai rupiah
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: 'This is the classic example of what not to do!! This will produce highly
-      biased output. '
+  - question: 'Apa nama sarana edukasi seputar jasa keuangan dan pengaduan masyarakat
+      terhadap pelanggaran-pelanggaran yang dilakukan oleh seluruh Lembaga Jasa Keuangan
+      (LJK)? '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: OJK Financial Customer Care (FCC)
       isTrue: 1
-    - answer: SALAH
+    - answer: OJK Whistle Blowing System (WBS)
       isTrue: 0
-    - answer: SALAH
+    - answer: OJK Whistle Blower System (WBS)
       isTrue: 0
-  - question: If you are a moderator, see our Moderator Guidelines page.
+    - answer: OJK Financial Customer Center (FCC)
+      isTrue: 0
+  - question: 'OJK FCC dapat dihubungi melalui telepon dengan nomor: '
     option:
-    - answer: SALAH
+    - answer: (021) 2960 0000
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: (021) 385 8321
+      isTrue: 0
+    - answer: 157
       isTrue: 1
-    - answer: SALAH
+    - answer: 155
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: ' private List<string> alpha = new List<string>{"A", "B", "C", "D"};'
+  - question: 'Berikut ini adalah nilai-nilai strategis OJK (Inpresiv), kecuali ... '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Integritas, Inklusif, Profesionalisme, Sinergi, dan Visioner
       isTrue: 1
-    - answer: SALAH
+    - answer: Integritas, Aktif, Profesionalisme, Sinergi, dan Visioner
       isTrue: 0
-    - answer: SALAH
+    - answer: Integritas, Inklusif, Profesionalisme, Religius, dan Visioner
       isTrue: 0
-  - question: I need a new shuffled list  eg :- {"C", "B", "D", "A"};
+    - answer: ' Integritas, Inklusif, Kompeten, Sinergi, dan Visioner'
+      isTrue: 0
+  - question: 'Berikut ini adalah Lembaga Jasa Keuangan (LJK) yang termasuk ke dalam
+      Industri Keuangan Non Bank (IKNB), kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Perusahaan Pembiayaan
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Perusahaan Asuransi
+      isTrue: 0
+    - answer: Perusahaan Efek
       isTrue: 1
-    - answer: SALAH
+    - answer: Perusahaan Pergadaian
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Using for loop i will show values in list.  How can i shuffle a list?
+  - question: 'Berikut ini adalah Misi OJK, kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Mewujudkan terselenggaranya seluruh kegiatan di dalam sektor jasa keuangan
+        secara teratur, adil, transparan, dan akuntabel
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Mewujudkan sistem keuangan yang tumbuh secara berkelanjutan dan stabil
+        serta
+      isTrue: 0
+    - answer: Melindungi kepentingan konsumen dan masyarakat
+      isTrue: 0
+    - answer: Memberantas korupsi di Industri Jasa Keuangan
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: "Microsoft Corporation A square divided into four sub-squares, colored
-      red, green, yellow and blue (clockwise), with the company name appearing to
-      its right. Microsoft building 17 front door.jpg Building 17 on the Microsoft
-      Redmond campus in Redmond, Washington Type Public Traded as\t NASDAQ: MSFT NASDAQ-100
-      component DJIA component S&P 100 component S&P 500 component ISIN\tUS5949181045
-      Industry\t Computer software Computer hardware Consumer electronics Social networking
-      service Cloud computing Video games Internet Corporate venture capital Founded\tApril
-      4, 1975; 43 years ago in Albuquerque, New Mexico, U.S. Founders\t Bill Gates
-      Paul Allen Headquarters\tOne Microsoft Way, Redmond, Washington, U.S. Area served
-      Worldwide Key people John W. Thompson (Chairman) Brad Smith (President and CLO)
-      Satya Nadella (CEO) Bill Gates (Technical advisor) Products\t Windows Office
-      Servers Skype Visual Studio Dynamics Xbox Surface Mobile List of software Services\t
-      Azure Bing LinkedIn MSDN Office 365 OneDrive Outlook.com TechNet Wallet Windows
-      Store Windows Update Xbox Live Revenue\tIncrease US$110.360 billion[1] (2018)
-      Operating income Increase US$35.058 billion[1] (2018) Net income Increase US$30.267
-      billion[1] (2018) Total assets\tIncrease US$258.848 billion[1] (2018) Total
-      equity\tIncrease US$82.718 billion[1] (2018) Number of employees Increase 131,300[2]
-      (2018) Subsidiaries\tList of Microsoft assets Website\tmicrosoft.com Microsoft
-      Corporation (/\u02C8ma\u026Akr\u0259s\u0252ft/,[3][4] abbreviated as MS) is
-      an American multinational technology company"
+  - question: 'Tindak pidana korupsi diatur dalam ... '
     option:
-    - answer: SALAH
+    - answer: UU Nomor 21 Tahun 2011
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: UU Nomor 20 Tahun 2011
+      isTrue: 0
+    - answer: UU Nomor 20 Tahun 2001
       isTrue: 1
-    - answer: SALAH
+    - answer: UU Nomor 28 Tahun 1999
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Microsoft was founded by Bill Gates and Paul Allen on April 4
+  - question: 'Apa saja yang termasuk perilaku utama nilai Integritas? '
     option:
-    - answer: SALAH
+    - answer: Pintar, Menghargai Perbedaan, Bijak, dan Adil
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: ' Jujur, Konsisten, Bijak, dan Adil'
       isTrue: 1
-    - answer: SALAH
+    - answer: ' Jujur, Konsisten, Pintar, dan Melihat ke depan'
       isTrue: 0
-    - answer: SALAH
+    - answer: Konsisten, Menghargai Perbedaan, Bijak, dan Adil
       isTrue: 0
-  - question: As of 2015, Microsoft is market-dominant in the IBM PC-compatible operating
-      system market
+  - question: 'Berikut ini merupakan bentuk dari korupsi, kecuali: '
     option:
-    - answer: SALAH
+    - answer: Gratifikasi
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Suap
+      isTrue: 0
+    - answer: Kerugian Keuangan Negara
+      isTrue: 0
+    - answer: Penipuan
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: CEO in 2014, the company has scaled back on hardware and has instead
-      focused on cloud computing
+  - question: 'Suatu tindakan pemberian uang atau barang dari vendor kepada pejabat
+      pengadaan barang dan jasa yang terjadi karena adanya kesepakatan (meeting of
+      mind) dan ijab qabul antara kedua pihak, serta adanya niat jahat (mens rea)
+      pada saat penerimaan uang atau barang tersebut, disebut: Suatu tindakan pemberian
+      uang atau barang dari vendor kepada pejabat pengadaan barang dan jasa yang terjadi
+      karena adanya kesepakatan (meeting of mind) dan ijab qabul antara kedua pihak,
+      serta adanya niat jahat (mens rea) pada saat penerimaan uang atau barang tersebut,
+      disebut: Suatu tindakan pemberian uang atau barang dari vendor kepada pejabat
+      pengadaan barang dan jasa yang terjadi karena adanya kesepakatan (meeting of
+      mind) dan ijab qabul antara kedua pihak, serta adanya niat jahat (mens rea)
+      pada saat penerimaan uang atau barang tersebut, disebut:  '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Suap
       isTrue: 1
-    - answer: SALAH
+    - answer: Gratifikasi
       isTrue: 0
-    - answer: SALAH
+    - answer: Pemerasan
       isTrue: 0
-  - question: entering the personal computer production market for the first time
-      in June 2012 with the launch
+    - answer: Penggelapan
+      isTrue: 0
+  - question: 'Perbuatan menggunakan kekerasan atau ancaman kekerasan atau pencemaran
+      seseorang dengan tujuan menguntungkan diri sendiri atau orang lain agar orang
+      tsb memberikan barang miliknya atau menghapuskan piutang, disebut: '
     option:
-    - answer: SALAH
+    - answer: Suap
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Gratifikasi
+      isTrue: 0
+    - answer: Pemerasan
       isTrue: 1
-    - answer: SALAH
+    - answer: Penggelapan
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: has instead focused on cloud computing, a move that helped the company's
-      shares reach its highest value
+  - question: 'Niat jahat (mens rea) dari suatu gratifikasi dianggap ada pada saat:Niat
+      jahat (mens rea) dari suatu gratifikasi dianggap ada pada saat:Niat jahat (mens
+      rea) dari suatu gratifikasi dianggap ada pada saat: '
     option:
-    - answer: SALAH
+    - answer: Penerima gratifikasi menerima pemberian barang gratifikasi.
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Setelah 5 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
+      isTrue: 0
+    - answer: Setelah 15 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
+      isTrue: 0
+    - answer: Setelah 30 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Childhood friends Bill Gates and Paul Allen sought to make a business
-      utilizing their shared skills in computer programming
+  - question: 'Dalam rangka Program Pengendalian Gratifikasi di OJK, setiap penerimaan
+      atau penolakan gratifikasi wajib dilaporkan Pejabat atau Pegawai OJK kepada:  '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: KPK melalui Unit Pengendalian Gratifikasi OJK
       isTrue: 1
-    - answer: SALAH
+    - answer: KPK melalui Unit Pengendalian LHKPN OJK
       isTrue: 0
-    - answer: SALAH
+    - answer: BPK
       isTrue: 0
-  - question: MITS requested a demonstration. Since they didn't yet have one
+    - answer: OJK tanpa harus disampaikan ke KPK
+      isTrue: 0
+  - question: 'Kapan batas waktu penerimaan gratifikasi dapat dilaporkan Pejabat atau
+      Pegawai OJK? '
     option:
-    - answer: SALAH
+    - answer: 10 Hari
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: 10 Hari Kerja
+      isTrue: 0
+    - answer: 30 Hari
+      isTrue: 0
+    - answer: 30 Hari Kerja
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Allen worked on a simulator for the Altair while Gates developed the
-      interpreter.
+  - question: 'Berikut ini merupakan contoh bentuk Gratifikasi yang Tidak Dianggap
+      Suap Terkait Kedinasan, kecuali: '
     option:
-    - answer: SALAH
+    - answer: Seminar kit, sertifikat, plakat atau cinderamata yang diperoleh dari
+        kegiatan resmi kedinasan yaitu rapat, seminar, workshop, konferensi, pelatihan,
+        atau kegiatan lain sejenis yang berlaku umum
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Hidangan atau sajian atau jamuan pada acara resmi kedinasan yang berlaku
+        umum
+      isTrue: 0
+    - answer: Hadiah yang diperoleh dari hubungan Keluarga sepanjang tidak mempunyai
+        konflik kepentingan
       isTrue: 1
-    - answer: SALAH
+    - answer: Fasilitas berupa uang saku, transportasi, akomodasi, dan/atau honorarium
+        pada waktu pelaksanaan tugas kedinasan berdasarkan penugasan resmi dari OJK
+        baik pada jam kerja maupun di luar jam kerja atas beban penyelenggara
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Although they developed the interpreter on a simulator and not the actual
-      device
+  - question: 'Apakah Pejabat atau Pegawai OJK diperbolehkan menerima jamuan makan
+      atau minum yang disediakan atau diberikan oleh IJK (seperti Bank, Asuransi,
+      Lembaga Pembiayaan, dan IJK lainnya)? '
     option:
-    - answer: SALAH
+    - answer: Boleh apabila jamuan makan atau minum tersebut mewah dan mahal
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Tidak boleh tanpa ada pengecualian
+      isTrue: 0
+    - answer: ' Boleh apabila hidangan atau sajian atau jamuan makan dan/atau minum
+        yang disediakan atau diberikan oleh IJK sepanjang berlaku umum dan dilakukan
+        pada acara resmi kedinasan.'
       isTrue: 1
-    - answer: SALAH
+    - answer: Boleh apabila jamuan makan atau minum tersebut khusus diberikan kepada
+        Pejabat atau Pegawai OJK
       isTrue: 0
-    - answer: SALAH
+  - question: 'Apa nama sistem untuk menyampaikan, mengelola, dan menindaklanjuti
+      laporan mengenai dugaan terjadinya pelanggaran yang dilakukan oleh pihak internal
+      OJK yaitu Anggota Dewan Komisioner, Pegawai, Calon Pegawai, Tenaga Kerja melalui
+      Perjanjian Kerja Waktu Tertentu dan/atau tenaga kerja outsourcing di OJK? '
+    option:
+    - answer: OJK Financial Customer Care (FCC)
+      isTrue: 0
+    - answer: OJK Whistle Blowing System (WBS)
+      isTrue: 1
+    - answer: OJK Whistle Blower System (WBS)
+      isTrue: 0
+    - answer: OJK Financial Customer Center (FCC)
+      isTrue: 0
+  - question: 'Jenis pelanggaran yang dilakukan Pihak Internal OJK dan dapat dilaporkan
+      melalui OJK WBS adalah: '
+    option:
+    - answer: Korupsi, kolusi, dan nepotisme (KKN)
+      isTrue: 0
+    - answer: ' Kecurangan (fraud), termasuk penipuan, penggelapan aset, dan pembocoran
+        informasi'
+      isTrue: 0
+    - answer: Benturan Kepentingan
+      isTrue: 0
+    - answer: Semua benar
+      isTrue: 1
+  - question: 'Berikut ini adalah sarana pelaporan OJK WBS, kecuali ... '
+    option:
+    - answer: www.ojk.go.id/wbs
+      isTrue: 1
+    - answer: E-mail ke ojk.wbs@rsm.id
+      isTrue: 0
+    - answer: 'PO BOX: ETIK OJK JKT 10000'
+      isTrue: 0
+    - answer: Telepon ke 157
+      isTrue: 0
+  - question: 'Siapa yang wajib mematuhi ketentuan Pengendalian Gratifikasi di OJK? '
+    option:
+    - answer: Anggota Dewan Komisioner
+      isTrue: 0
+    - answer: Pegawai OJK dan Keluarga Pegawai OJK
+      isTrue: 0
+    - answer: Anggota Dewan Komisioner, Pegawai OJK, dan/atau Keluarga Anggota Dewan
+        Komisioner atau Pegawai OJK
+      isTrue: 1
+    - answer: Anggota Dewan Komisioner dan Pegawai OJK
+      isTrue: 0
+  - question: 'Apa saja kategori gratifikasi berdasarkan ketentuan internal OJK? '
+    option:
+    - answer: Gratifikasi yang dianggap suap dan Gratifikasi yang pasti merupakan
+        suap
+      isTrue: 0
+    - answer: Gratifikasi yang dianggap suap, Gratifikasi yang tidak dianggap suap
+        terkait kedinasan, dan Gratifikasi yang tidak dianggap suap tidak terkait
+        kedinasan
+      isTrue: 1
+    - answer: Gratifikasi yang pasti merupakan suap, Gratifikasi yang tidak dianggap
+        suap terkait kedinasan, dan Gratifikasi yang tidak dianggap suap tidak terkait
+        kedinasan
+      isTrue: 0
+    - answer: ' Gratifikasi yang tidak dianggap suap terkait kedinasan dan Gratifikasi
+        yang tidak dianggap suap tidak terkait kedinasan'
+      isTrue: 0
+  - question: 'Suatu tindakan pemberian uang atau barang kepada Penyelenggara Negara
+      yang terjadi tanpa adanya kesepakatan (meeting of mind) dan ijab qabul antara
+      kedua pihak, serta adanya niat jahat (mens rea) dianggap muncul apabila setelah
+      30 hari kerja sejak diterimanya uang atau barang tersebut, Penyelenggara Negara
+      tersebut tidak melaporkannya kepada KPK, disebut:  '
+    option:
+    - answer: Suap
+      isTrue: 0
+    - answer: Gratifikasi
+      isTrue: 1
+    - answer: Pemerasan
+      isTrue: 0
+    - answer: Penggelapan
+      isTrue: 0
+  - question: 'Sanksi pidana atas penerimaan gratifikasi yang dianggap pemberian suap
+      dan tidak dilaporkan kepada KPK adalah ... '
+    option:
+    - answer: Pidana penjara seumur hidup atau pidana penjara paling singkat 4 tahun
+        dan paling lama 20 tahun, dan pidana denda paling sedikit Rp 200.000.000,-
+        dan paling banyak Rp 1.000.000.000,-
+      isTrue: 1
+    - answer: Pidana penjara paling singkat 1 tahun dan paling lama 20 tahun, dan
+        pidana denda paling sedikit Rp 100.000.000,- dan paling banyak Rp 500.000.000,-
+      isTrue: 0
+    - answer: Pidana penjara seumur hidup, dan pidana denda paling banyak Rp 200.000.000,-
+      isTrue: 0
+    - answer: Pidana penjara atau pidana penjara paling singkat 4 tahun dan paling
+        lama 15 tahun, dan pidana denda paling sedikit Rp 200.000.000,- dan paling
+        banyak Rp 1.000.000.000,-
+      isTrue: 0
+  - question: 'Lembaga negara yang memiliki kewenangan mengoordinasikan program pengendalian
+      gratifikasi Pegawai Negeri dan Penyelenggara Negara di Indonesia adalah '
+    option:
+    - answer: OJK
+      isTrue: 0
+    - answer: KPK
+      isTrue: 1
+    - answer: BPK
+      isTrue: 0
+    - answer: Bank Indonesia
+      isTrue: 0
+  - question: 'Berikut ini adalah tugas OJK, kecuali ... '
+    option:
+    - answer: Mengawasi Lembaga Jasa Keuangan
+      isTrue: 0
+    - answer: Mengawasi Sistem Pembayaran
+      isTrue: 1
+    - answer: Melindungi Konsumen Lembaga Jasa Keuangan
+      isTrue: 0
+    - answer: Mengatur Lembaga Jasa Keuangan
+      isTrue: 0
+  - question: 'Berikut ini merupakan contoh bentuk Gratifikasi yang Tidak Dianggap
+      Suap Tidak Terkait Kedinasan, kecuali: '
+    option:
+    - answer: ' Hadiah langsung atau undian, rabat atau diskon, voucher, poin penghargaan,
+        atau cinderamata yang berlaku secara umum'
+      isTrue: 0
+    - answer: Barang cinderamata sebagai hadiah seremonial pada waktu kegiatan pertemuan
+        resmi pelaksanaan tugas kedinasan
+      isTrue: 1
+    - answer: Hadiah yang diperoleh dari hubungan Keluarga sepanjang tidak mempunyai
+        konflik kepentingan
+      isTrue: 0
+    - answer: Keuntungan atau bunga dari penempatan dana, investasi atau kepemilikan
+        efek Keluarga yang berlaku secara umum
       isTrue: 0
   _generatedQuiz: []
   _GameStartPopUp: {fileID: 345660441}
@@ -12012,14 +12082,7 @@ MonoBehaviour:
   _SalahPopUp: {fileID: 1150836317}
   _BenarPopUp: {fileID: 1840096644}
   _ScoreText: {fileID: 2131084981}
-  _ImageFill: {fileID: 33291432}
   _BattleObject: {fileID: 1022734271}
-  _Speed: 5
-  _FillSpeed: 0.005
-  _IncreaseSpeed: 100
-  _IncreaseFillSpeed: 0.15
-  _DecreaseSpeed: 80
-  _DecreaseFillSpeed: 0.1
 --- !u!114 &1314250118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13265,74 +13328,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1492144341
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1492144342}
-  - component: {fileID: 1492144344}
-  - component: {fileID: 1492144343}
-  m_Layer: 5
-  m_Name: EnemyBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1492144342
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.01, y: 1.4139699, z: 1.0099999}
-  m_Children: []
-  m_Father: {fileID: 1896314388}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -11.200073, y: -13.399998}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1492144343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1492144344
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
 --- !u!1 &1520375724
 GameObject:
   m_ObjectHideFlags: 0
@@ -16793,76 +16788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1896314387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1896314388}
-  - component: {fileID: 1896314390}
-  - component: {fileID: 1896314389}
-  m_Layer: 5
-  m_Name: Bar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1896314388
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0517157, y: 1.0517157, z: 1.0517157}
-  m_Children:
-  - {fileID: 1492144342}
-  - {fileID: 33291431}
-  m_Father: {fileID: 624986265}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -332.4}
-  m_SizeDelta: {x: 808, y: 30.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1896314389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1896314390
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
 --- !u!1 &1918250633
 GameObject:
   m_ObjectHideFlags: 0

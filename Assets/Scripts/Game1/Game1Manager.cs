@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 [System.Serializable]
 public class Quiz {
@@ -61,27 +62,13 @@ public class Game1Manager : MonoBehaviour {
 
     [Header("Battle")]
     [SerializeField]
-    Image _ImageFill;
-    [SerializeField]
     RectTransform _BattleObject;
     Vector2 _DefaultPosBattle;
-    [SerializeField]
-    float _Speed = 10;
-    [SerializeField]
-    float _FillSpeed = 0.05f;
-    [SerializeField]
-    float _IncreaseSpeed = 15f;
-    [SerializeField]
-    float _IncreaseFillSpeed = 0.1f;
-    [SerializeField]
-    float _DecreaseSpeed = 10f;
-    [SerializeField]
-    float _DecreaseFillSpeed = 0.1f;
-    
-    bool _isWaiting = false;
     
     bool _IsStart = false;
-    bool _IsTrueAnswer = false;
+    float _TimeCount = 0;
+
+    Tween _MoveTween;
 
     private void Awake()
     {
@@ -177,32 +164,34 @@ public class Game1Manager : MonoBehaviour {
     }
 
     void ThrowAnswer(bool isTrue) {
-        _IsTrueAnswer = isTrue;
+
         if (isTrue)
         {
-            _isWaiting = true;
             _TrueAnswer++;
-            Debug.Log("TRUE");
             _BenarPopUp.SetActive(true);
-            _ScorePoint += 20;
+
+            float truePoint = 100 / _TimeCount;
+            _ScorePoint += Mathf.FloorToInt (truePoint);
+
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
-            StartCoroutine(AnswerWaiting());
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.BENAR, false));
         }
         else
         {
-            _isWaiting = true;
             _FalseAnswer++;
-            Debug.Log("FALSE");
-            _ScorePoint -= 10;
-            _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
             _SalahPopUp.SetActive(true);
-            StartCoroutine(AnswerWaiting());
+
+            float falsePoint = 2 * _TimeCount;
+            _ScorePoint -= Mathf.FloorToInt(falsePoint);
+            if (_ScorePoint < 0)
+                _ScorePoint = 0;
+
+            _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.SALAH, false));
         }
-
+        CheckAction(isTrue);
         EventManager.TriggerEvent(new HoldOnEvent(true));
 
         StartCoroutine (NextQuiz());
@@ -226,6 +215,7 @@ public class Game1Manager : MonoBehaviour {
     }
 
     IEnumerator NextQuiz() {
+        _TimeCount = 0;
         _QuizCount++;
         if (_QuizCount < _MaxQuiz)
         {
@@ -234,9 +224,6 @@ public class Game1Manager : MonoBehaviour {
         }
         else
         {
-            if (_TrueAnswer >= _QuizCount)
-                WinningBonus();
-
             GameEnd();
             Debug.Log("QUIZ END, RESULT = (TRUE : "+_TrueAnswer.ToString()+") (FALSE : "+_FalseAnswer+")");
         }
@@ -246,54 +233,45 @@ public class Game1Manager : MonoBehaviour {
     #region BATTLE
     void InitBattle()
     {
-
-        _ImageFill.fillAmount = 0.5f;
         _IsStart = true;
         _ScorePoint = 0;
         _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
-        _isWaiting = false;
-
-        //_AddValue = StartCoroutine(IncreaseValue());
     }
+
     private void Update()
     {
         if (_IsStart)
         {
-            if (!_isWaiting)
-            {
-                _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - (_Speed * Time.deltaTime), _BattleObject.anchoredPosition.y);
-                _ImageFill.fillAmount -= (_FillSpeed  * Time.deltaTime);
-            }
-            else
-            {
-                if (_IsTrueAnswer)
-                {
-                    _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x + _IncreaseSpeed * Time.deltaTime, _BattleObject.anchoredPosition.y);
-                    _ImageFill.fillAmount += _IncreaseFillSpeed * Time.deltaTime;
-                }
-                else
-                {
-                    _BattleObject.anchoredPosition = new Vector3(_BattleObject.anchoredPosition.x - _DecreaseSpeed * Time.deltaTime, _BattleObject.anchoredPosition.y);
-                    _ImageFill.fillAmount -= _DecreaseFillSpeed * Time.deltaTime;
-                }
-            }
-
-            if (_ImageFill.fillAmount <= 0)
-            {
-                GameEnd();
-            }
-            else if (_ImageFill.fillAmount >= 1)
-            {
-                WinningBonus();
-                GameEnd();
-            }
+            _TimeCount += (1 * Time.deltaTime);
+            Debug.Log(_TimeCount);
         }
     }
 
-    IEnumerator AnswerWaiting()
+    void CheckAction(bool isTrue)
     {
-        yield return new WaitForSeconds(1);
-        _isWaiting = false;
+        KillTween();
+        if (isTrue)
+        {
+            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x + 50, _BattleObject.anchoredPosition.y), 1).OnComplete(ConditionAfterAnswer);
+        }
+        else
+        {
+            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x - 50, _BattleObject.anchoredPosition.y), 1).OnComplete(ConditionAfterAnswer); 
+        }
+
+
+    }
+
+    void ConditionAfterAnswer()
+    {
+        if (!_IsStart)
+            return;
+
+        KillTween();
+        if (_BattleObject.anchoredPosition.x >= 300)
+            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x - 100, _BattleObject.anchoredPosition.y), 1);
+        else if (_BattleObject.anchoredPosition.x <= -300)
+            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x + 100, _BattleObject.anchoredPosition.y), 1);
     } 
 
     void GameEnd()
@@ -301,10 +279,12 @@ public class Game1Manager : MonoBehaviour {
         _IsStart = false;
         
         //CHARACTER RESULT OBJECT
-        if (_ImageFill.fillAmount >= 0.5f)
+        if (_TrueAnswer > _FalseAnswer)
         {
             EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, false));
+
+            WinningBonus();
         }
         else
         {
@@ -318,13 +298,24 @@ public class Game1Manager : MonoBehaviour {
 
     void WinningBonus()
     {
-        _ScorePoint += 100;
+        float winBonus = _TrueAnswer * _TrueAnswer;
+        
+        _ScorePoint += Mathf.FloorToInt(winBonus);
         _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
     }
     #endregion
-    void ResetData() {
+    void ResetData()
+    {
+        _TimeCount = 0;
         _QuizCount = 0;
         _TrueAnswer = 0;
         _FalseAnswer = 0;
+
+        KillTween();
+    }
+
+    void KillTween() {
+        if (_MoveTween != null)
+            _MoveTween.Kill(false);
     }
 }
