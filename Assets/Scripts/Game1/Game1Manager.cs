@@ -18,7 +18,7 @@ public class Option {
 public class Game1Manager : MonoBehaviour {
 
     [SerializeField]
-    List<Quiz> _quizList = new List<Quiz>();
+    public List<Quiz> _quizList = new List<Quiz>();
     [SerializeField]
     List<Quiz> _generatedQuiz = new List<Quiz>();
 

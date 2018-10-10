@@ -17,30 +17,47 @@ public class Game2Manager : MonoBehaviour
     public GameObject Blade;
     public GameObject Spawner;
     public GameObject Dodo;
+    public GameObject DodoWin;
+    public GameObject DodoLose;
     public GameObject Nina;
+    public GameObject NinaWin;
+    public GameObject NinaLose;
     public GameObject Enemy;
+    public GameObject EnemyWin;
+    public GameObject EnemyLose;
     public CharacterType Type;
+    public int CharacterPick;
+    public Game1Manager GameManager1;
+    public List<Quiz> Game2Quiz;
 
     bool _IsStart = false;
 
     FruitSpawner _Spawner;
     Blade _Blade;
-    Animator m_AnimatorDodo, m_AnimatorNina, m_AnimatorEnemy;
+    Animator m_AnimatorEnemy, m_AnimatorDodo, m_AnimatorNina;
     // Use this for initialization
     private void Awake()
     {
         EventManager.AddListener<DurationCutEvent>(CutEventHandler);
         EventManager.AddListener<ScoreSetEvent>(SetScoreHandler);
         EventManager.AddListener<InitCharacterManagerEvent>(InitCharacterManager);
+
         _Spawner = GetComponent<FruitSpawner>();
         _Blade = GetComponentInChildren<Blade>();
+
+        m_AnimatorDodo = Dodo.GetComponent<Animator>();
+        m_AnimatorNina = Nina.GetComponent<Animator>();
+        m_AnimatorEnemy = Enemy.GetComponent<Animator>();
+
+        for (int i = 0; i < GameManager1._quizList.Count; i++)
+        {
+            Game2Quiz.Add(GameManager1._quizList[i]);
+        }
     }
     private void Start()
     {
         PoolingObject.Instance.InitPooling();
-        m_AnimatorDodo = Dodo.GetComponent<Animator>();
-        m_AnimatorNina = Nina.GetComponent<Animator>();
-        m_AnimatorEnemy = Enemy.GetComponent<Animator>();
+        
     }
     private void SetScoreHandler(ScoreSetEvent e)
     {
@@ -54,12 +71,14 @@ public class Game2Manager : MonoBehaviour
 
     public void Init()
     {
+        //Sebab Bug Blade
+        //Blade.SetActive(true);
+
         Score = 0;
         time = timeAmount;
-        Blade.SetActive(true);
+        _Blade.Init();  
         Spawner.SetActive(true);
         durationFill.fillAmount = 1;
-        //StartCoroutine(spawnObject.SpawnFruits());
         _IsStart = true;
         _Spawner.InitSpawner();
         _Blade.Init();
@@ -93,40 +112,74 @@ public class Game2Manager : MonoBehaviour
 
     void GameEnd()
     {
+
+        //Sebab Bug Blade
+        //Blade.SetActive(false);
+
         _Spawner.Reset();
         _Blade.StopInit();
         durationFill.fillAmount = 0;
-        Blade.SetActive(false);
         Spawner.SetActive(false);
-        //GameOver.GetComponent<Text>().text = "GAME OVER YOUR SCORE : "+Score.ToString();
-        //GameOver.SetActive(true);
         EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
-        //m_AnimatorDodo.SetBool("IsPlay", false);
-        //m_AnimatorNina.SetBool("IsPlay", false);
-        m_AnimatorEnemy.SetBool("IsPlay", false);
+        Dodo.SetActive(false);
+        Nina.SetActive(false);
+        Enemy.SetActive(false);
+       
         if (Score>=300)
         {
-            m_AnimatorDodo.SetBool("IsWin", true);
-            m_AnimatorNina.SetBool("IsWin", true);
+            //Win Condition
+            if (CharacterPick==0)
+            {
+                DodoWin.SetActive(true);
+            }
+
+            if (CharacterPick==1)
+            {
+                NinaWin.SetActive(true);
+            }
+            EnemyLose.SetActive(true);
         }
         else
         {
-            m_AnimatorDodo.SetBool("IsLose", true);
-            m_AnimatorNina.SetBool("IsLose", true);
+            //Lose Condition
+            if (CharacterPick==0)
+            {
+                DodoLose.SetActive(true);
+            }
+
+            if(CharacterPick==1)
+            {
+                NinaLose.SetActive(true);
+            }
+            EnemyWin.SetActive(true);
         }
     }
 
     void InitCharacterManager(InitCharacterManagerEvent e)
     {
+        Dodo.SetActive(false);
+        DodoWin.SetActive(false);
+        DodoLose.SetActive(false);
+
+        Nina.SetActive(false);
+        NinaWin.SetActive(false);
+        NinaLose.SetActive(false);
+
+        Enemy.SetActive(false);
+        EnemyWin.SetActive(false);
+        EnemyLose.SetActive(false);
+
         if (e.Type == 0)
         {
             Dodo.SetActive(true);
             Enemy.SetActive(true);
+            CharacterPick = 0;
         }
         else
         {
             Nina.SetActive(true);
             Enemy.SetActive(true);
+            CharacterPick = 1;
         }
     }
 }

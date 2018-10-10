@@ -10,17 +10,18 @@ public class Fruit : MonoBehaviour {
 	public float startForce;
     public int scoreGet;
     public int durationCut;
-    //private Game2Manager _GameManager;
 	public Rigidbody2D rb;
 
     Coroutine _ThisCoroutine;
     Coroutine _SlashedCoroutine;
-    
+
+    private Game2Manager _Manager;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
     public void Init ()
     {
         float force = Random.Range(12.1f, 14.1f);
@@ -37,7 +38,7 @@ public class Fruit : MonoBehaviour {
                 slice.transform.localPosition = transform.localPosition;
                 //slice.transform.localRotation = transform.localRotation;
             }
-            
+
 
             //GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
             //Destroy(slicedFruit, 1f);
@@ -67,7 +68,7 @@ public class Fruit : MonoBehaviour {
 
     IEnumerator DestroyThis()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }
 
