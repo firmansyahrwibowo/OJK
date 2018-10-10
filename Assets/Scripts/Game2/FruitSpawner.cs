@@ -32,7 +32,7 @@ public class FruitSpawner : MonoBehaviour {
 			int spawnIndex = Random.Range(0, spawnPoints.Length);
 			Transform spawnPoint = spawnPoints[spawnIndex];
 
-            int itemIndex = Random.Range(0, 53);
+            int itemIndex = Random.Range(0, 44);
 
             GameObject slice = PoolingObject.Instance.GetRandom(itemIndex);
             if (slice != null)

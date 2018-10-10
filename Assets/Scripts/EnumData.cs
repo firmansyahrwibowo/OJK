@@ -38,7 +38,6 @@ public enum OptionType {
 }
 
 public enum ObjectName {
-    DOLAR_SUAP, //0
     BATIK, //1
     BERLIAN, //2
     EMAS, //3
@@ -46,18 +45,16 @@ public enum ObjectName {
     JAM, //5
     KADO, //6
     KALUNG, //7
-    KANTUNG_DOLAR, //8
-    KANTUNG_RP, //9
-    KOIN, //10
-    KOPER, //11
-    PARCEL, //12
-    RAKET, //13
-    RP_SUAP, //14
-    VERBODEN_DOLAR, //15
-    VERBODEN_RP, //16
-    VOUCHER, //17
+    KANTUNG_RP, //8
+    KOIN, //9
+    KOPER, //10
+    PARCEL, //11
+    RAKET, //12
+    RP_SUAP, //13
+    VERBODEN_RP, //14
+    VOUCHER, //15
 
-    BLADE_TRAIL//18
+    BLADE_TRAIL//16
 }
 
 public enum OrderType {
