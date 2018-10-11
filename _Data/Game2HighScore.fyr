@@ -1,22 +1,6 @@
 {
     "data": [
         {
-            "NamePlayer": "ME",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "0",
-            "Score": "0"
-        },
-        {
             "NamePlayer": "1",
             "Score": "0"
         },
@@ -26,6 +10,22 @@
         },
         {
             "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "0",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "ME",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "2",
             "Score": "0"
         },
         {
@@ -57,11 +57,11 @@
             "Score": "176"
         },
         {
-            "NamePlayer": "2",
+            "NamePlayer": "TRY",
             "Score": "190"
         },
         {
-            "NamePlayer": "TRY",
+            "NamePlayer": "2",
             "Score": "190"
         },
         {
@@ -175,6 +175,10 @@
         {
             "NamePlayer": "SAYA",
             "Score": "652"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "819"
         },
         {
             "NamePlayer": "YEAH",
