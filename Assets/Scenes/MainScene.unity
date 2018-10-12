@@ -2484,6 +2484,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298875560}
+--- !u!1 &306321439 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1514810903057210, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &332104270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,10 +5531,19 @@ MonoBehaviour:
   GameOver: {fileID: 2016601844}
   Blade: {fileID: 1690349973}
   Spawner: {fileID: 549651598}
-  Dodo: {fileID: 1974126072}
-  Nina: {fileID: 1974126071}
-  Enemy: {fileID: 1974126073}
+  Dodo: {fileID: 1956679271}
+  DodoWin: {fileID: 674777687}
+  DodoLose: {fileID: 1974126072}
+  Nina: {fileID: 1304095543}
+  NinaWin: {fileID: 1974126071}
+  NinaLose: {fileID: 2055501534}
+  Enemy: {fileID: 2138795283}
+  EnemyWin: {fileID: 1974126073}
+  EnemyLose: {fileID: 306321439}
   Type: 0
+  CharacterPick: 0
+  GameManager1: {fileID: 1314250117}
+  Game2Quiz: []
 --- !u!114 &628678995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6344,6 +6358,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669715290}
+--- !u!1 &674777687 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1689136213395962, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &677084598
 GameObject:
   m_ObjectHideFlags: 0
@@ -11662,6 +11681,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
+--- !u!1 &1304095543 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1928927951070652, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1314250115
 GameObject:
   m_ObjectHideFlags: 0
@@ -17535,6 +17559,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1956104121}
+--- !u!1 &1956679271 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1294271642751820, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1963072518
 GameObject:
   m_ObjectHideFlags: 0
@@ -18554,6 +18583,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2055047493}
+--- !u!1 &2055501534 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1737955660410142, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &2065945917
 GameObject:
   m_ObjectHideFlags: 0
@@ -19074,3 +19108,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131084979}
+--- !u!1 &2138795283 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1382887025487224, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
