@@ -218,7 +218,14 @@ MonoBehaviour:
   Type: 0
   CharacterPick: 0
   GameManager1: {fileID: 0}
+  Question: {fileID: 0}
+  NextQuestion: 0
+  AnswerA: {fileID: 0}
+  AnswerB: {fileID: 0}
+  AnswerC: {fileID: 0}
+  AnswerD: {fileID: 0}
   Game2Quiz: []
+  RandomizedQuiz: []
 --- !u!114 &114997292412387868
 MonoBehaviour:
   m_ObjectHideFlags: 1

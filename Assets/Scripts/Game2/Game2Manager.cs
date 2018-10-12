@@ -27,6 +27,12 @@ public class Game2Manager : MonoBehaviour
     public CharacterType Type;
     public int CharacterPick;
     public Game1Manager GameManager1;
+    public QuestionHolder Question;
+    public int NextQuestion;
+    public AnswerHolder AnswerA;
+    public AnswerHolder AnswerB;
+    public AnswerHolder AnswerC;
+    public AnswerHolder AnswerD;
     public List<Quiz> Game2Quiz;
     public List<Quiz> RandomizedQuiz;
 
@@ -81,6 +87,8 @@ public class Game2Manager : MonoBehaviour
         //Reset Random Quiz
         CopyQuizFromGame1();
         QuizRandomizer();
+        StartCoroutine(GenerateQuestion());
+
     }
 
     // Update is called once per frame
@@ -202,4 +210,37 @@ public class Game2Manager : MonoBehaviour
             Game2Quiz.Add(GameManager1._quizList[i]);
         }
     }
+
+    IEnumerator GenerateQuestion()
+    {
+        yield return new WaitForSeconds(1f);
+        for (NextQuestion = 0; NextQuestion < Game2Quiz.Count;)
+        {
+            Question.QuestionContent = Game2Quiz[NextQuestion].question;
+            Question.QuestionText.text = Game2Quiz[NextQuestion].question;
+
+            AnswerA.AnswerContent = Game2Quiz[NextQuestion].option[0].answer;
+            AnswerA.AnswerText.text = Game2Quiz[NextQuestion].option[0].answer;
+            AnswerA.IsTrue = Game2Quiz[NextQuestion].option[0].isTrue;
+
+            AnswerB.AnswerContent = Game2Quiz[NextQuestion].option[1].answer;
+            AnswerB.AnswerText.text = Game2Quiz[NextQuestion].option[1].answer;
+            AnswerB.IsTrue = Game2Quiz[NextQuestion].option[1].isTrue;
+
+            AnswerC.AnswerContent = Game2Quiz[NextQuestion].option[2].answer;
+            AnswerC.AnswerText.text = Game2Quiz[NextQuestion].option[2].answer;
+            AnswerC.IsTrue = Game2Quiz[NextQuestion].option[2].isTrue;
+
+            AnswerD.AnswerContent = Game2Quiz[NextQuestion].option[3].answer;
+            AnswerD.AnswerText.text = Game2Quiz[NextQuestion].option[3].answer;
+            AnswerD.IsTrue = Game2Quiz[NextQuestion].option[3].isTrue;
+        }
+
+    }
+
+    public void Next()
+    {
+        NextQuestion = NextQuestion + 1;
+    }
+
 }

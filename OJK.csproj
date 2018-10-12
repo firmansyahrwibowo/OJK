@@ -255,11 +255,13 @@
     <Compile Include="Assets\Scripts\Game1\DisableNotificationPopUp.cs" />
     <Compile Include="Assets\Scripts\Game1\Game1Manager.cs" />
     <Compile Include="Assets\Scripts\Game1\OptionData.cs" />
+    <Compile Include="Assets\Scripts\Game2\AnswerHolder.cs" />
     <Compile Include="Assets\Scripts\Game2\Blade.cs" />
     <Compile Include="Assets\Scripts\Game2\Fruit.cs" />
     <Compile Include="Assets\Scripts\Game2\FruitSpawner.cs" />
     <Compile Include="Assets\Scripts\Game2\Game2Manager.cs" />
     <Compile Include="Assets\Scripts\Game2\PoolingObject.cs" />
+    <Compile Include="Assets\Scripts\Game2\QuestionHolder.cs" />
     <Compile Include="Assets\Scripts\Game2\SlicedObject.cs" />
     <Compile Include="Assets\Scripts\Global.cs" />
     <Compile Include="Assets\Scripts\HighScoreManager.cs" />
