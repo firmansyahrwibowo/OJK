@@ -282,14 +282,14 @@ public class Game1Manager : MonoBehaviour {
         if (_TrueAnswer > _FalseAnswer)
         {
             EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, false));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
 
             WinningBonus();
         }
         else
         {
             EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, false));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, true));
         }
 
         //BUAT NAMPILIN POP UP SCORE
