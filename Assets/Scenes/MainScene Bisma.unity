@@ -452,74 +452,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &33291430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 33291431}
-  - component: {fileID: 33291433}
-  - component: {fileID: 33291432}
-  m_Layer: 5
-  m_Name: MainBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &33291431
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.01, y: 1.4139699, z: 1.0099999}
-  m_Children: []
-  m_Father: {fileID: 1896314388}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -11.2, y: -13.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &33291432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.29411766, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9eb0025aaa999db42ba56dea616111ce, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 0.5
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &33291433
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33291430}
 --- !u!1 &41012910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1017,81 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 97893788}
+--- !u!1 &100170905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 100170906}
+  - component: {fileID: 100170908}
+  - component: {fileID: 100170907}
+  m_Layer: 0
+  m_Name: D Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &100170906
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100170905}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1829567927}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.700012, y: 9}
+  m_SizeDelta: {x: 1060.04, y: 104.74}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &100170907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100170905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 65bcc3a818f9f4f45bb9a5ddef3fd515, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR
+    SIT AMET
+--- !u!222 &100170908
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100170905}
 --- !u!1 &101600929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,74 +1448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
---- !u!1 &155578605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 155578606}
-  - component: {fileID: 155578608}
-  - component: {fileID: 155578607}
-  m_Layer: 0
-  m_Name: B
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &155578606
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 155578605}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339, y: -353}
-  m_SizeDelta: {x: 575, y: 74}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &155578607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 155578605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &155578608
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 155578605}
 --- !u!1 &173842922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2209,86 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 251824128}
+--- !u!1 &252461149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 252461150}
+  - component: {fileID: 252461152}
+  - component: {fileID: 252461151}
+  m_Layer: 0
+  m_Name: Question Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &252461150
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252461149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 390875794}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.66, y: 2.76}
+  m_SizeDelta: {x: 2259.54, y: 145.85}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &252461151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252461149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 65bcc3a818f9f4f45bb9a5ddef3fd515, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR R SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT
+    AMETLOREM IPSUM DOLOR SIT AMETLOREM IPSUM DOLOR SIT AMET
+--- !u!222 &252461152
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252461149}
 --- !u!1 &263070203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &364171984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3431,74 +3450,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 2
---- !u!1 &410019065
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 410019066}
-  - component: {fileID: 410019068}
-  - component: {fileID: 410019067}
-  m_Layer: 0
-  m_Name: D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &410019066
+--- !u!224 &390875794 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410019065}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339, y: -431}
-  m_SizeDelta: {x: 575, y: 74}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &410019067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410019065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &410019068
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410019065}
+  m_PrefabParentObject: {fileID: 224301648089614592, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &416105215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,11 +3642,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419275105}
---- !u!4 &437861724 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4285726006900046, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &439093449
 GameObject:
   m_ObjectHideFlags: 0
@@ -4283,6 +4234,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490857511}
+--- !u!224 &497546719 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224047106016999466, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &504498167
 GameObject:
   m_ObjectHideFlags: 0
@@ -4752,62 +4708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
---- !u!1 &548014156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 548014157}
-  m_Layer: 0
-  m_Name: SpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &548014157
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 548014156}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -1273.76, y: -722.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 628678993}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
---- !u!1 &549651598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 549651599}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &549651599
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 549651598}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -1273.78, y: -723.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 628678993}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!1 &559492822
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,6 +4789,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
+--- !u!224 &560816851 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224206190525946932, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &578987505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5623,7 +5528,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 852516011}
-  - {fileID: 1896314388}
   m_Father: {fileID: 1023541319}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5713,196 +5617,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
---- !u!1 &628678992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 628678993}
-  - component: {fileID: 628678994}
-  - component: {fileID: 628678995}
-  - component: {fileID: 628678996}
-  m_Layer: 0
-  m_Name: Game2Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &628678993
+--- !u!4 &628678993 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 628678992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1280, y: 720, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 549651599}
-  - {fileID: 548014157}
-  - {fileID: 1910648251}
-  - {fileID: 1690349974}
-  m_Father: {fileID: 1631321504}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &628678994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 628678992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd215bd7f4513264493c07be17b755bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 885188246}
-  Score: 0
-  durationFill: {fileID: 1066781242}
-  time: 0
-  GameOver: {fileID: 2016601844}
-  Blade: {fileID: 1690349973}
-  Spawner: {fileID: 549651598}
-  Dodo: {fileID: 1974126072}
-  DodoWin: {fileID: 1643368582}
-  DodoLose: {fileID: 1356159025}
-  Nina: {fileID: 1974126071}
-  NinaWin: {fileID: 822166483}
-  NinaLose: {fileID: 1586624717}
-  Enemy: {fileID: 1974126073}
-  EnemyWin: {fileID: 1739712620}
-  EnemyLose: {fileID: 1976836455}
-  Type: 0
-  CharacterPick: 0
-  GameManager1: {fileID: 1314250117}
-  Game2Quiz: []
---- !u!114 &628678995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 628678992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8095d5927658744d842b467ce4fb5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 549651599}
-  - {fileID: 548014157}
-  - {fileID: 1910648251}
---- !u!114 &628678996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 628678992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f7c6d48a8d0aca45bb6000204217abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject:
-  - Object: {fileID: 1121465903263756, guid: 734be627d359f8c4cb35c975f9bd1639, type: 2}
-    AlternName: 0
-    Amount: 3
-  - Object: {fileID: 1906471785212798, guid: fbcf3458a0dd3564994d18a69e18eb1f, type: 2}
-    AlternName: 1
-    Amount: 3
-  - Object: {fileID: 1843024661760200, guid: 1bc7a9bdcb1b60145b47627c34ea9702, type: 2}
-    AlternName: 2
-    Amount: 3
-  - Object: {fileID: 1584775257227396, guid: 8c23ffe297f7f9e4aa854f5c43c93396, type: 2}
-    AlternName: 3
-    Amount: 3
-  - Object: {fileID: 1793316782897018, guid: df76f4dcaa73d0d4eb1d4f27238bb137, type: 2}
-    AlternName: 4
-    Amount: 3
-  - Object: {fileID: 1366157966752740, guid: b9104481b97c2c745b954791cb613dca, type: 2}
-    AlternName: 5
-    Amount: 3
-  - Object: {fileID: 1338412807788696, guid: 37a956810f0e2c047b0f35b51bf51927, type: 2}
-    AlternName: 6
-    Amount: 3
-  - Object: {fileID: 1730805476874246, guid: 0355ef43617653c47b9d3f07a4a1319b, type: 2}
-    AlternName: 7
-    Amount: 3
-  - Object: {fileID: 1076063590883568, guid: 1abc8ffddd4d69e488328036a411cec2, type: 2}
-    AlternName: 8
-    Amount: 3
-  - Object: {fileID: 1503628427541960, guid: d47d71f5d9052754f86e2a7b1c57b855, type: 2}
-    AlternName: 9
-    Amount: 3
-  - Object: {fileID: 1028125105448776, guid: e49d5b4deb79e9b4ab89a303038478de, type: 2}
-    AlternName: 10
-    Amount: 3
-  - Object: {fileID: 1557502678077488, guid: 9a8cc29bd6d0ef74dba4125613b960c5, type: 2}
-    AlternName: 11
-    Amount: 3
-  - Object: {fileID: 1037944903046792, guid: b03df9910da86704bb67d8cd67136baf, type: 2}
-    AlternName: 12
-    Amount: 3
-  - Object: {fileID: 1574555927768718, guid: deadd109539e96745b879670dcd24965, type: 2}
-    AlternName: 13
-    Amount: 3
-  - Object: {fileID: 1436787142481574, guid: 86e89a5f4afccf84c8c9fa49018b5592, type: 2}
-    AlternName: 14
-    Amount: 3
-  - Object: {fileID: 1240082411226160, guid: 490a107d9f43c9b42a060eedc8940283, type: 2}
-    AlternName: 15
-    Amount: 3
-  slicedObject:
-  - Object: {fileID: 1416409503708292, guid: b9338795bec578046be36f8c27f130b4, type: 2}
-    AlternName: 0
-    Amount: 3
-  - Object: {fileID: 1636286783258964, guid: d8b15fcc634af6e4b9d2fb633ece385c, type: 2}
-    AlternName: 1
-    Amount: 3
-  - Object: {fileID: 1654115261313542, guid: cc34f3611e514bd4d92af30a003dbed2, type: 2}
-    AlternName: 2
-    Amount: 3
-  - Object: {fileID: 1631839843667710, guid: 9e8320bfb0625c74f8c92ac97f868147, type: 2}
-    AlternName: 3
-    Amount: 3
-  - Object: {fileID: 1588292670725350, guid: 1e945176fcb653b4ba3e6b76f5343d01, type: 2}
-    AlternName: 4
-    Amount: 3
-  - Object: {fileID: 1002128250906494, guid: 97cde77fe069cc14e8e81c287343452c, type: 2}
-    AlternName: 5
-    Amount: 3
-  - Object: {fileID: 1730608950412600, guid: bffd02a022c055a4198d26105f6e03df, type: 2}
-    AlternName: 6
-    Amount: 3
-  - Object: {fileID: 1077251510374660, guid: 5c94d6f4317dc6d4fb5a60b77a6a3afe, type: 2}
-    AlternName: 7
-    Amount: 3
-  - Object: {fileID: 1929710381139272, guid: edb99c6767e7c004cb6204bbb2ed3abe, type: 2}
-    AlternName: 8
-    Amount: 3
-  - Object: {fileID: 1593082538241056, guid: 2fedb68372abcb142ad7f1b7c447b41b, type: 2}
-    AlternName: 9
-    Amount: 3
-  - Object: {fileID: 1153211602702682, guid: 4aa83a0a65e5f464eb34125958b4ae2e, type: 2}
-    AlternName: 10
-    Amount: 3
-  - Object: {fileID: 1333641239984094, guid: fbe6c21910976434eaab0cc070b1eab4, type: 2}
-    AlternName: 11
-    Amount: 3
-  - Object: {fileID: 1061160978393208, guid: 725819158f399d34988c10d4451479cd, type: 2}
-    AlternName: 12
-    Amount: 3
-  - Object: {fileID: 1964729168051362, guid: 0244265726c92aa46b13f12fd4154907, type: 2}
-    AlternName: 13
-    Amount: 3
-  - Object: {fileID: 1160421431592610, guid: e3274df89992ab1499e1cec2cfd5d530, type: 2}
-    AlternName: 14
-    Amount: 3
-  willGrow: 1
-  _PooledObjects: []
-  _SlicedObjects: []
+  m_PrefabParentObject: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1179077486}
 --- !u!1 &637297587
 GameObject:
   m_ObjectHideFlags: 0
@@ -6209,7 +5928,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
@@ -7297,74 +7016,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 787502749}
---- !u!1 &793909438
+--- !u!1 &799084670 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 793909439}
-  - component: {fileID: 793909441}
-  - component: {fileID: 793909440}
-  m_Layer: 0
-  m_Name: A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &793909439
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 793909438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -936, y: -353}
-  m_SizeDelta: {x: 575, y: 74}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &793909440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 793909438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &793909441
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 793909438}
+  m_PrefabParentObject: {fileID: 1928927951070652, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &815275345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7507,11 +7163,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820823743}
---- !u!1 &822166483 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1877227842710662, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &852516010
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,74 +7207,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224647730879864860, guid: ebb4d0d83d8c2b44ebbf79a5e5870b40,
     type: 2}
   m_PrefabInternal: {fileID: 1014131510}
---- !u!1 &874440193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 874440194}
-  - component: {fileID: 874440196}
-  - component: {fileID: 874440195}
-  m_Layer: 0
-  m_Name: QuestionPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &874440194
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 874440193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -638, y: -264}
-  m_SizeDelta: {x: 1172, y: 93}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &874440195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 874440193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &874440196
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 874440193}
 --- !u!114 &885188246 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114831546734488918, guid: 2ae874833bd172a4cbc6701a6dcca764,
@@ -7946,6 +7529,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &915143193 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1382887025487224, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &928166750
 GameObject:
   m_ObjectHideFlags: 0
@@ -10345,74 +9933,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &1143707032
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1143707033}
-  - component: {fileID: 1143707035}
-  - component: {fileID: 1143707034}
-  m_Layer: 0
-  m_Name: BG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1143707033
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143707032}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -639, y: -344}
-  m_SizeDelta: {x: 1282, y: 254}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1143707034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143707032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300006, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1143707035
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143707032}
 --- !u!1 &1150836317
 GameObject:
   m_ObjectHideFlags: 0
@@ -10825,6 +10345,113 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a89bf653ac20656408f2588879a01e9a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1179077486
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1631321504}
+    m_Modifications:
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567696879875324, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 885188246}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: durationFill
+      value: 
+      objectReference: {fileID: 1066781242}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 2016601844}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: Dodo
+      value: 
+      objectReference: {fileID: 2111749672}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: DodoWin
+      value: 
+      objectReference: {fileID: 1974126074}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: DodoLose
+      value: 
+      objectReference: {fileID: 1974126072}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: Nina
+      value: 
+      objectReference: {fileID: 799084670}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: NinaWin
+      value: 
+      objectReference: {fileID: 1974126071}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: NinaLose
+      value: 
+      objectReference: {fileID: 1974126075}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 915143193}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: EnemyWin
+      value: 
+      objectReference: {fileID: 1974126073}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: EnemyLose
+      value: 
+      objectReference: {fileID: 1974126076}
+    - target: {fileID: 114473285086177730, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: GameManager1
+      value: 
+      objectReference: {fileID: 1314250117}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1181025261
 GameObject:
@@ -11602,6 +11229,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
+--- !u!1 &1230434650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1230434651}
+  - component: {fileID: 1230434653}
+  - component: {fileID: 1230434652}
+  m_Layer: 0
+  m_Name: A Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1230434651
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230434650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 497546719}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9.4, y: 5.86}
+  m_SizeDelta: {x: 1060.04, y: 104.74}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1230434652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230434650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 65bcc3a818f9f4f45bb9a5ddef3fd515, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR
+    SIT AMET
+--- !u!222 &1230434653
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230434650}
 --- !u!1 &1242933500
 GameObject:
   m_ObjectHideFlags: 0
@@ -12148,230 +11850,369 @@ MonoBehaviour:
   _quizList:
   - question: 'Apa kepanjangan OJK? '
     option:
-    - answer: 'Organisasi Jasa Keuangan '
+    - answer: Organisasi Jasa Keuangan
+      isTrue: 0
+    - answer: Otoritas Jaga Korupsi
+      isTrue: 0
+    - answer: Otoritas Jasa Keuangan
       isTrue: 1
-    - answer: SALAH
+    - answer: Ormas Jasa Keuangan
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Unity uses Mono, System.IO is part of Mono
+  - question: 'Apa dasar hukum pembentukan OJK? '
     option:
-    - answer: Then, if you want to create a Folder
+    - answer: UU Nomor 21 Tahun 2011
       isTrue: 1
-    - answer: SALAH
+    - answer: UU Nomor 20 Tahun 2011
       isTrue: 0
-    - answer: SALAH
+    - answer: UU Nomor 20 Tahun 2001
       isTrue: 0
-    - answer: SALAH
+    - answer: UU Nomor 30 Tahun 2002
       isTrue: 0
-  - question: The best place to ask and answer questions about development with Unity.
+  - question: Berikut ini adalah Lembaga Jasa Keuangan yang diatur dan diawasi OJK,
+      kecuali ...
     option:
-    - answer: SALAH
+    - answer: Bank
       isTrue: 0
-    - answer: SALAH
+    - answer: Perusahaan Efek
       isTrue: 0
-    - answer: SALAH
+    - answer: Perusahaan Asuransi
       isTrue: 0
-    - answer: About handling files and folders
+    - answer: UMKM
       isTrue: 1
-  - question: To help users navigate the site we have posted a site navigation guide.
+  - question: 'Berapa jumlah Anggota Dewan Komisioner OJK? '
     option:
-    - answer: Then, if you want to create a Folder
+    - answer: 6 orang
+      isTrue: 0
+    - answer: 7 orang
+      isTrue: 0
+    - answer: 8 orang
+      isTrue: 0
+    - answer: 9 orang
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: If you are a moderator, see our Moderator Guidelines page.
+  - question: 'Berikut ini adalah tujuan pembentukan OJK, kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Menjaga keseluruhan kegiatan di dalam sektor jasa keuangan terselenggara
+        secara teratur, adil, transparan, akuntabel
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Mewujudkan sistem keuangan yang tumbuh secara berkelanjutan dan stabil
+      isTrue: 0
+    - answer: Melindungi kepentingan konsumen maupun masyarakat
+      isTrue: 0
+    - answer: Menjaga stabilitas nilai rupiah
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: 'This is the classic example of what not to do!! This will produce highly
-      biased output. '
+  - question: 'Apa nama sarana edukasi seputar jasa keuangan dan pengaduan masyarakat
+      terhadap pelanggaran-pelanggaran yang dilakukan oleh seluruh Lembaga Jasa Keuangan
+      (LJK)? '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: OJK Financial Customer Care (FCC)
       isTrue: 1
-    - answer: SALAH
+    - answer: OJK Whistle Blowing System (WBS)
       isTrue: 0
-    - answer: SALAH
+    - answer: OJK Whistle Blower System (WBS)
       isTrue: 0
-  - question: If you are a moderator, see our Moderator Guidelines page.
+    - answer: OJK Financial Customer Center (FCC)
+      isTrue: 0
+  - question: 'OJK FCC dapat dihubungi melalui telepon dengan nomor: '
     option:
-    - answer: SALAH
+    - answer: (021) 2960 0000
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: (021) 385 8321
+      isTrue: 0
+    - answer: 157
       isTrue: 1
-    - answer: SALAH
+    - answer: 155
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: ' private List<string> alpha = new List<string>{"A", "B", "C", "D"};'
+  - question: 'Berikut ini adalah nilai-nilai strategis OJK (Inpresiv), kecuali ... '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Integritas, Inklusif, Profesionalisme, Sinergi, dan Visioner
       isTrue: 1
-    - answer: SALAH
+    - answer: Integritas, Aktif, Profesionalisme, Sinergi, dan Visioner
       isTrue: 0
-    - answer: SALAH
+    - answer: Integritas, Inklusif, Profesionalisme, Religius, dan Visioner
       isTrue: 0
-  - question: I need a new shuffled list  eg :- {"C", "B", "D", "A"};
+    - answer: ' Integritas, Inklusif, Kompeten, Sinergi, dan Visioner'
+      isTrue: 0
+  - question: 'Berikut ini adalah Lembaga Jasa Keuangan (LJK) yang termasuk ke dalam
+      Industri Keuangan Non Bank (IKNB), kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Perusahaan Pembiayaan
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Perusahaan Asuransi
+      isTrue: 0
+    - answer: Perusahaan Efek
       isTrue: 1
-    - answer: SALAH
+    - answer: Perusahaan Pergadaian
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Using for loop i will show values in list.  How can i shuffle a list?
+  - question: 'Berikut ini adalah Misi OJK, kecuali ... '
     option:
-    - answer: SALAH
+    - answer: Mewujudkan terselenggaranya seluruh kegiatan di dalam sektor jasa keuangan
+        secara teratur, adil, transparan, dan akuntabel
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Mewujudkan sistem keuangan yang tumbuh secara berkelanjutan dan stabil
+        serta
+      isTrue: 0
+    - answer: Melindungi kepentingan konsumen dan masyarakat
+      isTrue: 0
+    - answer: Memberantas korupsi di Industri Jasa Keuangan
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: "Microsoft Corporation A square divided into four sub-squares, colored
-      red, green, yellow and blue (clockwise), with the company name appearing to
-      its right. Microsoft building 17 front door.jpg Building 17 on the Microsoft
-      Redmond campus in Redmond, Washington Type Public Traded as\t NASDAQ: MSFT NASDAQ-100
-      component DJIA component S&P 100 component S&P 500 component ISIN\tUS5949181045
-      Industry\t Computer software Computer hardware Consumer electronics Social networking
-      service Cloud computing Video games Internet Corporate venture capital Founded\tApril
-      4, 1975; 43 years ago in Albuquerque, New Mexico, U.S. Founders\t Bill Gates
-      Paul Allen Headquarters\tOne Microsoft Way, Redmond, Washington, U.S. Area served
-      Worldwide Key people John W. Thompson (Chairman) Brad Smith (President and CLO)
-      Satya Nadella (CEO) Bill Gates (Technical advisor) Products\t Windows Office
-      Servers Skype Visual Studio Dynamics Xbox Surface Mobile List of software Services\t
-      Azure Bing LinkedIn MSDN Office 365 OneDrive Outlook.com TechNet Wallet Windows
-      Store Windows Update Xbox Live Revenue\tIncrease US$110.360 billion[1] (2018)
-      Operating income Increase US$35.058 billion[1] (2018) Net income Increase US$30.267
-      billion[1] (2018) Total assets\tIncrease US$258.848 billion[1] (2018) Total
-      equity\tIncrease US$82.718 billion[1] (2018) Number of employees Increase 131,300[2]
-      (2018) Subsidiaries\tList of Microsoft assets Website\tmicrosoft.com Microsoft
-      Corporation (/\u02C8ma\u026Akr\u0259s\u0252ft/,[3][4] abbreviated as MS) is
-      an American multinational technology company"
+  - question: 'Tindak pidana korupsi diatur dalam ... '
     option:
-    - answer: SALAH
+    - answer: UU Nomor 21 Tahun 2011
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: UU Nomor 20 Tahun 2011
+      isTrue: 0
+    - answer: UU Nomor 20 Tahun 2001
       isTrue: 1
-    - answer: SALAH
+    - answer: UU Nomor 28 Tahun 1999
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Microsoft was founded by Bill Gates and Paul Allen on April 4
+  - question: 'Apa saja yang termasuk perilaku utama nilai Integritas? '
     option:
-    - answer: SALAH
+    - answer: Pintar, Menghargai Perbedaan, Bijak, dan Adil
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: ' Jujur, Konsisten, Bijak, dan Adil'
       isTrue: 1
-    - answer: SALAH
+    - answer: ' Jujur, Konsisten, Pintar, dan Melihat ke depan'
       isTrue: 0
-    - answer: SALAH
+    - answer: Konsisten, Menghargai Perbedaan, Bijak, dan Adil
       isTrue: 0
-  - question: As of 2015, Microsoft is market-dominant in the IBM PC-compatible operating
-      system market
+  - question: 'Berikut ini merupakan bentuk dari korupsi, kecuali: '
     option:
-    - answer: SALAH
+    - answer: Gratifikasi
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Suap
+      isTrue: 0
+    - answer: Kerugian Keuangan Negara
+      isTrue: 0
+    - answer: Penipuan
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: CEO in 2014, the company has scaled back on hardware and has instead
-      focused on cloud computing
+  - question: 'Suatu tindakan pemberian uang atau barang dari vendor kepada pejabat
+      pengadaan barang dan jasa yang terjadi karena adanya kesepakatan (meeting of
+      mind) dan ijab qabul antara kedua pihak, serta adanya niat jahat (mens rea)
+      pada saat penerimaan uang atau barang tersebut, disebut: Suatu tindakan pemberian
+      uang atau barang dari vendor kepada pejabat pengadaan barang dan jasa yang terjadi
+      karena adanya kesepakatan (meeting of mind) dan ijab qabul antara kedua pihak,
+      serta adanya niat jahat (mens rea) pada saat penerimaan uang atau barang tersebut,
+      disebut: Suatu tindakan pemberian uang atau barang dari vendor kepada pejabat
+      pengadaan barang dan jasa yang terjadi karena adanya kesepakatan (meeting of
+      mind) dan ijab qabul antara kedua pihak, serta adanya niat jahat (mens rea)
+      pada saat penerimaan uang atau barang tersebut, disebut:  '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Suap
       isTrue: 1
-    - answer: SALAH
+    - answer: Gratifikasi
       isTrue: 0
-    - answer: SALAH
+    - answer: Pemerasan
       isTrue: 0
-  - question: entering the personal computer production market for the first time
-      in June 2012 with the launch
+    - answer: Penggelapan
+      isTrue: 0
+  - question: 'Perbuatan menggunakan kekerasan atau ancaman kekerasan atau pencemaran
+      seseorang dengan tujuan menguntungkan diri sendiri atau orang lain agar orang
+      tsb memberikan barang miliknya atau menghapuskan piutang, disebut: '
     option:
-    - answer: SALAH
+    - answer: Suap
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Gratifikasi
+      isTrue: 0
+    - answer: Pemerasan
       isTrue: 1
-    - answer: SALAH
+    - answer: Penggelapan
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: has instead focused on cloud computing, a move that helped the company's
-      shares reach its highest value
+  - question: 'Niat jahat (mens rea) dari suatu gratifikasi dianggap ada pada saat:Niat
+      jahat (mens rea) dari suatu gratifikasi dianggap ada pada saat:Niat jahat (mens
+      rea) dari suatu gratifikasi dianggap ada pada saat: '
     option:
-    - answer: SALAH
+    - answer: Penerima gratifikasi menerima pemberian barang gratifikasi.
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Setelah 5 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
+      isTrue: 0
+    - answer: Setelah 15 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
+      isTrue: 0
+    - answer: Setelah 30 hari kerja, Penerima gratifikasi tidak melaporkan penerimaan
+        gratifikasi yang diterimanya.
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Childhood friends Bill Gates and Paul Allen sought to make a business
-      utilizing their shared skills in computer programming
+  - question: 'Dalam rangka Program Pengendalian Gratifikasi di OJK, setiap penerimaan
+      atau penolakan gratifikasi wajib dilaporkan Pejabat atau Pegawai OJK kepada:  '
     option:
-    - answer: SALAH
-      isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: KPK melalui Unit Pengendalian Gratifikasi OJK
       isTrue: 1
-    - answer: SALAH
+    - answer: KPK melalui Unit Pengendalian LHKPN OJK
       isTrue: 0
-    - answer: SALAH
+    - answer: BPK
       isTrue: 0
-  - question: MITS requested a demonstration. Since they didn't yet have one
+    - answer: OJK tanpa harus disampaikan ke KPK
+      isTrue: 0
+  - question: 'Kapan batas waktu penerimaan gratifikasi dapat dilaporkan Pejabat atau
+      Pegawai OJK? '
     option:
-    - answer: SALAH
+    - answer: 10 Hari
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: 10 Hari Kerja
+      isTrue: 0
+    - answer: 30 Hari
+      isTrue: 0
+    - answer: 30 Hari Kerja
       isTrue: 1
-    - answer: SALAH
-      isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Allen worked on a simulator for the Altair while Gates developed the
-      interpreter.
+  - question: 'Berikut ini merupakan contoh bentuk Gratifikasi yang Tidak Dianggap
+      Suap Terkait Kedinasan, kecuali: '
     option:
-    - answer: SALAH
+    - answer: Seminar kit, sertifikat, plakat atau cinderamata yang diperoleh dari
+        kegiatan resmi kedinasan yaitu rapat, seminar, workshop, konferensi, pelatihan,
+        atau kegiatan lain sejenis yang berlaku umum
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Hidangan atau sajian atau jamuan pada acara resmi kedinasan yang berlaku
+        umum
+      isTrue: 0
+    - answer: Hadiah yang diperoleh dari hubungan Keluarga sepanjang tidak mempunyai
+        konflik kepentingan
       isTrue: 1
-    - answer: SALAH
+    - answer: Fasilitas berupa uang saku, transportasi, akomodasi, dan/atau honorarium
+        pada waktu pelaksanaan tugas kedinasan berdasarkan penugasan resmi dari OJK
+        baik pada jam kerja maupun di luar jam kerja atas beban penyelenggara
       isTrue: 0
-    - answer: SALAH
-      isTrue: 0
-  - question: Although they developed the interpreter on a simulator and not the actual
-      device
+  - question: 'Apakah Pejabat atau Pegawai OJK diperbolehkan menerima jamuan makan
+      atau minum yang disediakan atau diberikan oleh IJK (seperti Bank, Asuransi,
+      Lembaga Pembiayaan, dan IJK lainnya)? '
     option:
-    - answer: SALAH
+    - answer: Boleh apabila jamuan makan atau minum tersebut mewah dan mahal
       isTrue: 0
-    - answer: I have a nice tutorial package
+    - answer: Tidak boleh tanpa ada pengecualian
+      isTrue: 0
+    - answer: ' Boleh apabila hidangan atau sajian atau jamuan makan dan/atau minum
+        yang disediakan atau diberikan oleh IJK sepanjang berlaku umum dan dilakukan
+        pada acara resmi kedinasan.'
       isTrue: 1
-    - answer: SALAH
+    - answer: Boleh apabila jamuan makan atau minum tersebut khusus diberikan kepada
+        Pejabat atau Pegawai OJK
       isTrue: 0
-    - answer: SALAH
+  - question: 'Apa nama sistem untuk menyampaikan, mengelola, dan menindaklanjuti
+      laporan mengenai dugaan terjadinya pelanggaran yang dilakukan oleh pihak internal
+      OJK yaitu Anggota Dewan Komisioner, Pegawai, Calon Pegawai, Tenaga Kerja melalui
+      Perjanjian Kerja Waktu Tertentu dan/atau tenaga kerja outsourcing di OJK? '
+    option:
+    - answer: OJK Financial Customer Care (FCC)
+      isTrue: 0
+    - answer: OJK Whistle Blowing System (WBS)
+      isTrue: 1
+    - answer: OJK Whistle Blower System (WBS)
+      isTrue: 0
+    - answer: OJK Financial Customer Center (FCC)
+      isTrue: 0
+  - question: 'Jenis pelanggaran yang dilakukan Pihak Internal OJK dan dapat dilaporkan
+      melalui OJK WBS adalah: '
+    option:
+    - answer: Korupsi, kolusi, dan nepotisme (KKN)
+      isTrue: 0
+    - answer: ' Kecurangan (fraud), termasuk penipuan, penggelapan aset, dan pembocoran
+        informasi'
+      isTrue: 0
+    - answer: Benturan Kepentingan
+      isTrue: 0
+    - answer: Semua benar
+      isTrue: 1
+  - question: 'Berikut ini adalah sarana pelaporan OJK WBS, kecuali ... '
+    option:
+    - answer: www.ojk.go.id/wbs
+      isTrue: 1
+    - answer: E-mail ke ojk.wbs@rsm.id
+      isTrue: 0
+    - answer: 'PO BOX: ETIK OJK JKT 10000'
+      isTrue: 0
+    - answer: Telepon ke 157
+      isTrue: 0
+  - question: 'Siapa yang wajib mematuhi ketentuan Pengendalian Gratifikasi di OJK? '
+    option:
+    - answer: Anggota Dewan Komisioner
+      isTrue: 0
+    - answer: Pegawai OJK dan Keluarga Pegawai OJK
+      isTrue: 0
+    - answer: Anggota Dewan Komisioner, Pegawai OJK, dan/atau Keluarga Anggota Dewan
+        Komisioner atau Pegawai OJK
+      isTrue: 1
+    - answer: Anggota Dewan Komisioner dan Pegawai OJK
+      isTrue: 0
+  - question: 'Apa saja kategori gratifikasi berdasarkan ketentuan internal OJK? '
+    option:
+    - answer: Gratifikasi yang dianggap suap dan Gratifikasi yang pasti merupakan
+        suap
+      isTrue: 0
+    - answer: Gratifikasi yang dianggap suap, Gratifikasi yang tidak dianggap suap
+        terkait kedinasan, dan Gratifikasi yang tidak dianggap suap tidak terkait
+        kedinasan
+      isTrue: 1
+    - answer: Gratifikasi yang pasti merupakan suap, Gratifikasi yang tidak dianggap
+        suap terkait kedinasan, dan Gratifikasi yang tidak dianggap suap tidak terkait
+        kedinasan
+      isTrue: 0
+    - answer: ' Gratifikasi yang tidak dianggap suap terkait kedinasan dan Gratifikasi
+        yang tidak dianggap suap tidak terkait kedinasan'
+      isTrue: 0
+  - question: 'Suatu tindakan pemberian uang atau barang kepada Penyelenggara Negara
+      yang terjadi tanpa adanya kesepakatan (meeting of mind) dan ijab qabul antara
+      kedua pihak, serta adanya niat jahat (mens rea) dianggap muncul apabila setelah
+      30 hari kerja sejak diterimanya uang atau barang tersebut, Penyelenggara Negara
+      tersebut tidak melaporkannya kepada KPK, disebut:  '
+    option:
+    - answer: Suap
+      isTrue: 0
+    - answer: Gratifikasi
+      isTrue: 1
+    - answer: Pemerasan
+      isTrue: 0
+    - answer: Penggelapan
+      isTrue: 0
+  - question: 'Sanksi pidana atas penerimaan gratifikasi yang dianggap pemberian suap
+      dan tidak dilaporkan kepada KPK adalah ... '
+    option:
+    - answer: Pidana penjara seumur hidup atau pidana penjara paling singkat 4 tahun
+        dan paling lama 20 tahun, dan pidana denda paling sedikit Rp 200.000.000,-
+        dan paling banyak Rp 1.000.000.000,-
+      isTrue: 1
+    - answer: Pidana penjara paling singkat 1 tahun dan paling lama 20 tahun, dan
+        pidana denda paling sedikit Rp 100.000.000,- dan paling banyak Rp 500.000.000,-
+      isTrue: 0
+    - answer: Pidana penjara seumur hidup, dan pidana denda paling banyak Rp 200.000.000,-
+      isTrue: 0
+    - answer: Pidana penjara atau pidana penjara paling singkat 4 tahun dan paling
+        lama 15 tahun, dan pidana denda paling sedikit Rp 200.000.000,- dan paling
+        banyak Rp 1.000.000.000,-
+      isTrue: 0
+  - question: 'Lembaga negara yang memiliki kewenangan mengoordinasikan program pengendalian
+      gratifikasi Pegawai Negeri dan Penyelenggara Negara di Indonesia adalah '
+    option:
+    - answer: OJK
+      isTrue: 0
+    - answer: KPK
+      isTrue: 1
+    - answer: BPK
+      isTrue: 0
+    - answer: Bank Indonesia
+      isTrue: 0
+  - question: 'Berikut ini adalah tugas OJK, kecuali ... '
+    option:
+    - answer: Mengawasi Lembaga Jasa Keuangan
+      isTrue: 0
+    - answer: Mengawasi Sistem Pembayaran
+      isTrue: 1
+    - answer: Melindungi Konsumen Lembaga Jasa Keuangan
+      isTrue: 0
+    - answer: Mengatur Lembaga Jasa Keuangan
+      isTrue: 0
+  - question: 'Berikut ini merupakan contoh bentuk Gratifikasi yang Tidak Dianggap
+      Suap Tidak Terkait Kedinasan, kecuali: '
+    option:
+    - answer: ' Hadiah langsung atau undian, rabat atau diskon, voucher, poin penghargaan,
+        atau cinderamata yang berlaku secara umum'
+      isTrue: 0
+    - answer: Barang cinderamata sebagai hadiah seremonial pada waktu kegiatan pertemuan
+        resmi pelaksanaan tugas kedinasan
+      isTrue: 1
+    - answer: Hadiah yang diperoleh dari hubungan Keluarga sepanjang tidak mempunyai
+        konflik kepentingan
+      isTrue: 0
+    - answer: Keuntungan atau bunga dari penempatan dana, investasi atau kepemilikan
+        efek Keluarga yang berlaku secara umum
       isTrue: 0
   _generatedQuiz: []
   _GameStartPopUp: {fileID: 345660441}
@@ -12385,14 +12226,7 @@ MonoBehaviour:
   _SalahPopUp: {fileID: 1150836317}
   _BenarPopUp: {fileID: 1840096644}
   _ScoreText: {fileID: 2131084981}
-  _ImageFill: {fileID: 33291432}
   _BattleObject: {fileID: 1022734271}
-  _Speed: 5
-  _FillSpeed: 0.005
-  _IncreaseSpeed: 100
-  _IncreaseFillSpeed: 0.15
-  _DecreaseSpeed: 80
-  _DecreaseFillSpeed: 0.1
 --- !u!114 &1314250118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13088,11 +12922,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349292274}
---- !u!1 &1356159025 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1543702241849160, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1364120353
 GameObject:
   m_ObjectHideFlags: 0
@@ -13643,74 +13472,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1492144341
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1492144342}
-  - component: {fileID: 1492144344}
-  - component: {fileID: 1492144343}
-  m_Layer: 5
-  m_Name: EnemyBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1492144342
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.01, y: 1.4139699, z: 1.0099999}
-  m_Children: []
-  m_Father: {fileID: 1896314388}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -11.200073, y: -13.399998}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1492144343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1492144344
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1492144341}
 --- !u!1 &1520375724
 GameObject:
   m_ObjectHideFlags: 0
@@ -13927,6 +13688,81 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527517892}
+--- !u!1 &1548204102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1548204103}
+  - component: {fileID: 1548204105}
+  - component: {fileID: 1548204104}
+  m_Layer: 0
+  m_Name: B Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1548204103
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548204102}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 560816851}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.7, y: 5.8599854}
+  m_SizeDelta: {x: 1060.04, y: 104.74}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1548204104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548204102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 65bcc3a818f9f4f45bb9a5ddef3fd515, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR
+    SIT AMET
+--- !u!222 &1548204105
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548204102}
 --- !u!1 &1552461350
 GameObject:
   m_ObjectHideFlags: 0
@@ -14082,11 +13918,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1572988037}
---- !u!1 &1586624717 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1737955660410142, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1592368653
 GameObject:
   m_ObjectHideFlags: 0
@@ -14937,45 +14768,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1638208370}
---- !u!1 &1643368582 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1689136213395962, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
---- !u!1 &1649399656
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1649399657}
-  m_Layer: 0
-  m_Name: UIQuestion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1649399657
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1649399656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1143707033}
-  - {fileID: 874440194}
-  - {fileID: 793909439}
-  - {fileID: 155578606}
-  - {fileID: 2009129131}
-  - {fileID: 410019066}
-  m_Father: {fileID: 437861724}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649913424
 GameObject:
   m_ObjectHideFlags: 0
@@ -15199,49 +14991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
---- !u!1 &1690349973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1690349974}
-  - component: {fileID: 1690349977}
-  m_Layer: 0
-  m_Name: Blade
-  m_TagString: Blade
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1690349974
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690349973}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -640, y: -360, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 628678993}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1690349977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690349973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb59d5f2181f96c4994a98b10a794520, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bladeTrailPrefab: {fileID: 1240082411226160, guid: 490a107d9f43c9b42a060eedc8940283,
-    type: 2}
-  minCuttingVelocity: 0.001
 --- !u!1 &1695981706
 GameObject:
   m_ObjectHideFlags: 0
@@ -15824,11 +15573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Key: 
---- !u!1 &1739712620 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1781575754828114, guid: 2ae874833bd172a4cbc6701a6dcca764,
-    type: 2}
-  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1001 &1744006200
 Prefab:
   m_ObjectHideFlags: 0
@@ -16276,6 +16020,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775817902}
+--- !u!224 &1786783903 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224350585175081872, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1789089940
 GameObject:
   m_ObjectHideFlags: 0
@@ -16555,6 +16304,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1828604373}
+--- !u!224 &1829567927 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224573526008422152, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1840096644
 GameObject:
   m_ObjectHideFlags: 0
@@ -17220,104 +16974,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1896314387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1896314388}
-  - component: {fileID: 1896314390}
-  - component: {fileID: 1896314389}
-  m_Layer: 5
-  m_Name: Bar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1896314388
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0517157, y: 1.0517157, z: 1.0517157}
-  m_Children:
-  - {fileID: 1492144342}
-  - {fileID: 33291431}
-  m_Father: {fileID: 624986265}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -332.4}
-  m_SizeDelta: {x: 808, y: 30.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1896314389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1896314390
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896314387}
---- !u!1 &1910648250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1910648251}
-  m_Layer: 0
-  m_Name: SpawnPoint (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1910648251
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1910648250}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -1273.76, y: -721.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 628678993}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!1 &1918250633
 GameObject:
   m_ObjectHideFlags: 0
@@ -17544,6 +17200,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1936203518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1936203519}
+  - component: {fileID: 1936203521}
+  - component: {fileID: 1936203520}
+  m_Layer: 0
+  m_Name: C Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1936203519
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936203518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1786783903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9.6, y: 9}
+  m_SizeDelta: {x: 1060.04, y: 104.74}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1936203520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936203518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 65bcc3a818f9f4f45bb9a5ddef3fd515, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR
+    SIT AMET
+--- !u!222 &1936203521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936203518}
 --- !u!1 &1937036781
 GameObject:
   m_ObjectHideFlags: 0
@@ -18318,171 +18049,82 @@ Prefab:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1338606857337282, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338606857337282, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_Name
       value: Game 2 (True)
       objectReference: {fileID: 0}
     - target: {fileID: 1620701305458348, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1928927951070652, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212850691069649896, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 212850691069649896, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 212850691069649896, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1689136213395962, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294271642751820, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877227842710662, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212850691069649896, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 729ae2f4231c5e049b793c5d62014cf1,
-        type: 3}
-    - target: {fileID: 212854143871728744, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 729ae2f4231c5e049b793c5d62014cf1,
-        type: 3}
-    - target: {fileID: 212854143871728744, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 212854143871728744, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 212854143871728744, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1737955660410142, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212708187222142700, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 729ae2f4231c5e049b793c5d62014cf1,
-        type: 3}
-    - target: {fileID: 212708187222142700, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 212708187222142700, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 212708187222142700, guid: 2ae874833bd172a4cbc6701a6dcca764,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
+    - target: {fileID: 4563891029300178, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4677807878571654, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 4493397774052550, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4216800963932174, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369095965866884, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4563891029300178, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543702241849160, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382887025487224, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514810903057210, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781575754828114, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285726006900046, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4966090408358022, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925423239648958, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+    - target: {fileID: 4263460868010026, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4481922924569848, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216800963932174, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 4263460868010026, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+    - target: {fileID: 4493397774052550, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369095965866884, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181318166699566, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4731579017584444, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -156
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ae874833bd172a4cbc6701a6dcca764, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1974126071 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1928927951070652, guid: 2ae874833bd172a4cbc6701a6dcca764,
+  m_PrefabParentObject: {fileID: 1877227842710662, guid: 2ae874833bd172a4cbc6701a6dcca764,
     type: 2}
   m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1974126072 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1294271642751820, guid: 2ae874833bd172a4cbc6701a6dcca764,
+  m_PrefabParentObject: {fileID: 1543702241849160, guid: 2ae874833bd172a4cbc6701a6dcca764,
     type: 2}
   m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &1974126073 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1382887025487224, guid: 2ae874833bd172a4cbc6701a6dcca764,
+  m_PrefabParentObject: {fileID: 1781575754828114, guid: 2ae874833bd172a4cbc6701a6dcca764,
     type: 2}
   m_PrefabInternal: {fileID: 1974126070}
---- !u!1 &1976836455 stripped
+--- !u!1 &1974126074 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1689136213395962, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
+--- !u!1 &1974126075 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1737955660410142, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
+--- !u!1 &1974126076 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1514810903057210, guid: 2ae874833bd172a4cbc6701a6dcca764,
     type: 2}
@@ -18950,74 +18592,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999146096}
---- !u!1 &2009129130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2009129131}
-  - component: {fileID: 2009129133}
-  - component: {fileID: 2009129132}
-  m_Layer: 0
-  m_Name: C
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2009129131
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2009129130}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1649399657}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -936, y: -431}
-  m_SizeDelta: {x: 575, y: 74}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2009129132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2009129130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 4b12483d6526c6f49a3867cc8b199fd2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &2009129133
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2009129130}
 --- !u!1 &2016601844 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1627545433908468, guid: 2ae874833bd172a4cbc6701a6dcca764,
@@ -19702,6 +19276,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2093163190}
+--- !u!1 &2111749672 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1294271642751820, guid: 2ae874833bd172a4cbc6701a6dcca764,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974126070}
 --- !u!1 &2122752211
 GameObject:
   m_ObjectHideFlags: 0

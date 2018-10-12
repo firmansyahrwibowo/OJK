@@ -7,7 +7,6 @@ using System;
 
 public class Game2Manager : MonoBehaviour
 {
-
     public Text scoreText;
     public int Score;
     public Image durationFill;
@@ -29,12 +28,14 @@ public class Game2Manager : MonoBehaviour
     public int CharacterPick;
     public Game1Manager GameManager1;
     public List<Quiz> Game2Quiz;
+    public List<Quiz> RandomizedQuiz;
 
     bool _IsStart = false;
 
     FruitSpawner _Spawner;
     Blade _Blade;
     Animator m_AnimatorEnemy, m_AnimatorDodo, m_AnimatorNina;
+
     // Use this for initialization
     private void Awake()
     {
@@ -48,16 +49,10 @@ public class Game2Manager : MonoBehaviour
         m_AnimatorDodo = Dodo.GetComponent<Animator>();
         m_AnimatorNina = Nina.GetComponent<Animator>();
         m_AnimatorEnemy = Enemy.GetComponent<Animator>();
-
-        for (int i = 0; i < GameManager1._quizList.Count; i++)
-        {
-            Game2Quiz.Add(GameManager1._quizList[i]);
-        }
     }
     private void Start()
     {
         PoolingObject.Instance.InitPooling();
-        
     }
     private void SetScoreHandler(ScoreSetEvent e)
     {
@@ -82,6 +77,10 @@ public class Game2Manager : MonoBehaviour
         _IsStart = true;
         _Spawner.InitSpawner();
         _Blade.Init();
+
+        //Reset Random Quiz
+        CopyQuizFromGame1();
+        QuizRandomizer();
     }
 
     // Update is called once per frame
@@ -169,6 +168,9 @@ public class Game2Manager : MonoBehaviour
         EnemyWin.SetActive(false);
         EnemyLose.SetActive(false);
 
+        Game2Quiz.Clear();
+        RandomizedQuiz.Clear();
+
         if (e.Type == 0)
         {
             Dodo.SetActive(true);
@@ -180,6 +182,24 @@ public class Game2Manager : MonoBehaviour
             Nina.SetActive(true);
             Enemy.SetActive(true);
             CharacterPick = 1;
+        }
+    }
+
+    void QuizRandomizer()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            int temp = UnityEngine.Random.Range(0,Game2Quiz.Count);
+            RandomizedQuiz.Add(Game2Quiz[temp]);
+            Game2Quiz.Remove(Game2Quiz[temp]);
+        }
+    }
+
+    void CopyQuizFromGame1()
+    {
+        for (int i = 0; i < GameManager1._quizList.Count; i++)
+        {
+            Game2Quiz.Add(GameManager1._quizList[i]);
         }
     }
 }
