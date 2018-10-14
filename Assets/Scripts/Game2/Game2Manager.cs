@@ -27,12 +27,26 @@ public class Game2Manager : MonoBehaviour
     public CharacterType Type;
     public int CharacterPick;
     public Game1Manager GameManager1;
-    public QuestionHolder Question;
-    public int NextQuestion;
-    public AnswerHolder AnswerA;
-    public AnswerHolder AnswerB;
-    public AnswerHolder AnswerC;
-    public AnswerHolder AnswerD;
+
+	public int CurrentQuestion;
+	public int QuestionAnswered;
+	public bool OnceAskedQuestion=false;
+	public GameObject Quiz;
+    public QuestionHolder Question1;
+    public AnswerHolder AnswerA1;
+    public AnswerHolder AnswerB1;
+    public AnswerHolder AnswerC1;
+    public AnswerHolder AnswerD1;
+	public QuestionHolder Question2;
+	public AnswerHolder AnswerA2;
+	public AnswerHolder AnswerB2;
+	public AnswerHolder AnswerC2;
+	public AnswerHolder AnswerD2;
+	public QuestionHolder Question3;
+	public AnswerHolder AnswerA3;
+	public AnswerHolder AnswerB3;
+	public AnswerHolder AnswerC3;
+	public AnswerHolder AnswerD3;
     public List<Quiz> Game2Quiz;
     public List<Quiz> RandomizedQuiz;
 
@@ -72,30 +86,29 @@ public class Game2Manager : MonoBehaviour
 
     public void Init()
     {
-        //Sebab Bug Blade
-        //Blade.SetActive(true);
-
-        Score = 0;
-        time = timeAmount;
-        _Blade.Init();  
+        Score = 0; 
         Spawner.SetActive(true);
         durationFill.fillAmount = 1;
-        _IsStart = true;
-        _Spawner.InitSpawner();
-        _Blade.Init();
+
 
         //Reset Random Quiz
+		CurrentQuestion = 0;
+		QuestionAnswered = 0;
+		OnceAskedQuestion = false;
         CopyQuizFromGame1();
         QuizRandomizer();
-        StartCoroutine(GenerateQuestion());
-
+		GenerateQuestion();
+		Quiz.SetActive (true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_IsStart)
+		QuestionChallenge();
+
+		if (_IsStart)
         {
+			
             m_AnimatorDodo.SetBool("IsPlay", true);
             m_AnimatorNina.SetBool("IsPlay", true);
             m_AnimatorEnemy.SetBool("IsPlay", true);
@@ -119,10 +132,6 @@ public class Game2Manager : MonoBehaviour
 
     void GameEnd()
     {
-
-        //Sebab Bug Blade
-        //Blade.SetActive(false);
-
         _Spawner.Reset();
         _Blade.StopInit();
         durationFill.fillAmount = 0;
@@ -211,36 +220,107 @@ public class Game2Manager : MonoBehaviour
         }
     }
 
-    IEnumerator GenerateQuestion()
+    void GenerateQuestion()
     {
-        yield return new WaitForSeconds(1f);
-        for (NextQuestion = 0; NextQuestion < Game2Quiz.Count;)
-        {
-            Question.QuestionContent = Game2Quiz[NextQuestion].question;
-            Question.QuestionText.text = Game2Quiz[NextQuestion].question;
+		// Question Sengaja ga di list, takutnya ada revisi minta di random lagi
 
-            AnswerA.AnswerContent = Game2Quiz[NextQuestion].option[0].answer;
-            AnswerA.AnswerText.text = Game2Quiz[NextQuestion].option[0].answer;
-            AnswerA.IsTrue = Game2Quiz[NextQuestion].option[0].isTrue;
+		//1
+		Question1.QuestionContent = RandomizedQuiz [0].question;
+		Question1.QuestionText.text = RandomizedQuiz [0].question;
 
-            AnswerB.AnswerContent = Game2Quiz[NextQuestion].option[1].answer;
-            AnswerB.AnswerText.text = Game2Quiz[NextQuestion].option[1].answer;
-            AnswerB.IsTrue = Game2Quiz[NextQuestion].option[1].isTrue;
+		AnswerA1.AnswerContent = RandomizedQuiz [0].option [0].answer;
+		AnswerA1.AnswerText.text = RandomizedQuiz [0].option [0].answer;
+		AnswerA1.IsTrue = RandomizedQuiz [0].option [0].isTrue;
 
-            AnswerC.AnswerContent = Game2Quiz[NextQuestion].option[2].answer;
-            AnswerC.AnswerText.text = Game2Quiz[NextQuestion].option[2].answer;
-            AnswerC.IsTrue = Game2Quiz[NextQuestion].option[2].isTrue;
+		AnswerB1.AnswerContent = RandomizedQuiz [0].option [1].answer;
+		AnswerB1.AnswerText.text = RandomizedQuiz [0].option [1].answer;
+		AnswerB1.IsTrue = RandomizedQuiz [0].option [1].isTrue;
 
-            AnswerD.AnswerContent = Game2Quiz[NextQuestion].option[3].answer;
-            AnswerD.AnswerText.text = Game2Quiz[NextQuestion].option[3].answer;
-            AnswerD.IsTrue = Game2Quiz[NextQuestion].option[3].isTrue;
-        }
+		AnswerC1.AnswerContent = RandomizedQuiz [0].option [2].answer;
+		AnswerC1.AnswerText.text = RandomizedQuiz [0].option [2].answer;
+		AnswerC1.IsTrue = RandomizedQuiz [0].option [2].isTrue;
 
+		AnswerD1.AnswerContent = RandomizedQuiz [0].option [3].answer;
+		AnswerD1.AnswerText.text = RandomizedQuiz [0].option [3].answer;
+		AnswerD1.IsTrue = RandomizedQuiz [0].option [3].isTrue;
+
+		//2
+		Question2.QuestionContent = RandomizedQuiz [1].question;
+		Question2.QuestionText.text = RandomizedQuiz [1].question;
+
+		AnswerA2.AnswerContent = RandomizedQuiz [1].option [0].answer;
+		AnswerA2.AnswerText.text = RandomizedQuiz [1].option [0].answer;
+		AnswerA2.IsTrue = RandomizedQuiz [1].option [0].isTrue;
+
+		AnswerB2.AnswerContent = RandomizedQuiz [1].option [1].answer;
+		AnswerB2.AnswerText.text = RandomizedQuiz [1].option [1].answer;
+		AnswerB2.IsTrue = RandomizedQuiz [1].option [1].isTrue;
+
+		AnswerC2.AnswerContent = RandomizedQuiz [1].option [2].answer;
+		AnswerC2.AnswerText.text = RandomizedQuiz [1].option [2].answer;
+		AnswerC2.IsTrue = RandomizedQuiz [1].option [2].isTrue;
+
+		AnswerD2.AnswerContent = RandomizedQuiz [1].option [3].answer;
+		AnswerD2.AnswerText.text = RandomizedQuiz [1].option [3].answer;
+		AnswerD2.IsTrue = RandomizedQuiz [1].option [3].isTrue;
+
+		//3
+		Question3.QuestionContent = RandomizedQuiz [2].question;
+		Question3.QuestionText.text = RandomizedQuiz [2].question;
+
+		AnswerA3.AnswerContent = RandomizedQuiz [2].option [0].answer;
+		AnswerA3.AnswerText.text = RandomizedQuiz [2].option [0].answer;
+		AnswerA3.IsTrue = RandomizedQuiz [2].option [0].isTrue;
+
+		AnswerB3.AnswerContent = RandomizedQuiz [2].option [1].answer;
+		AnswerB3.AnswerText.text = RandomizedQuiz [2].option [1].answer;
+		AnswerB3.IsTrue = RandomizedQuiz [2].option [1].isTrue;
+
+		AnswerC3.AnswerContent = RandomizedQuiz [2].option [2].answer;
+		AnswerC3.AnswerText.text = RandomizedQuiz [2].option [2].answer;
+		AnswerC3.IsTrue = RandomizedQuiz [2].option [2].isTrue;
+
+		AnswerD3.AnswerContent = RandomizedQuiz [2].option [3].answer;
+		AnswerD3.AnswerText.text = RandomizedQuiz [2].option [3].answer;
+		AnswerD3.IsTrue = RandomizedQuiz [2].option [3].isTrue;
     }
 
-    public void Next()
-    {
-        NextQuestion = NextQuestion + 1;
-    }
+	void QuestionChallenge()
+	{
+		if (OnceAskedQuestion==false) 
+		{
+			if ((CurrentQuestion==3) && (QuestionAnswered==1)) 
+			{
+				time = 30;
+				_Spawner.InitSpawner();
+				_Blade.Init();
+				_IsStart = true;
+				OnceAskedQuestion = true;
+			}
+			if ((CurrentQuestion==3) && (QuestionAnswered==2)) 
+			{
+				time = 60;
+				_Spawner.InitSpawner();
+				_Blade.Init();
+				_IsStart = true;
+				OnceAskedQuestion = true;
+			}
+			if ((CurrentQuestion==3) && (QuestionAnswered==3)) 
+			{
+				time = 80;
+				_Spawner.InitSpawner();
+				_Blade.Init();
+				_IsStart = true;
+				OnceAskedQuestion = true;
+			}
 
+			if((CurrentQuestion==3) && (QuestionAnswered==0))
+			{
+				GameEnd ();
+				OnceAskedQuestion = true;
+			}
+
+		}
+
+	}
 }

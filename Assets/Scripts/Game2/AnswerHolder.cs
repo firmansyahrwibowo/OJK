@@ -16,6 +16,10 @@ public class AnswerHolder : MonoBehaviour
 
     public void Clicked()
     {
-        Manager.Next();
+		Manager.CurrentQuestion += 1;
+		if (IsTrue) 
+		{
+			Manager.QuestionAnswered += 1;
+		}
     }
 }

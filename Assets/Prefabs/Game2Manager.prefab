@@ -218,12 +218,25 @@ MonoBehaviour:
   Type: 0
   CharacterPick: 0
   GameManager1: {fileID: 0}
-  Question: {fileID: 0}
-  NextQuestion: 0
-  AnswerA: {fileID: 0}
-  AnswerB: {fileID: 0}
-  AnswerC: {fileID: 0}
-  AnswerD: {fileID: 0}
+  CurrentQuestion: 0
+  QuestionAnswered: 0
+  OnceAskedQuestion: 0
+  Quiz: {fileID: 0}
+  Question1: {fileID: 0}
+  AnswerA1: {fileID: 0}
+  AnswerB1: {fileID: 0}
+  AnswerC1: {fileID: 0}
+  AnswerD1: {fileID: 0}
+  Question2: {fileID: 0}
+  AnswerA2: {fileID: 0}
+  AnswerB2: {fileID: 0}
+  AnswerC2: {fileID: 0}
+  AnswerD2: {fileID: 0}
+  Question3: {fileID: 0}
+  AnswerA3: {fileID: 0}
+  AnswerB3: {fileID: 0}
+  AnswerC3: {fileID: 0}
+  AnswerD3: {fileID: 0}
   Game2Quiz: []
   RandomizedQuiz: []
 --- !u!114 &114997292412387868
