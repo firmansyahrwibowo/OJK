@@ -1,39 +1,7 @@
 {
     "data": [
         {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "6",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "0",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
+            "NamePlayer": "2",
             "Score": "0"
         },
         {
@@ -49,7 +17,51 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "2",
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "0",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "AA",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "A",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "6",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
             "Score": "0"
         },
         {
@@ -61,7 +73,11 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "1",
+            "NamePlayer": "AAA",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "BBB",
             "Score": "0"
         },
         {
@@ -97,11 +113,11 @@
             "Score": "181"
         },
         {
-            "NamePlayer": "TRY",
+            "NamePlayer": "2",
             "Score": "190"
         },
         {
-            "NamePlayer": "2",
+            "NamePlayer": "TRY",
             "Score": "190"
         },
         {
@@ -163,6 +179,10 @@
         {
             "NamePlayer": "BAT",
             "Score": "337"
+        },
+        {
+            "NamePlayer": "B",
+            "Score": "345"
         },
         {
             "NamePlayer": "2",

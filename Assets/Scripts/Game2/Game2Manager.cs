@@ -56,6 +56,12 @@ public class Game2Manager : MonoBehaviour
     Blade _Blade;
     Animator m_AnimatorEnemy, m_AnimatorDodo, m_AnimatorNina;
 
+	[Header("POP UP")]
+	public GameObject SalahPopUp;
+	public GameObject BenarPopUp;
+
+	[SerializeField]
+	GameObject _StartUI;
     // Use this for initialization
     private void Awake()
     {
@@ -86,12 +92,19 @@ public class Game2Manager : MonoBehaviour
 
     public void Init()
     {
+		_StartUI.SetActive (true);
         Score = 0; 
-        Spawner.SetActive(true);
+		scoreText.text = "0";
+		_IsStart = false;
         durationFill.fillAmount = 1;
+		_Blade.Reset ();
 
-
+		Spawner.SetActive(false);
+		_Spawner.Reset();
+		Blade.SetActive (false);
+		_Blade.StopInit();
         //Reset Random Quiz
+
 		CurrentQuestion = 0;
 		QuestionAnswered = 0;
 		OnceAskedQuestion = false;
@@ -132,8 +145,10 @@ public class Game2Manager : MonoBehaviour
 
     void GameEnd()
     {
-        _Spawner.Reset();
-        _Blade.StopInit();
+		Spawner.SetActive(false);
+		_Spawner.Reset();
+		Blade.SetActive (false);
+		_Blade.StopInit();
         durationFill.fillAmount = 0;
         Spawner.SetActive(false);
         EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
@@ -292,7 +307,9 @@ public class Game2Manager : MonoBehaviour
 			if ((CurrentQuestion==3) && (QuestionAnswered==1)) 
 			{
 				time = 30;
+				Spawner.SetActive(true);
 				_Spawner.InitSpawner();
+				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
 				OnceAskedQuestion = true;
@@ -300,7 +317,9 @@ public class Game2Manager : MonoBehaviour
 			if ((CurrentQuestion==3) && (QuestionAnswered==2)) 
 			{
 				time = 60;
+				Spawner.SetActive(true);
 				_Spawner.InitSpawner();
+				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
 				OnceAskedQuestion = true;
@@ -308,7 +327,9 @@ public class Game2Manager : MonoBehaviour
 			if ((CurrentQuestion==3) && (QuestionAnswered==3)) 
 			{
 				time = 80;
+				Spawner.SetActive(true);
 				_Spawner.InitSpawner();
+				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
 				OnceAskedQuestion = true;

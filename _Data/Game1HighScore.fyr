@@ -9,11 +9,11 @@
             "Score": "221"
         },
         {
-            "NamePlayer": "HU",
+            "NamePlayer": "NUJI",
             "Score": "219"
         },
         {
-            "NamePlayer": "NUJI",
+            "NamePlayer": "HU",
             "Score": "219"
         },
         {
@@ -33,7 +33,7 @@
             "Score": "197"
         },
         {
-            "NamePlayer": "TYUIOP",
+            "NamePlayer": "HUJ",
             "Score": "194"
         },
         {
@@ -41,15 +41,15 @@
             "Score": "194"
         },
         {
-            "NamePlayer": "HUJ",
+            "NamePlayer": "TYUIOP",
             "Score": "194"
         },
         {
-            "NamePlayer": "HUJANN..",
+            "NamePlayer": "",
             "Score": "180"
         },
         {
-            "NamePlayer": "",
+            "NamePlayer": "HUJANN..",
             "Score": "180"
         },
         {
@@ -75,6 +75,10 @@
         {
             "NamePlayer": "TYU",
             "Score": "23"
+        },
+        {
+            "NamePlayer": "CUK",
+            "Score": "0"
         },
         {
             "NamePlayer": "OI",

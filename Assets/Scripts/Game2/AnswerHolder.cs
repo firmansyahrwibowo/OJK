@@ -17,9 +17,13 @@ public class AnswerHolder : MonoBehaviour
     public void Clicked()
     {
 		Manager.CurrentQuestion += 1;
-		if (IsTrue) 
-		{
+		if (IsTrue) {
 			Manager.QuestionAnswered += 1;
+			EventManager.TriggerEvent (new SFXPlayEvent (SfxType.BENAR, false));
+			Manager.BenarPopUp.SetActive (true);
+		} else {
+			EventManager.TriggerEvent (new SFXPlayEvent (SfxType.SALAH, false));
+			Manager.SalahPopUp.SetActive (true);
 		}
     }
 }
