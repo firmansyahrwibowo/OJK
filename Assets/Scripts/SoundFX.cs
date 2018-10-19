@@ -14,6 +14,11 @@ public enum SfxType {
     START_GAME
 }
 
+public enum BGMType {
+    MAIN_MENU,
+    GAMEPLAY_1,
+    GAMEPLAY_2
+}
 [System.Serializable]
 public class AudioClass {
 	public SfxType Type;
@@ -27,17 +32,50 @@ public class SoundFX : MonoBehaviour {
 	List <AudioSource> _AudioSub;
 
 	private AudioSource _MainAudio;
-	// Use this for initialization
 
-	void Awake (){
+    [SerializeField]
+    AudioSource _BGM;
+
+    [SerializeField]
+    AudioClip _MainMenuBGM;
+    [SerializeField]
+    AudioClip _Gameplay1;
+    [SerializeField]
+    AudioClip _Gameplay2;
+
+    // Use this for initialization
+
+    void Awake (){
 		_MainAudio = GetComponent<AudioSource>();
         EventManager.AddListener<SFXPlayEvent>(PlaySFX);
-	}
+        EventManager.AddListener<BGMEvent>(BGMHandler);
+    }
 
     private void Start()
     {
         for (int i = 0; i < transform.childCount; i++) {
             _AudioSub.Add(transform.GetChild(i).GetComponent<AudioSource>());
+        }
+    }
+
+    private void BGMHandler(BGMEvent e)
+    {
+        _BGM.Stop();
+        switch (e.Type)
+        {
+            case BGMType.MAIN_MENU:
+                _BGM.clip = _MainMenuBGM;
+                _BGM.Play();
+                break;
+            case BGMType.GAMEPLAY_1:
+                _BGM.clip = _Gameplay1;
+                _BGM.Play();
+                break;
+            case BGMType.GAMEPLAY_2:
+                _BGM.clip = _Gameplay2;
+                _BGM.Play();
+                break;
+
         }
     }
 

@@ -64,3 +64,17 @@ public enum DataType
 {
     STRING, FLOAT
 }
+
+//GAME 1
+public enum ConditionType {
+    DEFAULT,
+    TIME_OVER,
+    LOSE_BATTLE,
+    WIN_BATTLE
+}
+
+public enum FaceType {
+    IDLE,
+    HAPPY,
+    ANXIOUS
+}

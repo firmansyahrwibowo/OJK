@@ -64,9 +64,20 @@ public class Game1Manager : MonoBehaviour {
     [SerializeField]
     RectTransform _BattleObject;
     Vector2 _DefaultPosBattle;
+    [SerializeField]
+    float _PushValue = 50;
+    bool _IdleBattle = false;
     
     bool _IsStart = false;
     float _TimeCount = 0;
+
+    [Header("Time")]
+    [SerializeField]
+    float _TimeDuration = 120;
+    [SerializeField]
+    Text _TimeText;
+    string _Minutes;
+    string _Second;
 
     Tween _MoveTween;
 
@@ -164,6 +175,7 @@ public class Game1Manager : MonoBehaviour {
     }
 
     void ThrowAnswer(bool isTrue) {
+        _IdleBattle = false;
 
         if (isTrue)
         {
@@ -192,6 +204,7 @@ public class Game1Manager : MonoBehaviour {
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.SALAH, false));
         }
         CheckAction(isTrue);
+        EventManager.TriggerEvent(new FaceEvent(FaceType.HAPPY, isTrue));
         EventManager.TriggerEvent(new HoldOnEvent(true));
 
         StartCoroutine (NextQuiz());
@@ -224,8 +237,8 @@ public class Game1Manager : MonoBehaviour {
         }
         else
         {
-            GameEnd();
-            Debug.Log("QUIZ END, RESULT = (TRUE : "+_TrueAnswer.ToString()+") (FALSE : "+_FalseAnswer+")");
+            GameEnd(ConditionType.DEFAULT);
+            //Debug.Log("QUIZ END, RESULT = (TRUE : "+_TrueAnswer.ToString()+") (FALSE : "+_FalseAnswer+")");
         }
     }
     #endregion
@@ -244,7 +257,36 @@ public class Game1Manager : MonoBehaviour {
         {
             _TimeCount += (1 * Time.deltaTime);
             Debug.Log(_TimeCount);
+
+            _TimeDuration -= (1 * Time.deltaTime);
+            _Minutes = Mathf.Floor(_TimeDuration / 60).ToString("00");
+            _Second = (_TimeDuration % 60).ToString("00");
+            
+            _TimeText.text = string.Format("{0}:{1}", _Minutes, _Second);
+
+            if (_TimeDuration < 0) {
+                _TimeDuration = 0;
+                _TimeText.text = "00:00";
+                GameEnd(ConditionType.TIME_OVER);
+            }
+            if (_IdleBattle)
+                _BattleObject.anchoredPosition = new Vector2(_BattleObject.anchoredPosition.x - (5*Time.deltaTime), _BattleObject.anchoredPosition.y);
+
+            UpdateCondition();
         }
+    }
+
+    void UpdateCondition() {
+        if (_BattleObject.anchoredPosition.x < -350)
+        {
+            GameEnd(ConditionType.LOSE_BATTLE);
+        }
+        else if (_BattleObject.anchoredPosition.x > 350)
+        {
+            GameEnd(ConditionType.WIN_BATTLE);
+        }
+
+
     }
 
     void CheckAction(bool isTrue)
@@ -259,7 +301,6 @@ public class Game1Manager : MonoBehaviour {
             _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x - 50, _BattleObject.anchoredPosition.y), 1).OnComplete(ConditionAfterAnswer); 
         }
 
-
     }
 
     void ConditionAfterAnswer()
@@ -267,36 +308,86 @@ public class Game1Manager : MonoBehaviour {
         if (!_IsStart)
             return;
 
+        _IdleBattle = true;
         KillTween();
         if (_BattleObject.anchoredPosition.x >= 300)
-            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x - 100, _BattleObject.anchoredPosition.y), 1);
+            _PushValue = 20;
         else if (_BattleObject.anchoredPosition.x <= -300)
-            _MoveTween = _BattleObject.DOAnchorPos(new Vector2(_BattleObject.anchoredPosition.x + 100, _BattleObject.anchoredPosition.y), 1);
-    } 
+            _PushValue = 20;
+        else
+            _PushValue = 50;
 
-    void GameEnd()
-    {
-        _IsStart = false;
-        
-        //CHARACTER RESULT OBJECT
-        if (_TrueAnswer > _FalseAnswer)
+        if (_BattleObject.anchoredPosition.x < -200)
         {
-            EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
-
-            WinningBonus();
+            EventManager.TriggerEvent(new FaceEvent(FaceType.ANXIOUS, false));
+        }
+        else if (_BattleObject.anchoredPosition.x > 200)
+        {
+            EventManager.TriggerEvent(new FaceEvent(FaceType.ANXIOUS, true));
         }
         else
         {
-            EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, true));
+            EventManager.TriggerEvent(new FaceEvent(FaceType.IDLE, true));
+        }
+    }
+
+    void GameEnd(ConditionType type)
+    {
+        _IsStart = false;
+        switch (type) {
+            case ConditionType.DEFAULT:
+                //CHARACTER RESULT OBJECT
+                if (_TrueAnswer > _FalseAnswer)
+                {
+                    EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
+                    EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
+
+                    TimeBonus();
+                    QuestionBonus();
+                }
+                else
+                {
+                    EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
+                    EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, true));
+                }
+                break;
+            case ConditionType.TIME_OVER:
+                if (_TrueAnswer > _FalseAnswer)
+                {
+                    EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
+                    EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
+
+                    QuestionBonus();
+                }
+                else
+                {
+                    EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
+                    EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, true));
+                }
+                break;
+            case ConditionType.WIN_BATTLE:
+                EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.WIN));
+                EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
+
+                TimeBonus();
+                QuestionBonus();
+                break;
+            case ConditionType.LOSE_BATTLE:
+                EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
+                EventManager.TriggerEvent(new SFXPlayEvent(SfxType.LOSE, true));
+                break;
         }
 
         //BUAT NAMPILIN POP UP SCORE
+        _BattleObject.anchoredPosition = _DefaultPosBattle;
         EventManager.TriggerEvent(new PopUpScoreEvent(Mathf.FloorToInt(_ScorePoint).ToString(), true));
     }
 
-    void WinningBonus()
+    void TimeBonus() {
+        _ScorePoint = _TimeDuration * 2;
+    }
+
+    void QuestionBonus()
     {
         float winBonus = _TrueAnswer * _TrueAnswer;
         
@@ -311,6 +402,8 @@ public class Game1Manager : MonoBehaviour {
         _TrueAnswer = 0;
         _FalseAnswer = 0;
 
+        _PushValue = 50;
+        _IdleBattle = true;
         KillTween();
     }
 

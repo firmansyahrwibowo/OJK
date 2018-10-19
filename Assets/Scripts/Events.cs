@@ -49,6 +49,7 @@ public class HoldOnEvent : GameEvent {
         IsHold = isHold;
     }
 }
+public class ResetHighscoreEvent : GameEvent { }
 
 public class PopUpScoreEvent : GameEvent {
     public string Score;
@@ -90,6 +91,15 @@ public class SFXPlayEvent : GameEvent
         IsEnd = isEnd;
     }
 }
+
+public class BGMEvent : GameEvent {
+    public BGMType Type;
+
+    public BGMEvent(BGMType type)
+    {
+        Type = type;
+    }
+}
 public class KeyboardTypeEvent : GameEvent
 {
     public string KeyCode;
@@ -116,4 +126,15 @@ public class ShowRecordEvent : GameEvent
 public class CloseRecordEvent : GameEvent
 {
 
+}
+public class FaceEvent : GameEvent
+{
+    public FaceType Type;
+    public bool IsTrue;
+
+    public FaceEvent(FaceType type, bool isTrue)
+    {
+        Type = type;
+        IsTrue = isTrue;
+    }
 }

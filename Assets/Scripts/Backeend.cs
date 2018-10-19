@@ -27,7 +27,9 @@ public class Backeend : MonoBehaviour {
 
     void Awake () {
         EventManager.AddListener<SaveHighScoreEvent>(SaveHighScore);
+        EventManager.AddListener<ResetHighscoreEvent>(ResetHighscore);
     }
+
 
     void Start()
     {
@@ -35,6 +37,11 @@ public class Backeend : MonoBehaviour {
             Directory.CreateDirectory(_BackeendDir);
 
         LoadAllHighScore();
+    }
+
+    private void ResetHighscore(ResetHighscoreEvent e)
+    {
+
     }
 
     #region Save
@@ -58,7 +65,7 @@ public class Backeend : MonoBehaviour {
             _Game2HighScore.Add(e.highScore);
             _HighScoreArray = _Game2HighScore.ToArray();
 
-            MySort(OrderType.ASCENDING, DataType.FLOAT);
+            MySort(OrderType.DESCENDING, DataType.FLOAT);
         }
 
         filePath = _BackeendDir +"/"+fileName;
@@ -99,6 +106,8 @@ public class Backeend : MonoBehaviour {
             string json = File.ReadAllText(filePath);
             HighScore[] highScore = JsonHelper.FromJson<HighScore>(json);
             _Game2HighScore = highScore.ToList();
+            
+
         }
     }
     #endregion

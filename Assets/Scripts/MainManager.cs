@@ -57,6 +57,8 @@ public class MainManager : MonoBehaviour {
         _Tutorial2.SetActive(false);
         _Game1.SetActive(false);
         _Game2.SetActive(false);
+
+        EventManager.TriggerEvent(new BGMEvent(BGMType.MAIN_MENU));
     }
 
     private void ButtonActionHandler(ButtonActionEvent e)
@@ -73,6 +75,8 @@ public class MainManager : MonoBehaviour {
                 _Tutorial2.SetActive(false);
                 _Game1.SetActive(false);
                 _Game2.SetActive(false);
+
+                EventManager.TriggerEvent(new BGMEvent(BGMType.MAIN_MENU));
                 break;
             case ObjectType.SELECT_CHARACTER:
                 _SelectGame.SetActive(false);
@@ -118,6 +122,7 @@ public class MainManager : MonoBehaviour {
                     _Tutorial1.SetActive(false);
                     _Game1.SetActive(true);
                     _Game1Manager.Init();
+                    EventManager.TriggerEvent(new BGMEvent(BGMType.GAMEPLAY_1));
                 }
                 else
                 {
@@ -126,6 +131,7 @@ public class MainManager : MonoBehaviour {
                     _Tutorial2.SetActive(false);
                     _Game2.SetActive(true);
                     _Game2Manager.Init();
+                    EventManager.TriggerEvent(new BGMEvent(BGMType.GAMEPLAY_2));
                 }
 
                 break;

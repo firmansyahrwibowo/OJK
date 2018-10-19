@@ -1,6 +1,10 @@
 {
     "data": [
         {
+            "NamePlayer": "N",
+            "Score": "253"
+        },
+        {
             "NamePlayer": "TRY",
             "Score": "230"
         },
@@ -33,11 +37,11 @@
             "Score": "197"
         },
         {
-            "NamePlayer": "HUJ",
+            "NamePlayer": "YU",
             "Score": "194"
         },
         {
-            "NamePlayer": "YU",
+            "NamePlayer": "HUJ",
             "Score": "194"
         },
         {
@@ -75,6 +79,18 @@
         {
             "NamePlayer": "TYU",
             "Score": "23"
+        },
+        {
+            "NamePlayer": "YUI",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "Y",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "J",
+            "Score": "0"
         },
         {
             "NamePlayer": "CUK",

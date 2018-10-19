@@ -2,34 +2,206 @@
     "data": [
         {
             "NamePlayer": "2",
-            "Score": "0"
+            "Score": "878"
         },
         {
-            "NamePlayer": "1",
-            "Score": "0"
+            "NamePlayer": "YEAH",
+            "Score": "840"
         },
         {
             "NamePlayer": "2",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "ME",
-            "Score": "0"
+            "Score": "819"
         },
         {
             "NamePlayer": "1",
-            "Score": "0"
+            "Score": "812"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "668"
+        },
+        {
+            "NamePlayer": "SAYA",
+            "Score": "652"
+        },
+        {
+            "NamePlayer": "8",
+            "Score": "636"
+        },
+        {
+            "NamePlayer": "YUHUUU",
+            "Score": "617"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "609"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "607"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "597"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "593"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "459"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "448"
+        },
+        {
+            "NamePlayer": "TEST",
+            "Score": "446"
+        },
+        {
+            "NamePlayer": "SAYA",
+            "Score": "445"
+        },
+        {
+            "NamePlayer": "SAYA",
+            "Score": "410"
+        },
+        {
+            "NamePlayer": "SAYA",
+            "Score": "392"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "370"
+        },
+        {
+            "NamePlayer": "FIRST",
+            "Score": "367"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "356"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "346"
+        },
+        {
+            "NamePlayer": "B",
+            "Score": "345"
+        },
+        {
+            "NamePlayer": "BAT",
+            "Score": "337"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "334"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "325"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "320"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "300"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "297"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "295"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "291"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "289"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "262"
+        },
+        {
+            "NamePlayer": "6",
+            "Score": "238"
+        },
+        {
+            "NamePlayer": "E",
+            "Score": "236"
+        },
+        {
+            "NamePlayer": "B",
+            "Score": "234"
+        },
+        {
+            "NamePlayer": "SATU",
+            "Score": "225"
+        },
+        {
+            "NamePlayer": "U",
+            "Score": "213"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "190"
+        },
+        {
+            "NamePlayer": "TRY",
+            "Score": "190"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "181"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "176"
+        },
+        {
+            "NamePlayer": "U",
+            "Score": "171"
+        },
+        {
+            "NamePlayer": "GU",
+            "Score": "169"
+        },
+        {
+            "NamePlayer": "R",
+            "Score": "135"
         },
         {
             "NamePlayer": "0",
-            "Score": "0"
+            "Score": "65"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "40"
+        },
+        {
+            "NamePlayer": "8",
+            "Score": "34"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "31"
         },
         {
             "NamePlayer": "AA",
             "Score": "0"
         },
         {
-            "NamePlayer": "1",
+            "NamePlayer": "0",
             "Score": "0"
         },
         {
@@ -45,19 +217,19 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "6",
-            "Score": "0"
-        },
-        {
             "NamePlayer": "1",
             "Score": "0"
         },
         {
-            "NamePlayer": "1",
+            "NamePlayer": "2",
             "Score": "0"
         },
         {
-            "NamePlayer": "1",
+            "NamePlayer": "ME",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "2",
             "Score": "0"
         },
         {
@@ -73,7 +245,7 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "AAA",
+            "NamePlayer": "1",
             "Score": "0"
         },
         {
@@ -81,196 +253,28 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "2",
-            "Score": "31"
-        },
-        {
-            "NamePlayer": "8",
-            "Score": "34"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "40"
-        },
-        {
-            "NamePlayer": "0",
-            "Score": "65"
-        },
-        {
-            "NamePlayer": "R",
-            "Score": "135"
-        },
-        {
-            "NamePlayer": "U",
-            "Score": "171"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "176"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "181"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "190"
-        },
-        {
-            "NamePlayer": "TRY",
-            "Score": "190"
-        },
-        {
-            "NamePlayer": "U",
-            "Score": "213"
-        },
-        {
-            "NamePlayer": "SATU",
-            "Score": "225"
-        },
-        {
-            "NamePlayer": "B",
-            "Score": "234"
-        },
-        {
-            "NamePlayer": "E",
-            "Score": "236"
+            "NamePlayer": "AAA",
+            "Score": "0"
         },
         {
             "NamePlayer": "6",
-            "Score": "238"
+            "Score": "0"
         },
         {
             "NamePlayer": "1",
-            "Score": "262"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "289"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "291"
+            "Score": "0"
         },
         {
             "NamePlayer": "1",
-            "Score": "295"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "297"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "300"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "320"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "325"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "334"
-        },
-        {
-            "NamePlayer": "BAT",
-            "Score": "337"
-        },
-        {
-            "NamePlayer": "B",
-            "Score": "345"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "346"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "356"
-        },
-        {
-            "NamePlayer": "FIRST",
-            "Score": "367"
+            "Score": "0"
         },
         {
             "NamePlayer": "1",
-            "Score": "370"
-        },
-        {
-            "NamePlayer": "SAYA",
-            "Score": "392"
-        },
-        {
-            "NamePlayer": "SAYA",
-            "Score": "410"
-        },
-        {
-            "NamePlayer": "SAYA",
-            "Score": "445"
-        },
-        {
-            "NamePlayer": "TEST",
-            "Score": "446"
+            "Score": "0"
         },
         {
             "NamePlayer": "1",
-            "Score": "448"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "459"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "593"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "597"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "607"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "609"
-        },
-        {
-            "NamePlayer": "YUHUUU",
-            "Score": "617"
-        },
-        {
-            "NamePlayer": "8",
-            "Score": "636"
-        },
-        {
-            "NamePlayer": "SAYA",
-            "Score": "652"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "668"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "812"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "819"
-        },
-        {
-            "NamePlayer": "YEAH",
-            "Score": "840"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "878"
+            "Score": "0"
         }
     ]
 }
