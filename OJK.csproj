@@ -326,6 +326,7 @@
     <Compile Include="Assets\Scripts\KeyboardManager.cs" />
     <Compile Include="Assets\Scripts\KeyboardType.cs" />
     <Compile Include="Assets\Scripts\MainManager.cs" />
+    <Compile Include="Assets\Scripts\MoveBack.cs" />
     <Compile Include="Assets\Scripts\PauseManager.cs" />
     <Compile Include="Assets\Scripts\SoundFX.cs" />
   </ItemGroup>

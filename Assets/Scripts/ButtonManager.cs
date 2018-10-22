@@ -11,9 +11,11 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField]
     GameObject _StartGameBtn;
     [SerializeField]
-    GameObject _OptionBtn;
-    [SerializeField]
     GameObject _ExitBtn;
+
+    [Header("HIGHSCORE MENU")]
+    [SerializeField]
+    GameObject _HighscoreButton;
     [SerializeField]
     GameObject _ShowHighScore1Btn;
     [SerializeField]
@@ -59,21 +61,23 @@ public class ButtonManager : MonoBehaviour {
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
         });
-        _OptionBtn.AddComponent<Button>().onClick.AddListener(delegate {
-            OptionButton();
-
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
-        });
         _ExitBtn.AddComponent<Button>().onClick.AddListener(delegate {
             ExitButton();
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
         });
+
+
+        _HighscoreButton.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE));
+        });
         _ShowHighScore1Btn.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE_FALSE));
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
             EventManager.TriggerEvent(new ShowRecordEvent(_Backend._Game1HighScore));
         });
         _ShowHighScore2Btn.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE_FALSE));
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
             EventManager.TriggerEvent(new ShowRecordEvent(_Backend._Game2HighScore));
         });

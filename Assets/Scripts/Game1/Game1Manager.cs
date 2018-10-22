@@ -379,7 +379,6 @@ public class Game1Manager : MonoBehaviour {
         }
 
         //BUAT NAMPILIN POP UP SCORE
-        _BattleObject.anchoredPosition = _DefaultPosBattle;
         EventManager.TriggerEvent(new PopUpScoreEvent(Mathf.FloorToInt(_ScorePoint).ToString(), true));
     }
 

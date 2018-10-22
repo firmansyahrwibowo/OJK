@@ -28,7 +28,9 @@ public enum ObjectType
     SELECT_GAME,
     PLAY_GAME,
     INTRO_GAME,
-    TUTORIAL_GAME
+    TUTORIAL_GAME,
+    HIGH_SCORE,
+    HIGH_SCORE_FALSE
 }
 public enum OptionType {
     OPTION_A,

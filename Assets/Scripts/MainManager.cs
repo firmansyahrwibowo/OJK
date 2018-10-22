@@ -30,6 +30,11 @@ public class MainManager : MonoBehaviour {
     [SerializeField]
     GameObject _Game2;
 
+    [SerializeField]
+    GameObject _HighscoreGroup;
+    [SerializeField]
+    GameObject _HighscoreUI;
+
     public CharacterType CharacterSelected;
     public GameType GameSelected;
 
@@ -75,8 +80,16 @@ public class MainManager : MonoBehaviour {
                 _Tutorial2.SetActive(false);
                 _Game1.SetActive(false);
                 _Game2.SetActive(false);
+                _HighscoreGroup.SetActive(false);
+                _HighscoreUI.SetActive(false);
 
                 EventManager.TriggerEvent(new BGMEvent(BGMType.MAIN_MENU));
+                break;
+            case ObjectType.HIGH_SCORE:
+                _HighscoreGroup.SetActive(true);
+                break;
+            case ObjectType.HIGH_SCORE_FALSE:
+                _HighscoreGroup.SetActive(false);
                 break;
             case ObjectType.SELECT_CHARACTER:
                 _SelectGame.SetActive(false);

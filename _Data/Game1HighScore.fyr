@@ -13,11 +13,11 @@
             "Score": "221"
         },
         {
-            "NamePlayer": "NUJI",
+            "NamePlayer": "HU",
             "Score": "219"
         },
         {
-            "NamePlayer": "HU",
+            "NamePlayer": "NUJI",
             "Score": "219"
         },
         {
@@ -37,7 +37,7 @@
             "Score": "197"
         },
         {
-            "NamePlayer": "YU",
+            "NamePlayer": "TYUIOP",
             "Score": "194"
         },
         {
@@ -45,20 +45,24 @@
             "Score": "194"
         },
         {
-            "NamePlayer": "TYUIOP",
+            "NamePlayer": "YU",
             "Score": "194"
-        },
-        {
-            "NamePlayer": "",
-            "Score": "180"
         },
         {
             "NamePlayer": "HUJANN..",
             "Score": "180"
         },
         {
+            "NamePlayer": "",
+            "Score": "180"
+        },
+        {
             "NamePlayer": "YUI",
             "Score": "140"
+        },
+        {
+            "NamePlayer": "TYU",
+            "Score": "91"
         },
         {
             "NamePlayer": "YUI",
@@ -81,11 +85,7 @@
             "Score": "23"
         },
         {
-            "NamePlayer": "YUI",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "Y",
+            "NamePlayer": "CUK",
             "Score": "0"
         },
         {
@@ -93,7 +93,11 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "CUK",
+            "NamePlayer": "YUI",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "Y",
             "Score": "0"
         },
         {

@@ -47,10 +47,10 @@ public class HighScoreManager : MonoBehaviour {
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
         });
 
-        for (int i = 0; i < _RecordUI.transform.GetChild(2).childCount; i++) {
+        for (int i = 0; i < _RecordUI.transform.GetChild(1).GetChild(1).childCount; i++) {
             RecordData recordData = new RecordData(
-                _RecordUI.transform.GetChild(2).GetChild(i).GetChild(1).GetComponent<Text>(),
-                _RecordUI.transform.GetChild(2).GetChild(i).GetChild(2).GetComponent<Text>()
+                _RecordUI.transform.GetChild(1).GetChild(1).GetChild(i).GetChild(1).GetComponent<Text>(),
+                _RecordUI.transform.GetChild(1).GetChild(1).GetChild(i).GetChild(2).GetComponent<Text>()
                 );
             _RecordData.Add(recordData);
         }
