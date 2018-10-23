@@ -34,6 +34,8 @@ public class HighScoreManager : MonoBehaviour {
 
     [SerializeField]
     List<RecordData> _RecordData = new List<RecordData>();
+    [SerializeField]
+    Image _ImageBG;
     // Use this for initialization
     private void Awake()
     {
@@ -76,6 +78,11 @@ public class HighScoreManager : MonoBehaviour {
         _ScoreText.text = e.Score;
         _Score = e.Score;
         _IsGame1 = e.IsGame1;
+
+        if (e.IsWin)
+            _ImageBG.color = new Color(0, 1, 0.1f, 0.4f);
+        else
+            _ImageBG.color = new Color(1, 0, 0, 0.4f);
     }
 
     private void ShowRecord(ShowRecordEvent e)

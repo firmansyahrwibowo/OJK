@@ -44,6 +44,11 @@ public class CharacterManager : MonoBehaviour {
     Vector2 _CharacterDefaultPosition;
     Vector2 _EnemyDefaultPosition;
 
+    [SerializeField]
+    GameObject _CharacterAnxious;
+    [SerializeField]
+    GameObject _EnemyAnxious;
+
     FaceEvent _LastFace;
     // Use this for initialization
     private void Awake()

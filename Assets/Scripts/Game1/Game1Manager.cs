@@ -34,18 +34,7 @@ public class Game1Manager : MonoBehaviour {
     [SerializeField]
     Text _QuestionText;
     [SerializeField]
-    GameObject _OptionABtn;
-    [SerializeField]
-    GameObject _OptionBBtn;
-    [SerializeField]
-    GameObject _OptionCBtn;
-    [SerializeField]
-    GameObject _OptionDBtn;
-
-    Text _OptionAText;
-    Text _OptionBText;
-    Text _OptionCText;
-    Text _OptionDText;
+    GameObject [] _OptionBtn;
 
     int _QuizCount = 0, _TrueAnswer = 0, _FalseAnswer = 0;
 
@@ -81,30 +70,53 @@ public class Game1Manager : MonoBehaviour {
 
     Tween _MoveTween;
 
+    [SerializeField]
+    Sprite[] _AnswerBG;
+
+    [SerializeField]
+    List<OptionData> _OptionData = new List<OptionData>();
     private void Awake()
     {
-        _OptionABtn.AddComponent<Button>().onClick.AddListener(delegate {
+        _OptionBtn[0].AddComponent<Button>().onClick.AddListener(delegate
+        {
             SelectAnswer(OptionType.OPTION_A);
         });
-        _OptionBBtn.AddComponent<Button>().onClick.AddListener(delegate {
+        _OptionBtn[1].AddComponent<Button>().onClick.AddListener(delegate
+        {
             SelectAnswer(OptionType.OPTION_B);
         });
-        _OptionCBtn.AddComponent<Button>().onClick.AddListener(delegate {
+        _OptionBtn[2].AddComponent<Button>().onClick.AddListener(delegate
+        {
             SelectAnswer(OptionType.OPTION_C);
         });
-        _OptionDBtn.AddComponent<Button>().onClick.AddListener(delegate {
+        _OptionBtn[3].AddComponent<Button>().onClick.AddListener(delegate
+        {
             SelectAnswer(OptionType.OPTION_D);
         });
 
-        _OptionABtn.AddComponent<OptionData>();
-        _OptionBBtn.AddComponent<OptionData>();
-        _OptionCBtn.AddComponent<OptionData>();
-        _OptionDBtn.AddComponent<OptionData>();
+        //int index = 0;
+        //foreach (GameObject btn in _OptionBtn)
+        //{
+        //    btn.AddComponent<Button>().onClick.AddListener(delegate
+        //    {
+        //        OptionType type = (OptionType)index;
+        //        SelectAnswer(type);
+        //    });
+        //    index++;
+        //}
 
-        _OptionAText = _OptionABtn.GetComponentInChildren<Text>();
-        _OptionBText = _OptionBBtn.GetComponentInChildren<Text>();
-        _OptionCText = _OptionCBtn.GetComponentInChildren<Text>();
-        _OptionDText = _OptionDBtn.GetComponentInChildren<Text>();
+        //Set Option Data
+        foreach (GameObject btn in _OptionBtn)
+            _OptionData.Add(btn.AddComponent<OptionData>());
+        
+        int indexData = 0;
+
+        foreach (OptionData data in _OptionData)
+        {
+            data.thisImage = _OptionBtn[indexData].GetComponent<Image>();
+            data.thisText = _OptionBtn[indexData].GetComponentInChildren<Text>();
+            indexData++;
+        }
     }
 
     private void Start()
@@ -157,25 +169,14 @@ public class Game1Manager : MonoBehaviour {
     #endregion
 
     #region QUESTION
-    void SelectAnswer(OptionType type) {
-        switch (type) {
-            case OptionType.OPTION_A:
-                ThrowAnswer(_OptionABtn.GetComponent<OptionData>().option.isTrue);
-                break;
-            case OptionType.OPTION_B:
-                ThrowAnswer(_OptionBBtn.GetComponent<OptionData>().option.isTrue);
-                break;
-            case OptionType.OPTION_C:
-                ThrowAnswer(_OptionCBtn.GetComponent<OptionData>().option.isTrue);
-                break;
-            case OptionType.OPTION_D:
-                ThrowAnswer(_OptionDBtn.GetComponent<OptionData>().option.isTrue);
-                break;
-        }
+    void SelectAnswer(OptionType type)
+    {
+        ThrowAnswer((int)type);
     }
-
-    void ThrowAnswer(bool isTrue) {
+    
+    void ThrowAnswer(int index) {
         _IdleBattle = false;
+        bool isTrue = _OptionData[index].option.isTrue;
 
         if (isTrue)
         {
@@ -188,6 +189,8 @@ public class Game1Manager : MonoBehaviour {
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.BENAR, false));
+
+            _OptionData[index].thisImage.sprite = _AnswerBG[1];
         }
         else
         {
@@ -202,6 +205,12 @@ public class Game1Manager : MonoBehaviour {
             _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.SALAH, false));
+            
+            //CHANGE BG
+            OptionData data = _OptionData.Find(x => x.option.isTrue); //===> TRUE BG
+            data.thisImage.sprite = _AnswerBG[1];
+            _OptionData[index].thisImage.sprite = _AnswerBG[2]; //===> FALSE BG
+
         }
         CheckAction(isTrue);
         EventManager.TriggerEvent(new FaceEvent(FaceType.HAPPY, isTrue));
@@ -216,15 +225,13 @@ public class Game1Manager : MonoBehaviour {
 
         EventManager.TriggerEvent(new HoldOnEvent(false));
         _QuestionText.text = _generatedQuiz[_QuizCount].question;
-        _OptionAText.text = _generatedQuiz[_QuizCount].option[0].answer;
-        _OptionBText.text = _generatedQuiz[_QuizCount].option[1].answer;
-        _OptionCText.text = _generatedQuiz[_QuizCount].option[2].answer;
-        _OptionDText.text = _generatedQuiz[_QuizCount].option[3].answer;
 
-        _OptionABtn.GetComponent<OptionData>().option = _generatedQuiz[_QuizCount].option[0];
-        _OptionBBtn.GetComponent<OptionData>().option = _generatedQuiz[_QuizCount].option[1];
-        _OptionCBtn.GetComponent<OptionData>().option = _generatedQuiz[_QuizCount].option[2];
-        _OptionDBtn.GetComponent<OptionData>().option = _generatedQuiz[_QuizCount].option[3];
+        for (int i = 0; i < _OptionData.Count; i++) {
+            _OptionData[i].thisText.text = _generatedQuiz[_QuizCount].option[i].answer;
+        }
+
+        for (int i = 0; i < _OptionData.Count; i++)
+            _OptionData[i].option = _generatedQuiz[_QuizCount].option[i];
     }
 
     IEnumerator NextQuiz() {
@@ -233,11 +240,16 @@ public class Game1Manager : MonoBehaviour {
         if (_QuizCount < _MaxQuiz)
         {
             yield return new WaitForSeconds(1);
+            for (int i = 0; i < _OptionData.Count; i++)
+                _OptionData[i].thisImage.sprite = _AnswerBG[0]; //=========> RESTART BG
             ShowQuiz();
         }
         else
         {
             GameEnd(ConditionType.DEFAULT);
+            yield return new WaitForSeconds(1);
+            for (int i = 0; i < _OptionData.Count; i++)
+                _OptionData[i].thisImage.sprite = _AnswerBG[0]; //=========> RESTART BG
             //Debug.Log("QUIZ END, RESULT = (TRUE : "+_TrueAnswer.ToString()+") (FALSE : "+_FalseAnswer+")");
         }
     }
@@ -334,6 +346,7 @@ public class Game1Manager : MonoBehaviour {
     void GameEnd(ConditionType type)
     {
         _IsStart = false;
+        bool isWin = false;
         switch (type) {
             case ConditionType.DEFAULT:
                 //CHARACTER RESULT OBJECT
@@ -344,6 +357,7 @@ public class Game1Manager : MonoBehaviour {
 
                     TimeBonus();
                     QuestionBonus();
+                    isWin = true;
                 }
                 else
                 {
@@ -358,6 +372,7 @@ public class Game1Manager : MonoBehaviour {
                     EventManager.TriggerEvent(new SFXPlayEvent(SfxType.WIN, true));
 
                     QuestionBonus();
+                    isWin = true;
                 }
                 else
                 {
@@ -371,6 +386,7 @@ public class Game1Manager : MonoBehaviour {
 
                 TimeBonus();
                 QuestionBonus();
+                isWin = true;
                 break;
             case ConditionType.LOSE_BATTLE:
                 EventManager.TriggerEvent(new ResultCharacterEvent(ResultType.LOSE));
@@ -379,7 +395,7 @@ public class Game1Manager : MonoBehaviour {
         }
 
         //BUAT NAMPILIN POP UP SCORE
-        EventManager.TriggerEvent(new PopUpScoreEvent(Mathf.FloorToInt(_ScorePoint).ToString(), true));
+        EventManager.TriggerEvent(new PopUpScoreEvent(Mathf.FloorToInt(_ScorePoint).ToString(), true, isWin));
     }
 
     void TimeBonus() {
@@ -403,6 +419,9 @@ public class Game1Manager : MonoBehaviour {
 
         _PushValue = 50;
         _IdleBattle = true;
+
+        for (int i = 0; i < _OptionData.Count; i++)
+            _OptionData[i].thisImage.sprite = _AnswerBG[0]; //=========> RESTART BG
         KillTween();
     }
 

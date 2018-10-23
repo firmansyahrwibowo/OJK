@@ -40,12 +40,15 @@ public class MainManager : MonoBehaviour {
 
     Game1Manager _Game1Manager;
     Game2Manager _Game2Manager;
-    // Use this for initialization
+
+    
     void Awake () {
         EventManager.AddListener<ButtonActionEvent>(ButtonActionHandler);
         EventManager.AddListener<SelectCharacterEvent>(SelectCharacterHandler);
         EventManager.AddListener<SelectGameEvent>(SelectGameHandler);
-
+        
+        //initialization of this code
+        //find the reference of code by searching children
         _Game1Manager = GetComponentInChildren<Game1Manager>();
         _Game2Manager = GetComponentInChildren<Game2Manager>();
     }

@@ -54,11 +54,13 @@ public class ResetHighscoreEvent : GameEvent { }
 public class PopUpScoreEvent : GameEvent {
     public string Score;
     public bool IsGame1;
+    public bool IsWin;
 
-    public PopUpScoreEvent(string score, bool isGame1)
+    public PopUpScoreEvent(string score, bool isGame1, bool isWin = true)
     {
         Score = score;
         IsGame1 = isGame1;
+        IsWin = isWin;
     }
 }
 
