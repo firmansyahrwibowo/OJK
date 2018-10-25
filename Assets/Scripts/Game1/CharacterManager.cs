@@ -68,6 +68,9 @@ public class CharacterManager : MonoBehaviour {
                 _Character.Object.SetActive(true);
                 _Character.WinObject.SetActive(false);
                 _Character.LoseObject.SetActive(false);
+
+                _CharacterAnxious.transform.SetParent(_Character.Head.transform);
+                _CharacterAnxious.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -53);
             }
             else
             {
@@ -82,6 +85,9 @@ public class CharacterManager : MonoBehaviour {
         _Enemy.LoseObject.SetActive(false);
         _LastFace = new FaceEvent(FaceType.IDLE, true);
         FaceHandler(_LastFace);
+
+        _CharacterAnxious.SetActive(false);
+        _EnemyAnxious.SetActive(false);
     }
 
     void ResultAnimation (ResultCharacterEvent e) {
@@ -117,12 +123,18 @@ public class CharacterManager : MonoBehaviour {
         _LastFace = new FaceEvent(FaceType.IDLE, true);
         switch (e.Type) {
             case FaceType.IDLE:
+                _CharacterAnxious.SetActive(false);
+                _EnemyAnxious.SetActive(false);
+
                 _Character.Head.sprite = _Character.IdleFace;
                 _Enemy.Head.sprite = _Enemy.IdleFace;
 
                 _LastFace = e;
                 break;
             case FaceType.HAPPY:
+                _CharacterAnxious.SetActive(false);
+                _EnemyAnxious.SetActive(false);
+
                 if (e.IsTrue)
                 {
                     _Character.Head.sprite = _Character.HappyFace;
@@ -140,11 +152,17 @@ public class CharacterManager : MonoBehaviour {
                 {
                     _Character.Head.sprite = _Character.HappyFace;
                     _Enemy.Head.sprite = _Enemy.AnxiousFace;
+
+                    _CharacterAnxious.SetActive(false);
+                    _EnemyAnxious.SetActive(true);
                 }
                 else
                 {
                     _Character.Head.sprite = _Character.AnxiousFace;
                     _Enemy.Head.sprite = _Enemy.HappyFace;
+
+                    _CharacterAnxious.SetActive(true);
+                    _EnemyAnxious.SetActive(false);
                 }
 
                 _LastFace = e;

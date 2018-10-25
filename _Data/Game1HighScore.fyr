@@ -97,6 +97,10 @@
             "Score": "47"
         },
         {
+            "NamePlayer": "B",
+            "Score": "26"
+        },
+        {
             "NamePlayer": "TYU",
             "Score": "23"
         },
@@ -109,11 +113,15 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "YUI",
+            "NamePlayer": "Y",
             "Score": "0"
         },
         {
-            "NamePlayer": "Y",
+            "NamePlayer": "M",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "YUI",
             "Score": "0"
         },
         {
