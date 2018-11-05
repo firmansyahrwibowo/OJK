@@ -185,8 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb59d5f2181f96c4994a98b10a794520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bladeTrailPrefab: {fileID: 1240082411226160, guid: 490a107d9f43c9b42a060eedc8940283,
-    type: 2}
   minCuttingVelocity: 0.001
 --- !u!114 &114473285086177730
 MonoBehaviour:
@@ -239,6 +237,10 @@ MonoBehaviour:
   AnswerD3: {fileID: 0}
   Game2Quiz: []
   RandomizedQuiz: []
+  SpamBlocker: {fileID: 0}
+  SalahPopUp: {fileID: 0}
+  BenarPopUp: {fileID: 0}
+  _StartUI: {fileID: 0}
 --- !u!114 &114997292412387868
 MonoBehaviour:
   m_ObjectHideFlags: 1
