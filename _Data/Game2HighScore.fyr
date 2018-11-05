@@ -153,11 +153,11 @@
             "Score": "213"
         },
         {
-            "NamePlayer": "2",
+            "NamePlayer": "TRY",
             "Score": "190"
         },
         {
-            "NamePlayer": "TRY",
+            "NamePlayer": "2",
             "Score": "190"
         },
         {
@@ -197,62 +197,6 @@
             "Score": "31"
         },
         {
-            "NamePlayer": "AA",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "0",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "A",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "ME",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "2",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "0",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "1",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "BBB",
-            "Score": "0"
-        },
-        {
             "NamePlayer": "AAA",
             "Score": "0"
         },
@@ -261,7 +205,7 @@
             "Score": "0"
         },
         {
-            "NamePlayer": "1",
+            "NamePlayer": "BBB",
             "Score": "0"
         },
         {
@@ -274,6 +218,66 @@
         },
         {
             "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "I",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "0",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "A",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "AA",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "0",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "2",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "ME",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "1",
+            "Score": "0"
+        },
+        {
+            "NamePlayer": "2",
             "Score": "0"
         }
     ]
