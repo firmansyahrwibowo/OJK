@@ -49,6 +49,7 @@ public class Game2Manager : MonoBehaviour
 	public AnswerHolder AnswerD3;
     public List<Quiz> Game2Quiz;
     public List<Quiz> RandomizedQuiz;
+	public GameObject SpamBlocker;
 
     bool _IsStart = false;
 
@@ -96,15 +97,15 @@ public class Game2Manager : MonoBehaviour
         Score = 0; 
 		scoreText.text = "0";
 		_IsStart = false;
-        durationFill.fillAmount = 1;
+        durationFill.fillAmount = 0;
 		_Blade.Reset ();
 
 		Spawner.SetActive(false);
 		_Spawner.Reset();
 		Blade.SetActive (false);
 		_Blade.StopInit();
-        //Reset Random Quiz
-
+        
+		//Reset Random Quiz
 		CurrentQuestion = 0;
 		QuestionAnswered = 0;
 		OnceAskedQuestion = false;
@@ -202,6 +203,7 @@ public class Game2Manager : MonoBehaviour
 
         Game2Quiz.Clear();
         RandomizedQuiz.Clear();
+		SpamBlocker.SetActive (false);
 
         if (e.Type == 0)
         {
