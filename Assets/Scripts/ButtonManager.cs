@@ -48,6 +48,10 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField]
     GameObject _SkipTutorial2;
 
+    [Header("PAUSE BUTTON")]
+    [SerializeField]
+    GameObject _PauseButton;
+
     Backeend _Backend;
     PauseManager _PauseManager;
     // Use this for initialization
@@ -133,6 +137,10 @@ public class ButtonManager : MonoBehaviour {
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
         });
+        
+        _PauseButton.AddComponent<Button>().onClick.AddListener(delegate {
+            PauseButton();
+        });
     }
 
     void SelectCharacterButton (CharacterType type)
@@ -158,13 +166,11 @@ public class ButtonManager : MonoBehaviour {
         Debug.Log("Exit");
     }
 
-    private void Update()
+    void PauseButton()
     {
-        if (Input.GetKeyUp(KeyCode.Escape)) {
-            if (!Global.IsPause)
-                _PauseManager.PauseHandler(true);
-            else
-                _PauseManager.PauseHandler(false);
-        }
+        if (!Global.IsPause)
+            _PauseManager.PauseHandler(true);
+        else
+            _PauseManager.PauseHandler(false);
     }
 }
