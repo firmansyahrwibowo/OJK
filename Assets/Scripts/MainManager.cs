@@ -87,26 +87,33 @@ public class MainManager : MonoBehaviour {
                 _HighscoreUI.SetActive(false);
 
                 EventManager.TriggerEvent(new BGMEvent(BGMType.MAIN_MENU));
+                EventManager.TriggerEvent(new PauseEvent(false));
                 break;
             case ObjectType.HIGH_SCORE:
                 _HighscoreGroup.SetActive(true);
+                EventManager.TriggerEvent(new PauseEvent(false));
                 break;
             case ObjectType.HIGH_SCORE_FALSE:
                 _HighscoreGroup.SetActive(false);
+                EventManager.TriggerEvent(new PauseEvent(false));
                 break;
             case ObjectType.SELECT_CHARACTER:
                 _SelectGame.SetActive(false);
                 _SelectCharacter.SetActive(true);
+                EventManager.TriggerEvent(new PauseEvent(true));
                 break;
             case ObjectType.SELECT_GAME:
                 _SelectCharacter.SetActive(false);
                 _SelectGame.SetActive(true);
+                EventManager.TriggerEvent(new PauseEvent(true));
                 break;
             case ObjectType.INTRO_GAME:
                 _MainMenu.SetActive(false);
                 _SelectCharacter.SetActive(false);
                 _SelectGame.SetActive(false);
-                
+
+                EventManager.TriggerEvent(new PauseEvent(true));
+
 
                 if (GameSelected == GameType.GAME_1)
                     _Intro1.SetActive(true);
@@ -115,6 +122,7 @@ public class MainManager : MonoBehaviour {
                 
                 break;
             case ObjectType.TUTORIAL_GAME:
+                EventManager.TriggerEvent(new PauseEvent(true));
 
                 if (GameSelected == GameType.GAME_1)
                 {
@@ -128,6 +136,8 @@ public class MainManager : MonoBehaviour {
                 }
                 break;
             case ObjectType.PLAY_GAME:
+                EventManager.TriggerEvent(new PauseEvent(true));
+
                 EventManager.TriggerEvent(new KeyboardInitEvent());
 
                 EventManager.TriggerEvent(new SFXPlayEvent(SfxType.START_GAME, true));

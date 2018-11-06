@@ -59,6 +59,8 @@ public class ButtonManager : MonoBehaviour {
         _Backend = GetComponent<Backeend>();
         _PauseManager = GetComponent<PauseManager>();
 
+        EventManager.AddListener<PauseEvent>(PauseObjectActive);
+
         //MAIN MENU
         _StartGameBtn.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.SELECT_CHARACTER));
@@ -141,6 +143,8 @@ public class ButtonManager : MonoBehaviour {
         _PauseButton.AddComponent<Button>().onClick.AddListener(delegate {
             PauseButton();
         });
+
+
     }
 
     void SelectCharacterButton (CharacterType type)
@@ -154,23 +158,28 @@ public class ButtonManager : MonoBehaviour {
         EventManager.TriggerEvent(new SelectGameEvent(type));
         EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.INTRO_GAME));
     }
-
-
-    void OptionButton()
-    {
-        Debug.Log("Option");
-    }
+    
     void ExitButton()
     {
         Application.Quit();
         Debug.Log("Exit");
     }
 
+    void PauseObjectActive(PauseEvent e) {
+        _PauseButton.SetActive(e.IsTrue);
+    }
+
     void PauseButton()
     {
         if (!Global.IsPause)
+        {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
             _PauseManager.PauseHandler(true);
+        }
         else
+        {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
             _PauseManager.PauseHandler(false);
+        }
     }
 }

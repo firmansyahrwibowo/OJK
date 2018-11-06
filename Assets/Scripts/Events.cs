@@ -140,3 +140,12 @@ public class FaceEvent : GameEvent
         IsTrue = isTrue;
     }
 }
+public class PauseEvent : GameEvent
+{
+    public bool IsTrue;
+
+    public PauseEvent(bool isTrue)
+    {
+        IsTrue = isTrue;
+    }
+}
