@@ -17,10 +17,12 @@ public class PauseManager : MonoBehaviour {
     {
         _ResumeButton.AddComponent<Button>().onClick.AddListener(delegate {
             PauseHandler(false);
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
         });
         _ExitButton.AddComponent<Button>().onClick.AddListener(delegate {
             PauseHandler(false);
             ExitHandler();
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
         });
     }
 
