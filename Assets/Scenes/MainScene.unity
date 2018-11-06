@@ -5933,7 +5933,7 @@ Prefab:
       objectReference: {fileID: 1129658143}
     - target: {fileID: 1968720764056458, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1566279705229624, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
       propertyPath: m_IsActive
@@ -7095,7 +7095,7 @@ Prefab:
     - target: {fileID: 224367808086150802, guid: d71e206fc913eb34197d059d21d18c47,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224799996560820848, guid: d71e206fc913eb34197d059d21d18c47,
         type: 2}
@@ -7105,7 +7105,7 @@ Prefab:
     - target: {fileID: 224301454874356136, guid: d71e206fc913eb34197d059d21d18c47,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224842784118852242, guid: d71e206fc913eb34197d059d21d18c47,
         type: 2}
@@ -7212,6 +7212,14 @@ Prefab:
     - target: {fileID: 4127603188064726, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404555148140382, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404555148140382, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.888
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d71e206fc913eb34197d059d21d18c47, type: 2}
@@ -28212,7 +28220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300014, guid: 475fa3dd89f271c44a0e531692aa695f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
