@@ -40,7 +40,6 @@ public class SaveHighScoreEvent : GameEvent
         IsGame1 = isGame1;
     }
 }
-
 public class HoldOnEvent : GameEvent {
     public bool IsHold;
 
@@ -49,7 +48,15 @@ public class HoldOnEvent : GameEvent {
         IsHold = isHold;
     }
 }
-public class ResetHighscoreEvent : GameEvent { }
+public class ResetHighscoreEvent : GameEvent
+{
+    public bool IsGame1;
+
+    public ResetHighscoreEvent(bool isGame1)
+    {
+        IsGame1 = isGame1;
+    }
+}
 
 public class PopUpScoreEvent : GameEvent {
     public string Score;
@@ -117,10 +124,12 @@ public class KeyboardInitEvent : GameEvent
 }
 public class ShowRecordEvent : GameEvent
 {
+    public bool IsGame1;
     public List<HighScore> HighScore;
 
-    public ShowRecordEvent(List<HighScore> highScore)
+    public ShowRecordEvent(bool isGame1, List<HighScore> highScore)
     {
+        IsGame1 = isGame1;
         HighScore = highScore;
     }
 }

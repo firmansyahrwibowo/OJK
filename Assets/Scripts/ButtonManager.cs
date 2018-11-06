@@ -70,22 +70,23 @@ public class ButtonManager : MonoBehaviour {
         _ExitBtn.AddComponent<Button>().onClick.AddListener(delegate {
             ExitButton();
 
-            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
         });
 
 
         _HighscoreButton.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE));
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
         });
         _ShowHighScore1Btn.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE_FALSE));
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
-            EventManager.TriggerEvent(new ShowRecordEvent(_Backend._Game1HighScore));
+            EventManager.TriggerEvent(new ShowRecordEvent(true, _Backend._Game1HighScore));
         });
         _ShowHighScore2Btn.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.HIGH_SCORE_FALSE));
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
-            EventManager.TriggerEvent(new ShowRecordEvent(_Backend._Game2HighScore));
+            EventManager.TriggerEvent(new ShowRecordEvent(false, _Backend._Game2HighScore));
         });
         _CloseHighScore.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));

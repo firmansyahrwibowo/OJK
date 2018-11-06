@@ -41,7 +41,30 @@ public class Backeend : MonoBehaviour {
 
     private void ResetHighscore(ResetHighscoreEvent e)
     {
+        string fileName = "";
+        string filePath = "";
+        string json = "";
 
+        if (e.IsGame1)
+        {
+            fileName = "Game1HighScore.fyr";
+            _Game1HighScore = new List<HighScore>();
+            _HighScoreArray = _Game1HighScore.ToArray();
+        }
+        else
+        {
+            fileName = "Game2HighScore.fyr";
+            _Game2HighScore = new List<HighScore>();
+            _HighScoreArray = _Game2HighScore.ToArray();
+        }
+
+        filePath = _BackeendDir + "/" + fileName;
+
+
+        json = JsonHelper.ToJson(_HighScoreArray, true); 
+        File.WriteAllText(filePath, json);
+
+        LoadAllHighScore();
     }
 
     #region Save

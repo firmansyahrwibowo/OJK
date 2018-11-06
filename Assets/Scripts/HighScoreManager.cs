@@ -36,6 +36,16 @@ public class HighScoreManager : MonoBehaviour {
     List<RecordData> _RecordData = new List<RecordData>();
     [SerializeField]
     Image _ImageBG;
+
+    [SerializeField]
+    GameObject _ResetButton;
+    [SerializeField]
+    GameObject _PopUpResetUI;
+    [SerializeField]
+    GameObject _YaButton;
+    [SerializeField]
+    GameObject _TidakButton;
+    
     // Use this for initialization
     private void Awake()
     {
@@ -49,6 +59,18 @@ public class HighScoreManager : MonoBehaviour {
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
         });
 
+        _ResetButton.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.CLICK, false));
+            ResetData();
+        });
+        _YaButton.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
+            ResetPopUp(true);
+        });
+        _TidakButton.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
+            ResetPopUp(false);
+        });
         for (int i = 0; i < _RecordUI.transform.GetChild(1).GetChild(1).childCount; i++) {
             RecordData recordData = new RecordData(
                 _RecordUI.transform.GetChild(1).GetChild(1).GetChild(i).GetChild(1).GetComponent<Text>(),
@@ -61,6 +83,7 @@ public class HighScoreManager : MonoBehaviour {
     void Start() {
         _UIScore.SetActive(false);
         _RecordUI.SetActive(false);
+        _PopUpResetUI.SetActive(false);
     }
 
     private void SelesaiButtonHandler()
@@ -87,6 +110,7 @@ public class HighScoreManager : MonoBehaviour {
 
     private void ShowRecord(ShowRecordEvent e)
     {
+        _IsGame1 = e.IsGame1;
         _RecordUI.SetActive(true);
         for (int i = 0; i < e.HighScore.Count; i++) {
             if (i < _RecordData.Count)
@@ -107,5 +131,26 @@ public class HighScoreManager : MonoBehaviour {
             _RecordData[i].Name.text = "????????";
             _RecordData[i].Score.text = "?????";
         }
+    }
+
+    void ResetPopUp(bool isTrue) {
+        _PopUpResetUI.SetActive(false);
+        if (isTrue)
+        {
+            EventManager.TriggerEvent(new ResetHighscoreEvent(_IsGame1));
+            for (int i = 0; i < _RecordData.Count; i++)
+            {
+                _RecordData[i].Name.text = "????????";
+                _RecordData[i].Score.text = "?????";
+            }
+        }
+        else {
+
+        }
+    }
+
+    private void ResetData()
+    {
+        _PopUpResetUI.SetActive(true);
     }
 }
