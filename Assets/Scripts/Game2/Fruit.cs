@@ -33,6 +33,7 @@ public class Fruit : MonoBehaviour {
 		if (col.tag == "Blade")
 		{
             GameObject slice = PoolingObject.Instance.GetSlicedObject(gameObject.name);
+			EventManager.TriggerEvent (new SFXPlayEvent (SfxType.SWOOSH, false));
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;

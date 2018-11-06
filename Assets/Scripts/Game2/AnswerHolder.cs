@@ -16,6 +16,7 @@ public class AnswerHolder : MonoBehaviour
 	public GameObject ThisQuestion;
 	public GameObject NextQuestion;
 	public GameObject BlockSpam;
+	public List <GameObject> Answer;
     // Use this for initialization
     void Start () {
 		
@@ -24,6 +25,7 @@ public class AnswerHolder : MonoBehaviour
     public void Clicked()
     {
 		Manager.CurrentQuestion += 1;
+		CheckAnswer();
 		BlockSpam.SetActive (true);
 		if (IsTrue) {
 			Manager.QuestionAnswered += 1;
@@ -52,12 +54,43 @@ public class AnswerHolder : MonoBehaviour
 			ThisQuestion.SetActive (false);
 			NextQuestion.SetActive (true);
 			BlockSpam.SetActive (false);
-			this.gameObject.GetComponent<Image> ().sprite = NormalButton;
+			//Reset Button Color
+			Answer [0].GetComponent<Image> ().sprite = NormalButton;
+			Answer [1].GetComponent<Image> ().sprite = NormalButton;
+			Answer [2].GetComponent<Image> ().sprite = NormalButton;
+			Answer [3].GetComponent<Image> ().sprite = NormalButton;
 		} 
 		else 
 		{
 			ThisQuestion.SetActive (false);
-			this.gameObject.GetComponent<Image> ().sprite = NormalButton;
+			//Reset Button Color
+			Answer [0].GetComponent<Image> ().sprite = NormalButton;
+			Answer [1].GetComponent<Image> ().sprite = NormalButton;
+			Answer [2].GetComponent<Image> ().sprite = NormalButton;
+			Answer [3].GetComponent<Image> ().sprite = NormalButton;
+		}
+	}
+
+	public void CheckAnswer()
+	{
+		if (Answer [0].GetComponent<AnswerHolder> ().IsTrue==true) 
+		{
+			Answer [0].GetComponent<Image> ().sprite = GreenButton;
+		}
+
+		if (Answer [1].GetComponent<AnswerHolder> ().IsTrue==true) 
+		{
+			Answer [1].GetComponent<Image> ().sprite = GreenButton;
+		}
+
+		if (Answer [2].GetComponent<AnswerHolder> ().IsTrue==true) 
+		{
+			Answer [2].GetComponent<Image> ().sprite = GreenButton;
+		}
+
+		if (Answer [3].GetComponent<AnswerHolder> ().IsTrue==true) 
+		{
+			Answer [3].GetComponent<Image> ().sprite = GreenButton;
 		}
 	}
 }

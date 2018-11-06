@@ -11,7 +11,8 @@ public enum SfxType {
     TYPE,
     WIN,
     LOSE,
-    START_GAME
+    START_GAME,
+	SWOOSH
 }
 
 public enum BGMType {
