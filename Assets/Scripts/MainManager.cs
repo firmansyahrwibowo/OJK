@@ -11,6 +11,8 @@ public class MainManager : MonoBehaviour {
     GameObject _SelectCharacter;
     [SerializeField]
     GameObject _SelectGame;
+    [SerializeField]
+    GameObject _IntroMainMenu;
 
     //GAME 1
     [Header("Game 1 Component")]
@@ -56,6 +58,7 @@ public class MainManager : MonoBehaviour {
     private void Start()
     {
         EventManager.TriggerEvent(new HoldOnEvent(false));
+        _IntroMainMenu.SetActive(true);
         _MainMenu.SetActive(true);
         _SelectCharacter.SetActive(false);
         _SelectGame.SetActive(false);
@@ -160,6 +163,9 @@ public class MainManager : MonoBehaviour {
                     EventManager.TriggerEvent(new BGMEvent(BGMType.GAMEPLAY_2));
                 }
 
+                break;
+            case ObjectType.SKIP_INTRO_MAIN_MENU:
+                _IntroMainMenu.SetActive(false);
                 break;
         }
     }

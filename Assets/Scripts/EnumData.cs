@@ -30,7 +30,8 @@ public enum ObjectType
     INTRO_GAME,
     TUTORIAL_GAME,
     HIGH_SCORE,
-    HIGH_SCORE_FALSE
+    HIGH_SCORE_FALSE,
+    SKIP_INTRO_MAIN_MENU
 }
 public enum OptionType {
     OPTION_A,

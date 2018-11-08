@@ -12,6 +12,8 @@ public class ButtonManager : MonoBehaviour {
     GameObject _StartGameBtn;
     [SerializeField]
     GameObject _ExitBtn;
+    [SerializeField]
+    GameObject _SkipIntro;
 
     [Header("HIGHSCORE MENU")]
     [SerializeField]
@@ -71,6 +73,11 @@ public class ButtonManager : MonoBehaviour {
             ExitButton();
 
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
+        });
+        _SkipIntro.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.SKIP_INTRO_MAIN_MENU));
+
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
         });
 
 
