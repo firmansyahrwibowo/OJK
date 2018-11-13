@@ -37,6 +37,7 @@ public class Fruit : MonoBehaviour {
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;
+				_Manager.SpawnedItem.Remove (slice);
                 //slice.transform.localRotation = transform.localRotation;
             }
 

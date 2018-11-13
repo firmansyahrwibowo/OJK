@@ -50,6 +50,7 @@ public class Game2Manager : MonoBehaviour
     public List<Quiz> Game2Quiz;
     public List<Quiz> RandomizedQuiz;
 	public GameObject SpamBlocker;
+	public List<GameObject> SpawnedItem;
 
     bool _IsStart = false;
 

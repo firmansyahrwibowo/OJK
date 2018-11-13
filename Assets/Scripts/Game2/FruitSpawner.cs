@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FruitSpawner : MonoBehaviour {
 
-    //public GameObject[] itemPrefabs;
 	public Transform[] spawnPoints;
+	private Game2Manager _Manager;
 
 	private float minDelay = 0.1f;
 	private float maxDelay = 1.0f;
@@ -40,6 +40,7 @@ public class FruitSpawner : MonoBehaviour {
                 slice.transform.position = spawnPoint.position;
                 slice.transform.rotation = spawnPoint.rotation;
                 slice.SetActive(true);
+				_Manager.SpawnedItem.Add (slice);
                 slice.GetComponent<Fruit>().Init();
             }
         }

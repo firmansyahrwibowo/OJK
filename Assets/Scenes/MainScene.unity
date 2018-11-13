@@ -20055,6 +20055,11 @@ Prefab:
       propertyPath: _StartUI
       value: 
       objectReference: {fileID: 569979648}
+    - target: {fileID: 114027782873555974, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7,
+        type: 2}
+      propertyPath: _Game2Manager
+      value: 
+      objectReference: {fileID: 1129658143}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb5fbea0a04cd94c80a790e8d7eeab7, type: 2}
   m_IsPrefabParent: 0
