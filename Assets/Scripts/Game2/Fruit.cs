@@ -20,6 +20,7 @@ public class Fruit : MonoBehaviour {
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _Manager = GameObject.Find("Game2Manager").GetComponent<Game2Manager>();
     }
 
     public void Init ()
@@ -33,11 +34,12 @@ public class Fruit : MonoBehaviour {
 		if (col.tag == "Blade")
 		{
             GameObject slice = PoolingObject.Instance.GetSlicedObject(gameObject.name);
-			EventManager.TriggerEvent (new SFXPlayEvent (SfxType.SWOOSH, false));
+            //GameObject sliceditem = this.gameObject;
+            EventManager.TriggerEvent (new SFXPlayEvent (SfxType.SWOOSH, false));
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;
-				_Manager.SpawnedItem.Remove (slice);
+                _Manager.SpawnedItem.Remove(this.gameObject);
                 //slice.transform.localRotation = transform.localRotation;
             }
 
@@ -72,6 +74,7 @@ public class Fruit : MonoBehaviour {
     {
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
+        _Manager.SpawnedItem.Remove(this.gameObject);
     }
 
     private void OnDisable()

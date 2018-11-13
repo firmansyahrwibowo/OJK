@@ -94,7 +94,6 @@ public class Game2Manager : MonoBehaviour
 
     public void Init()
     {
-		_StartUI.SetActive (true);
         Score = 0; 
 		scoreText.text = "0";
 		_IsStart = false;
@@ -123,7 +122,6 @@ public class Game2Manager : MonoBehaviour
 
 		if (_IsStart)
         {
-			
             m_AnimatorDodo.SetBool("IsPlay", true);
             m_AnimatorNina.SetBool("IsPlay", true);
             m_AnimatorEnemy.SetBool("IsPlay", true);
@@ -153,11 +151,12 @@ public class Game2Manager : MonoBehaviour
 		_Blade.StopInit();
         durationFill.fillAmount = 0;
         Spawner.SetActive(false);
-        EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
+       
         Dodo.SetActive(false);
         Nina.SetActive(false);
         Enemy.SetActive(false);
-       
+
+        EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
         if (Score>=300)
         {
             //Win Condition
@@ -315,7 +314,8 @@ public class Game2Manager : MonoBehaviour
 				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
-				OnceAskedQuestion = true;
+                _StartUI.SetActive(true);
+                OnceAskedQuestion = true;
 			}
 			if ((CurrentQuestion==3) && (QuestionAnswered==2)) 
 			{
@@ -325,7 +325,8 @@ public class Game2Manager : MonoBehaviour
 				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
-				OnceAskedQuestion = true;
+                _StartUI.SetActive(true);
+                OnceAskedQuestion = true;
 			}
 			if ((CurrentQuestion==3) && (QuestionAnswered==3)) 
 			{
@@ -335,7 +336,8 @@ public class Game2Manager : MonoBehaviour
 				Blade.SetActive (true);
 				_Blade.Init();
 				_IsStart = true;
-				OnceAskedQuestion = true;
+                _StartUI.SetActive(true);
+                OnceAskedQuestion = true;
 			}
 
 			if((CurrentQuestion==3) && (QuestionAnswered==0))
@@ -347,4 +349,52 @@ public class Game2Manager : MonoBehaviour
 		}
 
 	}
+
+    public void Reset()
+    {
+
+        Dodo.SetActive(false);
+        DodoWin.SetActive(false);
+        DodoLose.SetActive(false);
+
+        Nina.SetActive(false);
+        NinaWin.SetActive(false);
+        NinaLose.SetActive(false);
+
+        Enemy.SetActive(false);
+        EnemyWin.SetActive(false);
+        EnemyLose.SetActive(false);
+
+        Game2Quiz.Clear();
+        RandomizedQuiz.Clear();
+        SpamBlocker.SetActive(false);
+
+        Spawner.SetActive(false);
+        _Spawner.Reset();
+        _Blade.Reset();
+        Blade.SetActive(false);
+        _Blade.StopInit();
+        durationFill.fillAmount = 0;
+        Spawner.SetActive(false);
+
+        Score = 0;
+        scoreText.text = "0";
+        _IsStart = false;
+
+        //Reset Random Quiz
+        CurrentQuestion = 0;
+        QuestionAnswered = 0;
+        OnceAskedQuestion = false;
+        CopyQuizFromGame1();
+        QuizRandomizer();
+        GenerateQuestion();
+        Quiz.SetActive(true);
+
+        foreach (var item in SpawnedItem)
+        {
+            item.SetActive(false);
+            SpawnedItem.Remove(item);
+        }
+
+    }
 }

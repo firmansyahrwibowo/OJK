@@ -12,7 +12,12 @@ public class FruitSpawner : MonoBehaviour {
 
     Coroutine _LoopSpawner;
     bool _IsStart;
-    // Use this for initialization
+
+    private void Awake()
+    {
+        _Manager = GetComponent<Game2Manager>();
+    }
+
     public void InitSpawner ()
     {
         if (_LoopSpawner != null)

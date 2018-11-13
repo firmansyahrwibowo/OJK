@@ -13,6 +13,8 @@ public class PauseManager : MonoBehaviour {
     [SerializeField]
     GameObject _ExitButton;
 
+    private Game2Manager _Manager;
+
     private void Awake()
     {
         _ResumeButton.AddComponent<Button>().onClick.AddListener(delegate {
@@ -24,6 +26,8 @@ public class PauseManager : MonoBehaviour {
             ExitHandler();
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
         });
+
+        _Manager = GameObject.Find("Game2Manager").GetComponent<Game2Manager>();
     }
 
     public void PauseHandler(bool isPause) {
@@ -31,7 +35,7 @@ public class PauseManager : MonoBehaviour {
         {
             _PauseUI.SetActive(true);
             Global.IsPause = true;
-            Time.timeScale = 0.01f;
+            Time.timeScale = 0f;
         }
         else
         {
@@ -43,5 +47,6 @@ public class PauseManager : MonoBehaviour {
 
     void ExitHandler() {
         EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.MAIN_MENU));
+        _Manager.Reset();
     }
 }
