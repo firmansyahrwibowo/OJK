@@ -22,8 +22,6 @@ public class Blade : MonoBehaviour {
 	void Awake ()
 	{
 		cam = Camera.main;
-		//rb = GetComponent<Rigidbody2D>();
-		//circleCollider = GetComponent<CircleCollider2D>();
 	}
 
     public void Init() {
@@ -68,7 +66,6 @@ public class Blade : MonoBehaviour {
         currentBladeTrail.transform.SetParent (transform);
         currentBladeTrail.transform.localPosition = new Vector3(0, 0, 0);
         currentBladeTrail.SetActive(true);
-		//previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 	}
 
 	void StopCutting ()

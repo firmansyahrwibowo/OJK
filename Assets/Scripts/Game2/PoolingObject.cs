@@ -119,30 +119,4 @@ public class PoolingObject : MonoBehaviour
 
         return null;
     }
- //   public void PoolObject (string objName, Vector3 trans){
-	//	bool StopFind = false;
-	//	for (int i = 0; i < _PooledObjects.Count && !StopFind; i++)
-	//	{
-	//		if (!_PooledObjects[i].activeInHierarchy)
-	//		{
-	//			if (objName+"(Clone)" == _PooledObjects[i].name)
-	//			{
-	//				_PooledObjects[i].transform.position = trans;
-	//				_PooledObjects[i].SetActive(true);
-	//				StopFind = true;
-	//			}
-
-	//		}
-	//	}
-	//}
-
-	//public void DestroyPool (){
-	//	for (int i = 0; i < _PooledObjects.Count; i++)
-	//	{
-	//		if (_PooledObjects[i].activeInHierarchy)
-	//		{
-	//			_PooledObjects[i].SetActive(false); 
-	//		}
-	//	}
-	//}
 }

@@ -31,7 +31,9 @@ public class Game2Manager : MonoBehaviour
 	public int CurrentQuestion;
 	public int QuestionAnswered;
 	public bool OnceAskedQuestion=false;
-	public GameObject Quiz;
+	public GameObject Quiz1;
+    public GameObject Quiz2;
+    public GameObject Quiz3;
     public QuestionHolder Question1;
     public AnswerHolder AnswerA1;
     public AnswerHolder AnswerB1;
@@ -51,6 +53,9 @@ public class Game2Manager : MonoBehaviour
     public List<Quiz> RandomizedQuiz;
 	public GameObject SpamBlocker;
 	public List<GameObject> SpawnedItem;
+    public GameObject DurationBarEffect;
+    public GameObject BenarPopup;
+    public GameObject SalahPopup;
 
     bool _IsStart = false;
 
@@ -112,7 +117,11 @@ public class Game2Manager : MonoBehaviour
         CopyQuizFromGame1();
         QuizRandomizer();
 		GenerateQuestion();
-		Quiz.SetActive (true);
+		Quiz1.SetActive (true);
+        Quiz2.SetActive(false);
+        Quiz3.SetActive(false);
+        BenarPopup.SetActive(false);
+        SalahPopUp.SetActive(false);
     }
 
     // Update is called once per frame
@@ -157,7 +166,7 @@ public class Game2Manager : MonoBehaviour
         Enemy.SetActive(false);
 
         EventManager.TriggerEvent(new PopUpScoreEvent(Score.ToString(), false));
-        if (Score>=300)
+        if (Score>0)
         {
             //Win Condition
             if (CharacterPick==0)
@@ -209,12 +218,16 @@ public class Game2Manager : MonoBehaviour
         {
             Dodo.SetActive(true);
             Enemy.SetActive(true);
+            m_AnimatorDodo.SetBool("IsPlay", false);
+            m_AnimatorEnemy.SetBool("IsPlay", false);
             CharacterPick = 0;
         }
         else
         {
             Nina.SetActive(true);
             Enemy.SetActive(true);
+            m_AnimatorNina.SetBool("IsPlay", false);
+            m_AnimatorEnemy.SetBool("IsPlay", false);
             CharacterPick = 1;
         }
     }
@@ -309,36 +322,24 @@ public class Game2Manager : MonoBehaviour
 			if ((CurrentQuestion==3) && (QuestionAnswered==1)) 
 			{
 				time = 30;
-				Spawner.SetActive(true);
-				_Spawner.InitSpawner();
-				Blade.SetActive (true);
-				_Blade.Init();
-				_IsStart = true;
                 _StartUI.SetActive(true);
                 OnceAskedQuestion = true;
+                StartCoroutine(StartGame());
 			}
 			if ((CurrentQuestion==3) && (QuestionAnswered==2)) 
 			{
 				time = 60;
-				Spawner.SetActive(true);
-				_Spawner.InitSpawner();
-				Blade.SetActive (true);
-				_Blade.Init();
-				_IsStart = true;
                 _StartUI.SetActive(true);
                 OnceAskedQuestion = true;
-			}
+                StartCoroutine(StartGame());
+            }
 			if ((CurrentQuestion==3) && (QuestionAnswered==3)) 
 			{
 				time = 80;
-				Spawner.SetActive(true);
-				_Spawner.InitSpawner();
-				Blade.SetActive (true);
-				_Blade.Init();
-				_IsStart = true;
                 _StartUI.SetActive(true);
                 OnceAskedQuestion = true;
-			}
+                StartCoroutine(StartGame());
+            }
 
 			if((CurrentQuestion==3) && (QuestionAnswered==0))
 			{
@@ -352,7 +353,6 @@ public class Game2Manager : MonoBehaviour
 
     public void Reset()
     {
-
         Dodo.SetActive(false);
         DodoWin.SetActive(false);
         DodoLose.SetActive(false);
@@ -388,13 +388,26 @@ public class Game2Manager : MonoBehaviour
         CopyQuizFromGame1();
         QuizRandomizer();
         GenerateQuestion();
-        Quiz.SetActive(true);
+        Quiz1.SetActive(false);
+        Quiz2.SetActive(false);
+        Quiz3.SetActive(false);
+        BenarPopup.SetActive(false);
+        SalahPopUp.SetActive(false);
 
         foreach (var item in SpawnedItem)
         {
             item.SetActive(false);
             SpawnedItem.Remove(item);
         }
+    }
 
+    public IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(1f);
+        _IsStart = true;
+        Spawner.SetActive(true);
+        _Spawner.InitSpawner();
+        Blade.SetActive(true);
+        _Blade.Init();
     }
 }

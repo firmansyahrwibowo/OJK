@@ -16,11 +16,14 @@ public class Fruit : MonoBehaviour {
     Coroutine _SlashedCoroutine;
 
     private Game2Manager _Manager;
+    private GameObject _DecreaseTimeEffect;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         _Manager = GameObject.Find("Game2Manager").GetComponent<Game2Manager>();
+        _DecreaseTimeEffect = _Manager.DurationBarEffect;
+        Debug.Log(_DecreaseTimeEffect);
     }
 
     public void Init ()
@@ -34,45 +37,47 @@ public class Fruit : MonoBehaviour {
 		if (col.tag == "Blade")
 		{
             GameObject slice = PoolingObject.Instance.GetSlicedObject(gameObject.name);
-            //GameObject sliceditem = this.gameObject;
             EventManager.TriggerEvent (new SFXPlayEvent (SfxType.SWOOSH, false));
             if (slice != null)
             {
                 slice.transform.localPosition = transform.localPosition;
                 _Manager.SpawnedItem.Remove(this.gameObject);
-                //slice.transform.localRotation = transform.localRotation;
             }
 
-
-            //GameObject slicedFruit = Instantiate(fruitSlicedPrefab,transform.position,transform.rotation);
-            //Destroy(slicedFruit, 1f);
-
-
             EventManager.TriggerEvent(new DurationCutEvent(durationCut));
-            EventManager.TriggerEvent(new ScoreSetEvent(scoreGet));
-            //_GameManager.time -= durationCut;
-            //_GameManager.Score += scoreGet;
 
-            //gameObject.SetActive(false);
+            if (this.gameObject.GetComponent<Fruit>().durationCut>0)
+            {
+;               _DecreaseTimeEffect.SetActive(true);
+            }
+
+            EventManager.TriggerEvent(new ScoreSetEvent(scoreGet));
             DisableActivation();
 		}
-	}
+    }
 
     void DisableActivation() {
         transform.localPosition = new Vector3(1000, 1000, 1000);
+        DestroyThis();
     }
 
     void OnEnable ()
     {
         if (_ThisCoroutine != null)
             StopCoroutine(_ThisCoroutine);
-
-        _ThisCoroutine = StartCoroutine(DestroyThis());
+        _ThisCoroutine = StartCoroutine(UndestroyedItem());
     }
 
-    IEnumerator DestroyThis()
+    void DestroyThis()
+    {
+        gameObject.SetActive(false);
+        _Manager.SpawnedItem.Remove(this.gameObject);
+    }
+
+    IEnumerator UndestroyedItem()
     {
         yield return new WaitForSeconds(1);
+        _Manager.Score -= this.gameObject.GetComponent<Fruit>().scoreGet;
         gameObject.SetActive(false);
         _Manager.SpawnedItem.Remove(this.gameObject);
     }
