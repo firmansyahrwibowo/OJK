@@ -31,7 +31,8 @@ public enum ObjectType
     TUTORIAL_GAME,
     HIGH_SCORE,
     HIGH_SCORE_FALSE,
-    SKIP_INTRO_MAIN_MENU
+    SKIP_INTRO_MAIN_MENU,
+    CLOSE_POP_UP_HIGHSCORE
 }
 public enum OptionType {
     OPTION_A,

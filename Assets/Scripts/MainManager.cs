@@ -13,6 +13,8 @@ public class MainManager : MonoBehaviour {
     GameObject _SelectGame;
     [SerializeField]
     GameObject _IntroMainMenu;
+    [SerializeField]
+    GameObject _TitleObject;
 
     //GAME 1
     [Header("Game 1 Component")]
@@ -21,7 +23,15 @@ public class MainManager : MonoBehaviour {
     [SerializeField]
     GameObject _Intro1;
     [SerializeField]
+    GameObject _SequenceDodo1;
+    [SerializeField]
+    GameObject _SequenceNina1;
+    [SerializeField]
     GameObject _Intro2;
+    [SerializeField]
+    GameObject _SequenceDodo2;
+    [SerializeField]
+    GameObject _SequenceNina2;
     [SerializeField]
     GameObject _Tutorial1;
     [SerializeField]
@@ -58,6 +68,7 @@ public class MainManager : MonoBehaviour {
     private void Start()
     {
         EventManager.TriggerEvent(new HoldOnEvent(false));
+        _TitleObject.SetActive(false);
         _IntroMainMenu.SetActive(true);
         _MainMenu.SetActive(true);
         _SelectCharacter.SetActive(false);
@@ -68,6 +79,7 @@ public class MainManager : MonoBehaviour {
         _Tutorial2.SetActive(false);
         _Game1.SetActive(false);
         _Game2.SetActive(false);
+        _HighscoreGroup.SetActive(false);
 
         EventManager.TriggerEvent(new BGMEvent(BGMType.MAIN_MENU));
     }
@@ -119,10 +131,23 @@ public class MainManager : MonoBehaviour {
 
 
                 if (GameSelected == GameType.GAME_1)
+                {
                     _Intro1.SetActive(true);
+                    if (CharacterSelected == CharacterType.DODO)
+                    {
+                        _SequenceDodo1.SetActive(true);
+                        _SequenceNina1.SetActive(false);
+                    }
+                    else
+                    {
+                        _SequenceDodo1.SetActive(false);
+                        _SequenceNina1.SetActive(true);
+                    }
+                }
                 else
+                {
                     _Intro2.SetActive(true);
-                
+                }
                 break;
             case ObjectType.TUTORIAL_GAME:
                 EventManager.TriggerEvent(new PauseEvent(true));
@@ -166,6 +191,10 @@ public class MainManager : MonoBehaviour {
                 break;
             case ObjectType.SKIP_INTRO_MAIN_MENU:
                 _IntroMainMenu.SetActive(false);
+                _TitleObject.SetActive(true);
+                break;
+            case ObjectType.CLOSE_POP_UP_HIGHSCORE:
+                _HighscoreGroup.SetActive(false);
                 break;
         }
     }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AnimationEvent : MonoBehaviour {
 
-    public void OnMainMenuIntroEnd() {
-        gameObject.transform.parent.gameObject.SetActive(false);
+    public void OnMainMenuIntroEnd()
+    {
+        EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.SKIP_INTRO_MAIN_MENU));
     }
 
     public void OnIntroEnd() {

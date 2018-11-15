@@ -24,6 +24,8 @@ public class ButtonManager : MonoBehaviour {
     GameObject _ShowHighScore2Btn;
     [SerializeField]
     GameObject _CloseHighScore;
+    [SerializeField]
+    GameObject _ClosePopUp;
 
 
     [Header("SELECT CHARACTER")]
@@ -98,6 +100,9 @@ public class ButtonManager : MonoBehaviour {
         _CloseHighScore.AddComponent<Button>().onClick.AddListener(delegate {
             EventManager.TriggerEvent(new SFXPlayEvent(SfxType.YES, false));
             EventManager.TriggerEvent(new CloseRecordEvent());
+        });
+        _ClosePopUp.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.CLOSE_POP_UP_HIGHSCORE));
         });
 
         //SELECY T CHARACTER

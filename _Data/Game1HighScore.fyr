@@ -1,148 +1,16 @@
 {
     "data": [
         {
-            "NamePlayer": "GUI",
-            "Score": "257"
+            "NamePlayer": "TTT",
+            "Score": "357"
         },
         {
             "NamePlayer": "N",
-            "Score": "253"
+            "Score": "149"
         },
         {
-            "NamePlayer": "TRY",
-            "Score": "230"
-        },
-        {
-            "NamePlayer": "YU",
-            "Score": "228"
-        },
-        {
-            "NamePlayer": "RERE",
-            "Score": "221"
-        },
-        {
-            "NamePlayer": "HU",
-            "Score": "219"
-        },
-        {
-            "NamePlayer": "NUJI",
-            "Score": "219"
-        },
-        {
-            "NamePlayer": "YHUGU",
-            "Score": "212"
-        },
-        {
-            "NamePlayer": "TYEW",
-            "Score": "201"
-        },
-        {
-            "NamePlayer": "YUJIN",
-            "Score": "198"
-        },
-        {
-            "NamePlayer": "TEST",
-            "Score": "197"
-        },
-        {
-            "NamePlayer": "TYUIOP",
-            "Score": "194"
-        },
-        {
-            "NamePlayer": "HUJ",
-            "Score": "194"
-        },
-        {
-            "NamePlayer": "YU",
-            "Score": "194"
-        },
-        {
-            "NamePlayer": "G",
-            "Score": "193"
-        },
-        {
-            "NamePlayer": "HUJANN..",
-            "Score": "180"
-        },
-        {
-            "NamePlayer": "",
-            "Score": "180"
-        },
-        {
-            "NamePlayer": "YUI",
-            "Score": "140"
-        },
-        {
-            "NamePlayer": "G",
-            "Score": "125"
-        },
-        {
-            "NamePlayer": "TYU",
-            "Score": "91"
-        },
-        {
-            "NamePlayer": "YUI",
-            "Score": "81"
-        },
-        {
-            "NamePlayer": "OI",
-            "Score": "73"
-        },
-        {
-            "NamePlayer": "88",
-            "Score": "50"
-        },
-        {
-            "NamePlayer": "GG",
-            "Score": "49"
-        },
-        {
-            "NamePlayer": "TUI",
-            "Score": "47"
-        },
-        {
-            "NamePlayer": "BH",
-            "Score": "41"
-        },
-        {
-            "NamePlayer": "B",
-            "Score": "26"
-        },
-        {
-            "NamePlayer": "TYU",
-            "Score": "23"
-        },
-        {
-            "NamePlayer": "Y",
+            "NamePlayer": "K",
             "Score": "0"
-        },
-        {
-            "NamePlayer": "M",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "GUI",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "J",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "YUI",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "CUK",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "YYY",
-            "Score": "0"
-        },
-        {
-            "NamePlayer": "OI",
-            "Score": "-34"
         }
     ]
 }

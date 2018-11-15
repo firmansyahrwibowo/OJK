@@ -93,19 +93,7 @@ public class Game1Manager : MonoBehaviour {
         {
             SelectAnswer(OptionType.OPTION_D);
         });
-
-        //int index = 0;
-        //foreach (GameObject btn in _OptionBtn)
-        //{
-        //    btn.AddComponent<Button>().onClick.AddListener(delegate
-        //    {
-        //        OptionType type = (OptionType)index;
-        //        SelectAnswer(type);
-        //    });
-        //    index++;
-        //}
-
-        //Set Option Data
+        
         foreach (GameObject btn in _OptionBtn)
             _OptionData.Add(btn.AddComponent<OptionData>());
         
@@ -423,6 +411,11 @@ public class Game1Manager : MonoBehaviour {
         for (int i = 0; i < _OptionData.Count; i++)
             _OptionData[i].thisImage.sprite = _AnswerBG[0]; //=========> RESTART BG
         KillTween();
+
+
+        _TimeDuration = 120;
+        _Minutes = Mathf.Floor(_TimeDuration / 60).ToString("00");
+        _Second = (_TimeDuration % 60).ToString("00");
     }
 
     void KillTween() {
