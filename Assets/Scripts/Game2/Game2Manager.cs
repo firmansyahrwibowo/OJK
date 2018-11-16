@@ -403,7 +403,7 @@ public class Game2Manager : MonoBehaviour
 
     public IEnumerator StartGame()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         _IsStart = true;
         Spawner.SetActive(true);
         _Spawner.InitSpawner();

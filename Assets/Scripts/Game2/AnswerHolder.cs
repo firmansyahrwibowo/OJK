@@ -93,4 +93,13 @@ public class AnswerHolder : MonoBehaviour
 			Answer [3].GetComponent<Image> ().sprite = GreenButton;
 		}
 	}
+
+	void OnDisable()
+	{
+		Debug.Log ("Answer Disabled");
+		Answer [0].GetComponent<Image> ().sprite = NormalButton;
+		Answer [1].GetComponent<Image> ().sprite = NormalButton;
+		Answer [2].GetComponent<Image> ().sprite = NormalButton;
+		Answer [3].GetComponent<Image> ().sprite = NormalButton;
+	}
 }
