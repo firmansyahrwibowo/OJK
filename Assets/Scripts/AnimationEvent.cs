@@ -16,4 +16,16 @@ public class AnimationEvent : MonoBehaviour {
     {
         EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.TUTORIAL_GAME));
     }
+    public void OnThrilledBGM()
+    {
+        EventManager.TriggerEvent(new BGMEvent(BGMType.THRILL));
+    }
+    public void OnCountingEvent()
+    {
+        EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, true));
+    }
+    public void OnStartGameEvent()
+    {
+        EventManager.TriggerEvent(new SFXPlayEvent(SfxType.START_GAME, true));
+    }
 }

@@ -23,7 +23,6 @@ public class Fruit : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         _Manager = GameObject.Find("Game2Manager").GetComponent<Game2Manager>();
         _DecreaseTimeEffect = _Manager.DurationBarEffect;
-        Debug.Log(_DecreaseTimeEffect);
     }
 
     public void Init ()

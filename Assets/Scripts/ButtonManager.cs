@@ -102,6 +102,7 @@ public class ButtonManager : MonoBehaviour {
             EventManager.TriggerEvent(new CloseRecordEvent());
         });
         _ClosePopUp.AddComponent<Button>().onClick.AddListener(delegate {
+            EventManager.TriggerEvent(new SFXPlayEvent(SfxType.NO, false));
             EventManager.TriggerEvent(new ButtonActionEvent(ObjectType.CLOSE_POP_UP_HIGHSCORE));
         });
 

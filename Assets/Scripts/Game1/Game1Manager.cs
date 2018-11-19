@@ -117,9 +117,8 @@ public class Game1Manager : MonoBehaviour {
         ResetData();
         _BattleObject.anchoredPosition = _DefaultPosBattle;
         GenerateQuiz();
-        _GameStartPopUp.SetActive(true);
         ShowQuiz();
-        InitBattle();
+        StartCoroutine (InitBattle());
     }
 
     #region TRIVIA ROLL
@@ -244,8 +243,10 @@ public class Game1Manager : MonoBehaviour {
     #endregion
 
     #region BATTLE
-    void InitBattle()
+    IEnumerator InitBattle()
     {
+        _GameStartPopUp.SetActive(true);
+        yield return new WaitForSeconds(3);
         _IsStart = true;
         _ScorePoint = 0;
         _ScoreText.text = "SCORE : " + Mathf.FloorToInt(_ScorePoint);

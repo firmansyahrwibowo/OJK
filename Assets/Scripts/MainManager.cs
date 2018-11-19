@@ -147,6 +147,16 @@ public class MainManager : MonoBehaviour {
                 else
                 {
                     _Intro2.SetActive(true);
+                    if (CharacterSelected == CharacterType.DODO)
+                    {
+                        _SequenceDodo2.SetActive(true);
+                        _SequenceNina2.SetActive(false);
+                    }
+                    else
+                    {
+                        _SequenceDodo2.SetActive(false);
+                        _SequenceNina2.SetActive(true);
+                    }
                 }
                 break;
             case ObjectType.TUTORIAL_GAME:
@@ -168,7 +178,6 @@ public class MainManager : MonoBehaviour {
 
                 EventManager.TriggerEvent(new KeyboardInitEvent());
 
-                EventManager.TriggerEvent(new SFXPlayEvent(SfxType.START_GAME, true));
                 if (GameSelected == GameType.GAME_1)
                 {
                     EventManager.TriggerEvent(new InitCharacterManagerEvent(CharacterSelected));

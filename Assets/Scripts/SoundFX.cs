@@ -18,7 +18,8 @@ public enum SfxType {
 public enum BGMType {
     MAIN_MENU,
     GAMEPLAY_1,
-    GAMEPLAY_2
+    GAMEPLAY_2,
+    THRILL
 }
 [System.Serializable]
 public class AudioClass {
@@ -43,6 +44,8 @@ public class SoundFX : MonoBehaviour {
     AudioClip _Gameplay1;
     [SerializeField]
     AudioClip _Gameplay2;
+    [SerializeField]
+    AudioClip _Thrilled;
 
     // Use this for initialization
 
@@ -74,6 +77,10 @@ public class SoundFX : MonoBehaviour {
                 break;
             case BGMType.GAMEPLAY_2:
                 _BGM.clip = _Gameplay2;
+                _BGM.Play();
+                break;
+            case BGMType.THRILL:
+                _BGM.clip = _Thrilled;
                 _BGM.Play();
                 break;
 
